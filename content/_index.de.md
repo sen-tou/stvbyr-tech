@@ -5,4 +5,4 @@ draft: true
 translationKey: "about"
 ---
 
-This is my HomePage
+Das ist meine Website
