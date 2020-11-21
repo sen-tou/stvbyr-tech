@@ -1,9 +1,14 @@
 #basic
-baseURL: http://example.org/
+baseURL: http://yerstem.com/
 title: Yerstem
 
 # lang
-languageCode: en-us
+defaultContentLanguage: en
+languages:
+  en:
+    weight: 1
+  de:
+    weight: 2
 
 # misc
 enableGitInfo: true
