@@ -1,0 +1,9 @@
+#basic
+baseURL: http://example.org/
+title: Yerstem
+
+# lang
+languageCode: en-us
+
+# misc
+enableGitInfo: true
