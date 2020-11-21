@@ -17,8 +17,10 @@
     <body>
         {{ partial "header.html" . }}
 
-        {{ block "main" . }}
-        {{ end }}
+        <main aria-role="main">
+            {{ block "main" . }}
+            {{ end }}
+        </main>
 
         {{ partial "footer.html" . }}
     </body>

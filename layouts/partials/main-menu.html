@@ -1,4 +1,4 @@
-<ul>
+<ul id="nav-main-menu">
     {{- $currentPage := . -}}
     {{ range .Site.Menus.main -}}
     <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">

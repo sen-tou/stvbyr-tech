@@ -2,14 +2,10 @@
     <nav>
         <a class="nav-brand" href="/">
             <picture>
-                <img src="images/Logo.png" alt="Yerstem">
+                <img src="/images/Logo.png" alt="Yerstem">
             </picture>
         </a>
-        <div id="nav-main-menu">
-            {{ partial "main-menu.html" . }}
-        </div>
-        <div id="nav-lang-menu">
-            {{ partial "lang-menu.html" . }}
-        </div>
+        {{ partial "main-menu.html" . }}
+        {{ partial "lang-menu.html" . }}
     </nav>
 </header>
