@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="/css/normalize.css" />
         {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+        {{ block "styles" . }}
+        {{ end }}
     </head>
     <body>
         {{ partial "header.html" . }}

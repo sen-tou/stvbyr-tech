@@ -1,5 +1,8 @@
-<ul id="nav-lang-menu">
-    {{ range $.Site.Home.AllTranslations }}
-        <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+{{ $curLang := .Language }}
+<ul id="nav-lang-menu" role="navigation">
+    {{ range sort $.Site.Home.AllTranslations "Weight" }}
+        {{ if ne $curLang .Language}}
+            <li><a href="{{ .Permalink }}"><img src="/images/{{ .Language }}-flag.svg" style="height: 1em" alt="{{ .Language.LanguageName }}"/></a></li>
+        {{ end }}
     {{ end }}
 </ul>

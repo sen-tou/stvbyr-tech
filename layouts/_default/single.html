@@ -1,7 +1,9 @@
 {{ define "main" }}
     <h1>{{ .Title }}</h1>
 
-    <time>{{ .Date }}</time>
+    <time>{{ partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate) }}</time>
+
+    {{ .Content }}
 
     {{ partial "i18nlist.html" . }}
 {{ end }}
