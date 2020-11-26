@@ -8,11 +8,11 @@ $footerPadding: 4rem 1rem;
 $headerPadding: 0.5rem 1rem;
 
 html {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 body {
-    font-family: "Titillium";
+    font-family: "Poppins";
     font-style: normal;
 }
 
@@ -56,9 +56,11 @@ ul[role="navigation"] {
 }
 
 p {
-    line-height: 1.6;
+    line-height: 1.7;
     padding: 0;
-    margin: 0 0 0.89rem 0;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: 0.04rem;
+    word-spacing: 0.2rem;
 }
 
 #page-header {
@@ -107,6 +109,9 @@ main {
 }
 
 @media (min-width: 34em) {
+    html {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 49em) {
