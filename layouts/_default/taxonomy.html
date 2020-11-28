@@ -1,6 +1,5 @@
 {{ define "main" }}
     <header class="content-header">
-        {{ partial "img.html" . }}
         <h1>{{ .Title }}</h1>
         {{ with .Params.subtitle }}
             <span class="subtitle">{{.}}</span>
@@ -16,17 +15,6 @@
                     <h2>
                         <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
                     </h2>
-                    <p class="meta">
-                        <time>{{ partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate) }}</time>
-                        · 
-                        {{ i18n "readingTime" .ReadingTime }}
-                    </p>
-
-                    <p>
-                        {{ .Summary }}
-                    </p>
-
-                    <a href="{{ .Permalink }}">{{ i18n "read-more" . }}</a>
                 </header>
             </article>
         {{ end }}

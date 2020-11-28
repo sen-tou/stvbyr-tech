@@ -1,0 +1,5 @@
+readingTime:
+    one: "1 min Lesezeit"
+    other: "{{ .WordCount }} min Lesezeit"
+read-more:
+    other: Mehr lesen

@@ -5,12 +5,17 @@ title: Yerstem
 # lang
 defaultContentLanguage: en
 languages:
-  en:
-    languageName: English
-    weight: 1
-  de:
-    languageName: Deutsch
-    weight: 2
+    en:
+        languageName: English
+        weight: 1
+        taxonomies:
+            categories: categories
+    de:
+        languageName: Deutsch
+        weight: 2
+        taxonomies:
+            categories: Kategorien
 
 # misc
 enableGitInfo: true
+showReadingTime: true

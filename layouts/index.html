@@ -3,21 +3,15 @@
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 {{ end }}
 {{ define "main" }}
-    <header class="homepage-header">
+    <header class="content-header">
         <h1>{{.Title}}</h1>
         {{ with .Params.subtitle }}
             <span class="subtitle">{{.}}</span>
         {{ end }}
     </header>
 
-    <div class="homepage-content">
+    <div class="container">
         <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
         {{.Content}}
-    </div>
-
-    <div>
-        {{ range first 10 .Site.RegularPages }}
-            {{ .Render "summary"}}
-        {{ end }}
     </div>
 {{ end }}

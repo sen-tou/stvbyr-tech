@@ -1,14 +1,13 @@
 
 @import "variables";
 @import "font";
+@import "basic";
 
 #page-header {
-    height: 20rem;
     background: $dark-purple;
     background: linear-gradient(125deg, $dark-purple 0%, $light-purple 100%);
     
     nav {
-        height: 5rem;
         ul {
             li {
                 a {

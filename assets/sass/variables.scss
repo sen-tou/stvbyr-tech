@@ -1,4 +1,16 @@
 
+$mediumScreen: 34em;
+$largeScreen: 49em;
+
+$contentWidth: 49em;
+$headerWidth: $contentWidth * 1.2;
+$smallPadding: 0.5rem 2rem;
+$mediumPadding: 2rem 2rem;
+$largePadding: 6rem 2rem;
+$border-radius: 0.3rem;
+
+
 $dark-purple: rgb(47,0,142);
 $light-purple: rgba(125,0,173,1);
-$light-grey: #efefef;
+$light-grey: #707070;
+$very-light-grey: #f7f7f7;

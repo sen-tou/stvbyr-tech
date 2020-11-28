@@ -1,9 +1,17 @@
 {{ define "main" }}
-    <h1>{{ .Title }}</h1>
+    <article>
+        <header class="content-header">
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.subtitle }}
+                <span class="subtitle">{{.}}</span>
+            {{ end }}
 
-    <time>{{ partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate) }}</time>
+            <time>{{ partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate) }}</time>
+        </header>
 
-    {{ .Content }}
+        <div class="container">
 
-    {{ partial "i18nlist.html" . }}
+            {{ .Content }}
+        </div>
+    </article>
 {{ end }}
