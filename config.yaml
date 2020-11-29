@@ -19,3 +19,5 @@ languages:
 # misc
 enableGitInfo: true
 showReadingTime: true
+canonifyURLs: true
+copyright: Steve Beyer

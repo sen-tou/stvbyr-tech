@@ -10,7 +10,10 @@ $largePadding: 6rem 2rem;
 $border-radius: 0.3rem;
 
 
+
 $dark-purple: rgb(47,0,142);
 $light-purple: rgba(125,0,173,1);
+$gradient: linear-gradient(90deg, $dark-purple 0%, $light-purple 100%);
+
 $light-grey: #707070;
 $very-light-grey: #f7f7f7;

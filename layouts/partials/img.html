@@ -44,5 +44,12 @@
         {{ with $large.RelPermalink }}, {{.}} 1500w {{ end }}
     {{ end }}'
     
-    src="{{ $src.RelPermalink }}">
+    src="{{ $src.RelPermalink }}" style="width: 1px; height: 1px;">
+
+    
+{{ end }}
+
+{{ define "scripts" }}
+    {{ $built := resources.Get "js/img.js" | js.Build | minify | fingerprint }}
+    <script src="{{ $built.RelPermalink }}"></script>
 {{ end }}
