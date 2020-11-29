@@ -3,10 +3,10 @@
 
 {{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
 
-{{ $tinyw := default "500x" }}
-{{ $smallw := default "800x" }}
-{{ $mediumw := default "1200x" }}
-{{ $largew := default "1500x" }}
+{{ $tinyw := default "360x jpg q80" }}
+{{ $smallw := default "544x jpg q80" }}
+{{ $mediumw := default "784x jpg q80" }}
+{{ $largew := default "1500x jpg q80" }}
 
 {{/* resize the src image to the given sizes */}}
 
@@ -28,21 +28,17 @@
 <img 
   {{ with .Get "sizes" }}sizes='{{.}}'{{ else }}sizes="(min-width: 35em) 1200px, 100vw"{{ end }}
   srcset='
-  {{ if ge $src.Width "500" }}
-    {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
+  {{ if ge $src.Width "360" }}
+    {{ with $tiny.Permalink }}{{.}} 360w{{ end }}
   {{ end }}
-  {{ if ge $src.Width "800" }}
-    {{ with $small.RelPermalink }}, {{.}} 800w{{ end }}
+  {{ if ge $src.Width "544" }}
+    {{ with $small.Permalink }}, {{.}} 544w{{ end }}
   {{ end }}
-  {{ if ge $src.Width "1200" }}
-    {{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}
+  {{ if ge $src.Width "784" }}
+    {{ with $medium.Permalink }}, {{.}} 784w{{ end }}
   {{ end }}
   {{ if ge $src.Width "1500" }}
-    {{ with $large.RelPermalink }}, {{.}} 1500w {{ end }}
+    {{ with $large.Permalink }}, {{.}} 1500w {{ end }}
   {{ end }}'
-  {{ if .Get (print $medium) }}
-    src="{{ $medium.RelPermalink }}" 
-  {{ else }}
-    src="{{ $src.RelPermalink }}" 
-  {{ end }}
-  {{ with .Get "alt" }}alt="{{.}}"{{ else }}alt=""{{ end }}>
+
+  src="{{ $src.Permalink }}" loading="lazy" data-size="{{ $src.Width }}x{{ $src.Height }}">

@@ -2,4 +2,6 @@ readingTime:
     one: "1 min read"
     other: "{{ .WordCount }} min read"
 read-more:
-    other: Mehr lesen
+    other: Read more
+legal:
+    other: Legal

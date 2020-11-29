@@ -1,3 +1,92 @@
 @import "variables";
-@import "font";
-@import "basic";
+
+main {
+    margin-bottom: 8rem;
+
+    .list {
+        article {
+            margin-bottom: 4rem;
+            background: white;
+            padding: $mediumPadding;
+            border-radius: $border-radius;
+
+
+            h2 {
+                margin-top: 0;
+
+                a {
+                    color: $dark-purple;
+
+                    &:hover {
+                        color: lighten($dark-purple, $amount: 20);
+                    }
+                }
+            }
+        }
+    }
+}
+
+article {
+
+    .meta {
+        color: $light-grey;
+    }
+}
+
+#page-footer {
+    padding: $largePadding;
+    padding-left: 0;
+    padding-right: 0;
+    background: $dark-purple;
+    background: $gradient;
+    color: white;
+    font-size: 14px;
+
+    a {
+        color: white;
+    }
+}
+
+@media (min-width: $largeScreen) {
+    #page-footer {
+        nav {
+            margin: 0 auto;
+            align-items: flex-start;
+
+            ul[role="navigation"] {
+                display: block;
+                 li {
+                    margin: 0;
+                    line-height: 2;
+                 }
+            }
+        }
+
+        section {
+            label {
+                display: block;
+                margin-bottom: 2rem;
+            }
+
+            svg {
+                width: 1rem;
+                color: white;
+                stroke: white;
+                fill: white;
+                margin-right: 1rem;;
+            }
+
+            #nav-connect-menu {
+                a {
+                    display: flex;
+                    align-items: stretch;
+
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+

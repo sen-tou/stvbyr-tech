@@ -3,3 +3,5 @@ readingTime:
     other: "{{ .WordCount }} min Lesezeit"
 read-more:
     other: Mehr lesen
+legal:
+    other: Rechtliches

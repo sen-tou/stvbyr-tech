@@ -1,3 +1,6 @@
+@import "variables";
+@import "font";
+
 * {
     box-sizing: border-box;
 }
@@ -9,7 +12,7 @@ html {
 
 @media (min-width: $mediumScreen) {
     html {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
@@ -88,33 +91,6 @@ a {
     }
 }
 
-main {
-    margin-bottom: 8rem;
-
-    .list {
-
-        article {
-            margin-bottom: 4rem;
-            background: white;
-            padding: $mediumPadding;
-            border-radius: $border-radius;
-
-
-            h2 {
-                margin-top: 0;
-
-                a {
-                    color: $dark-purple;
-
-                    &:hover {
-                        color: lighten($dark-purple, $amount: 20);
-                    }
-                }
-            }
-        }
-    }
-}
-
 @media (min-width: $largeScreen) {
     .container {
         width: $contentWidth;
@@ -122,12 +98,6 @@ main {
     }
 }
 
-article {
-
-     .meta {
-         color: $light-grey;
-     }
-}
 
 #page-header {
     height: 5rem;
@@ -183,31 +153,11 @@ article {
     }
 }
 
-#page-footer {
-    padding: $largePadding;
-    background: $dark-purple;
-    background: $gradient;
-    color: white;
-
-    a {
-        color: white;
-    }
-}
-
-@media (min-width: $largeScreen) {
-    #page-footer {
-        nav {
-            width: $contentWidth;
-            margin: 0 auto;
-        }
-    }
-}
-
 .content-header {
     text-align: center;
     background: $dark-purple;
     background: $gradient;
-    height: 20rem; /* You must set a specified height */
+    height: 35rem; /* You must set a specified height */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -215,6 +165,10 @@ article {
 
     * {
         color: white;
+    }
+
+    img {
+        position: absolute;
     }
 
     .layer {

@@ -3,10 +3,14 @@
     <head>
         {{ partial "seo.html" . }}
 
-        <link rel="stylesheet" href="/css/normalize.css" />
-        {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-        <link rel="stylesheet" href="{{ $style.Permalink }}">
+        {{ $norm := resources.Get "sass/normalize.scss" | resources.ToCSS | resources.Minify }}
+        {{ $citical := resources.Get "sass/critical.scss" | resources.ToCSS | resources.Minify }}
+        <style>{{ $norm.Content | safeCSS }} {{ $citical.Content | safeCSS }}</style>
 
+        {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+        <link rel="preload" href="{{ $style.Permalink }}" as="style">
+        <link rel="stylesheet" href="{{ $style.Permalink }}" media="print" onload="this.media='all'">
+        
         {{ block "styles" . }}
         {{ end }}
     </head>
