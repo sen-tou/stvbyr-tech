@@ -33,6 +33,55 @@ article {
     }
 }
 
+blockquote {
+
+    border-left: 10px solid $dark-purple;
+    margin: 1.5em 0;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    color: $light-grey;
+    font-style: italic;
+
+    &:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+    }
+
+    blockquote p {
+        display: inline;
+    }    
+}
+
+table {
+    border-collapse: collapse;
+
+    tr {
+        td, th {
+            padding: 1rem;
+            border: 1px solid $light-grey;
+        }
+    }
+
+    thead {
+        background-color: $dark-purple;
+        color: white;
+        
+        tr {
+            td, th {
+                border: 1px solid $dark-purple;
+            }
+        }
+    }
+
+    tbody {
+
+    }
+}
+
 #page-footer {
     padding: $largePadding;
     padding-left: 0;
@@ -45,27 +94,27 @@ article {
     a {
         color: white;
     }
-}
 
-@media (min-width: $largeScreen) {
-    #page-footer {
-        nav {
-            margin: 0 auto;
-            align-items: flex-start;
+    nav {
+        margin: 0 auto;
+        align-items: flex-start;
 
-            ul[role="navigation"] {
-                display: block;
-                li {
-                    margin: 0;
-                    line-height: 2;
-                }
+        ul[role="navigation"] {
+            display: block;
+            li {
+                margin: 0;
+                line-height: 2;
             }
         }
 
         section {
+            margin-bottom: 4rem;
+            text-align: center;
+
             label {
+                font-size: 130%;
                 display: block;
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
             }
 
             svg {
@@ -79,7 +128,8 @@ article {
             #nav-connect-menu {
                 a {
                     display: flex;
-                    align-items: stretch;
+                    align-items: center;
+                    justify-content: center;
 
                     span {
                         display: block;
@@ -87,6 +137,12 @@ article {
                 }
             }
         }
+    }
+}
+
+@media (min-width: $largeScreen) {
+    #page-footer {
+
     }
 }
 

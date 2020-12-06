@@ -13,7 +13,13 @@ categories:
 ##### Das ist die Listenseite von Coding
 ###### Das ist die Listenseite von Coding
 
-> Quote one - Test
+> Quote one sanjajdnd jjksnfjsd jfnsjkfsf
+> -- <cite>[Albert Einstein][1]</cite>
+
+
+[1]: http://www.quotedb.com/quotes/2112
+
+{{< img src="images/home-header.png" alt="Test" >}}
 
 ```php
 <?php
