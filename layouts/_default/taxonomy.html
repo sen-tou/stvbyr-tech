@@ -8,6 +8,10 @@
         {{ .Content }}
     </header>
     
+    <div class="container">
+        {{ partial "breadcrumb.html" . }}
+    </div>
+
     <div class="container list">
         {{ range .Pages.ByPublishDate.Reverse }}
             <article>

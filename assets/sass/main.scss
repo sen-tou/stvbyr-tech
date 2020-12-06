@@ -4,12 +4,13 @@ main {
     margin-bottom: 8rem;
 
     .list {
+        margin-top: 4rem;
+
         article {
             margin-bottom: 4rem;
             background: white;
             padding: $mediumPadding;
             border-radius: $border-radius;
-
 
             h2 {
                 margin-top: 0;
@@ -27,7 +28,6 @@ main {
 }
 
 article {
-
     .meta {
         color: $light-grey;
     }
@@ -55,10 +55,10 @@ article {
 
             ul[role="navigation"] {
                 display: block;
-                 li {
+                li {
                     margin: 0;
                     line-height: 2;
-                 }
+                }
             }
         }
 
@@ -73,7 +73,7 @@ article {
                 color: white;
                 stroke: white;
                 fill: white;
-                margin-right: 1rem;;
+                margin-right: 1rem;
             }
 
             #nav-connect-menu {
@@ -90,3 +90,19 @@ article {
     }
 }
 
+#breadcrumbs {
+    display: block;
+    color: $light-grey;
+    padding: $smallPadding;
+    padding-left: 0;
+
+    a {
+        display: inline-block;
+    }
+}
+
+.highlight {
+    pre {
+        padding: $smallPadding;
+    }
+}
