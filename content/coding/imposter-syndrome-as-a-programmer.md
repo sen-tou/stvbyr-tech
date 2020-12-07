@@ -3,7 +3,7 @@ title: "Imposter Syndrome as a Programmer"
 date: 2020-11-28T20:21:30+01:00
 draft: true
 categories:
-    - mental health
+    - mental-health
 images:
     - "/images/Banner.png"
 ---

@@ -1,0 +1,55 @@
+@import "variables";
+
+#page-header {
+    height: 5rem;
+    padding: $smallPadding;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+    nav {
+        ul {
+            li {
+                a {
+                    color: $dark-purple;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        #nav-main-menu {
+            display: none;
+            margin-left: auto;
+        }
+
+        #nav-lang-menu {
+            display: none;
+        }
+
+        .nav-brand {
+            display: block;
+            width: 8rem;
+            height: 3rem;
+            background-image: url(/images/Logo-Purple.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+@media (min-width: $largeScreen) {
+    #page-header {
+        nav {
+            width: $largeScreen;
+            margin: 0 auto;
+
+            #nav-main-menu {
+                display: flex;
+            }
+
+            #nav-lang-menu {
+                display: flex;
+            }
+        }
+    }
+}

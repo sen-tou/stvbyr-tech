@@ -1,9 +1,9 @@
 ---
 title: "Impostor Syndrom Als Programmierer Und Was Du Dagegen Tun Kannst"
 date: 2020-11-28T20:21:30+01:00
-draft: true
+draft: false
 categories:
-    - mental health
+    - mental-health
 images:
     - "/images/Banner.png"
 ---

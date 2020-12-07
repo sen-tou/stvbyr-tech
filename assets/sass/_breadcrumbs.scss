@@ -1,0 +1,10 @@
+#breadcrumbs {
+    display: block;
+    color: $light-grey;
+    padding: $smallPadding;
+    padding-left: 0;
+
+    a {
+        display: inline-block;
+    }
+}
