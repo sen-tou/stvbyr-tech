@@ -3,9 +3,12 @@
 #page-header {
     height: 5rem;
     padding: $smallPadding;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
 
     nav {
         ul {
@@ -20,10 +23,6 @@
         #nav-main-menu {
             display: none;
             margin-left: auto;
-        }
-
-        #nav-lang-menu {
-            display: none;
         }
 
         .nav-brand {
@@ -44,10 +43,6 @@
             margin: 0 auto;
 
             #nav-main-menu {
-                display: flex;
-            }
-
-            #nav-lang-menu {
                 display: flex;
             }
         }
