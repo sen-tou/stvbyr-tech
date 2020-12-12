@@ -1,26 +1,26 @@
 {{ define "main" }}
-    <header class="content-header">
-        <h1>{{ .Title }}</h1>
-        {{ with .Params.subtitle }}
-            <span class="subtitle">{{.}}</span>
-        {{ end }}
+<header>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}
+    <span>{{.}}</span>
+    {{ end }}
 
-        {{ .Content }}
-    </header>
-    
-    <div class="container">
-        {{ partial "breadcrumb.html" . }}
-    </div>
+    {{ .Content }}
+</header>
 
-    <div class="container list">
-        {{ range .Pages.ByPublishDate.Reverse }}
-            <article>
-                <header>
-                    <h2>
-                        <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-                    </h2>
-                </header>
-            </article>
-        {{ end }}
-    </div>
+<div>
+    {{ partial "breadcrumb.html" . }}
+</div>
+
+<div>
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <article>
+        <header>
+            <h2>
+                <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            </h2>
+        </header>
+    </article>
+    {{ end }}
+</div>
 {{ end }}

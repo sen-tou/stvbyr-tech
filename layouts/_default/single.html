@@ -1,27 +1,27 @@
 {{ define "main" }}
-    <article>
-        <header class="content-header">
-            {{ partial "img.html" . }}
+<article>
+    <header>
+        {{ partial "img.html" . }}
 
-            <div class="layer">
-                <h1>{{ .Title }}</h1>
-                {{ with .Params.subtitle }}
-                    <span class="subtitle">{{.}}</span>
-                {{ end }}
+        <div>
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.subtitle }}
+            <span>{{.}}</span>
+            {{ end }}
 
-                {{ if .Date }}
-                    <time>{{ partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate) }}</time>
-                {{ end }}
-            </div>
-        </header>
-
-        <div class="container">
-            {{ partial "breadcrumb.html" . }}
+            {{ if .Date }}
+            <time>{{ partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate) }}</time>
+            {{ end }}
         </div>
-        
-        <div class="container">
+    </header>
 
-            {{ .Content }}
-        </div>
-    </article>
+    <div>
+        {{ partial "breadcrumb.html" . }}
+    </div>
+
+    <div>
+
+        {{ .Content }}
+    </div>
+</article>
 {{ end }}

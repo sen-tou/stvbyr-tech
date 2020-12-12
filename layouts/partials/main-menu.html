@@ -1,4 +1,7 @@
-<ul id="nav-main-menu" role="navigation">
+<ul
+    id="nav-main-menu"
+    role="navigation"
+>
     {{- $currentPage := . -}}
     {{ range sort .Site.Menus.main "Weight" }}
     <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
