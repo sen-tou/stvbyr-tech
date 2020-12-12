@@ -1,41 +1,41 @@
 {{ define "main" }}
-    <header class="content-header">
-        {{ partial "img.html" . }}
-        
-        <div class="layer">
-            <h1>{{ .Title }}</h1>
-            {{ with .Params.subtitle }}
-                <span class="subtitle">{{.}}</span>
-            {{ end }}
+<header>
+    {{ partial "img.html" . }}
 
-            {{ .Content }}
-        </div>
-    </header>
-    
-    <div class="container">
-        {{ partial "breadcrumb.html" . }}
-    </div>
-
-    <div class="container list">
-        {{ range .Pages.ByPublishDate.Reverse }}
-            <article>
-                <header>
-                    <h2>
-                        <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-                    </h2>
-                    <p class="meta">
-                        <time>{{ partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate) }}</time>
-                        · 
-                        {{ i18n "readingTime" .ReadingTime }}
-                    </p>
-
-                    <p>
-                        {{ .Summary }}
-                    </p>
-
-                    <a href="{{ .Permalink }}">{{ i18n "read-more" . }}</a>
-                </header>
-            </article>
+    <div>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.subtitle }}
+        <span>{{.}}</span>
         {{ end }}
+
+        {{ .Content }}
     </div>
+</header>
+
+<div>
+    {{ partial "breadcrumb.html" . }}
+</div>
+
+<div>
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <article>
+        <header>
+            <h2>
+                <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            </h2>
+            <p>
+                <time>{{partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate)}}</time>
+                ·
+                {{ i18n "readingTime" .ReadingTime }}
+            </p>
+
+            <p>
+                {{ .Summary }}
+            </p>
+
+            <a href="{{ .Permalink }}">{{ i18n "read-more" . }}</a>
+        </header>
+    </article>
+    {{ end }}
+</div>
 {{ end }}

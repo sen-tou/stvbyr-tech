@@ -1,36 +1,36 @@
 {{ if .Params.images }}
 
-    {{ $image := index .Params.images 0 }}
-    {{ $src := resources.GetMatch $image }}
-    
+{{ $image := index .Params.images 0 }}
+{{ $src := resources.GetMatch $image }}
 
-    {{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
 
-    {{ $tinyw := default "360x jpg q80" }}
-    {{ $smallw := default "544x jpg q80" }}
-    {{ $mediumw := default "784x jpg q80" }}
-    {{ $largew := default "1500x jpg q80" }}
+{{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
 
-    {{/* resize the src image to the given sizes */}}
+{{ $tinyw := default "360x jpg q80" }}
+{{ $smallw := default "544x jpg q80" }}
+{{ $mediumw := default "784x jpg q80" }}
+{{ $largew := default "1500x jpg q80" }}
 
-    {{ .Scratch.Set "tiny" ($src.Resize $tinyw) }}
-    {{ .Scratch.Set "small" ($src.Resize $smallw) }}
-    {{ .Scratch.Set "medium" ($src.Resize $mediumw) }}
-    {{ .Scratch.Set "large" ($src.Resize $largew) }}
+{{/* resize the src image to the given sizes */}}
 
-    {{/* add the processed images to the scratch */}}
+{{ .Scratch.Set "tiny" ($src.Resize $tinyw) }}
+{{ .Scratch.Set "small" ($src.Resize $smallw) }}
+{{ .Scratch.Set "medium" ($src.Resize $mediumw) }}
+{{ .Scratch.Set "large" ($src.Resize $largew) }}
 
-    {{ $tiny := .Scratch.Get "tiny" }}
-    {{ $small := .Scratch.Get "small" }}
-    {{ $medium := .Scratch.Get "medium" }}
-    {{ $large := .Scratch.Get "large" }}
+{{/* add the processed images to the scratch */}}
 
-    {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
-    {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
+{{ $tiny := .Scratch.Get "tiny" }}
+{{ $small := .Scratch.Get "small" }}
+{{ $medium := .Scratch.Get "medium" }}
+{{ $large := .Scratch.Get "large" }}
 
-    <img 
-    sizes="(min-width: 35em) 1200px, 100vw"
-    srcset='
+{{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
+{{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
+
+<img
+  sizes="(min-width: 35em) 1200px, 100vw"
+  srcset='
     {{ if ge $src.Width "360" }}
       {{ with $tiny.Permalink }}{{.}} 360w{{ end }}
     {{ end }}
@@ -43,13 +43,15 @@
     {{ if ge $src.Width "1500" }}
       {{ with $large.Permalink }}, {{.}} 1500w {{ end }}
     {{ end }}'
-      
-    src="{{ $src.Permalink }}" loading="lazy" data-size="{{ $src.Width }}x{{ $src.Height }}">
+  src="{{ $src.Permalink }}"
+  loading="lazy"
+  data-size="{{ $src.Width }}x{{ $src.Height }}"
+>
 
-    
+
 {{ end }}
 
 {{ define "scripts" }}
-    {{ $built := resources.Get "js/img.js" | js.Build | minify | fingerprint }}
-    <script src="{{ $built.Permalink }}"></script>
+{{ $built := resources.Get "js/img.js" | js.Build | minify | fingerprint }}
+<script src="{{ $built.Permalink }}"></script>
 {{ end }}

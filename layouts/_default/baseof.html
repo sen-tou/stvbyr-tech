@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="{{ .Lang }}">
-    <head>
-        {{ partial "seo.html" . }}
 
-        {{ $norm := resources.Get "sass/normalize.scss" | resources.ToCSS | resources.Minify }}
-        {{ $citical := resources.Get "sass/critical.scss" | resources.ToCSS | resources.Minify }}
-        <style>{{ $norm.Content | safeCSS }} {{ $citical.Content | safeCSS }}</style>
+<head>
+    {{ partial "seo.html" . }}
 
-        {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-        <link rel="preload" href="{{ $style.Permalink }}" as="style">
-        <link rel="stylesheet" href="{{ $style.Permalink }}" media="print" onload="this.media='all'">
-        
-        {{ block "styles" . }}
+    {{ if .Site.IsServer }}
+    {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/postcss.config.js") }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    {{ else }}
+        {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/postcss.config.js") | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    {{ end }}
+
+    {{ block "styles" . }}{{ end }}
+</head>
+
+<body>
+    {{ partial "header.html" . }}
+
+    <main>
+        {{ block "main" . }}
         {{ end }}
-    </head>
-    <body>
-        {{ partial "header.html" . }}
+    </main>
 
-        <main aria-role="main">
-            {{ block "main" . }}
-            {{ end }}
-        </main>
+    {{ partial "footer.html" . }}
 
-        {{ partial "footer.html" . }}
+    {{ block "scripts" . }}
+    {{ end }}
+</body>
 
-        {{ block "scripts" . }}
-        {{ end }}
-    </body>
 </html>

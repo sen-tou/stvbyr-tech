@@ -1,16 +1,27 @@
 {
-  "name": "assets",
-  "version": "1.0.0",
-  "description": "",
+  "name": "yerstem",
+  "version": "0.0.1",
+  "description": "Yerstem website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "hugo server --disableFastRender",
+    "build": "NODE_ENV=production hugo --verbose --gc --minify",
+    "build:example": "NODE_ENV=production hugo --verbose --gc --minify -s exampleSite --themesDir=../..",
+    "start": "hugo --gc"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Steve Beyer",
+  "license": "Propritary",
   "dependencies": {
     "autoprefixer": "^10.1.0",
     "postcss": "^8.2.1",
-    "tailwindcss": "^2.0.1"
-  }
+    "postcss-cli": "^8.3.0",
+    "postcss-import": "^13.0.0",
+    "tailwindcss": "^2.0.2"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
 }
