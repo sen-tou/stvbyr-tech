@@ -1,18 +1,7 @@
 @import "variables";
-@import "footer";
-@import "blockquote";
-@import "table";
-@import "article";
 
-main {
-    margin-bottom: 8rem;
-}
-
-
-
-
-.highlight {
-    pre {
-        padding: $smallPadding;
-    }
-}
+// @import "footer";
+// @import "blockquote";
+// @import "table";
+// @import "article";
+@import "tail"
