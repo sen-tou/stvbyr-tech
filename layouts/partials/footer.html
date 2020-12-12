@@ -1,72 +1,74 @@
-<footer id="page-footer">
-    <div>
-        <nav>
-            <section>
-                <label for="nav-legal-menu">{{ i18n "legal" }}</label>
+<footer
+    id="page-footer"
+    class="m-auto max-w-2xl"
+>
+    <nav class="xl:flex justify-between">
+        <section>
+            <label for="nav-legal-menu" class="block mb-4">{{ i18n "legal" }}</label>
 
-                <ul
-                    id="nav-legal-menu"
-                    role="navigation"
-                >
-                    {{- $currentPage := . -}}
-                    {{ range .Site.Menus.footer }}
-                    <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                        <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-                    </li>
-                    {{ end }}
-                </ul>
-            </section>
+            <ul
+                id="nav-legal-menu"
+                role="navigation"
+            >
+                {{- $currentPage := . -}}
+                {{ range .Site.Menus.footer }}
+                <li>
+                    <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </section>
 
-            <section>
-                <label for="nav-legal-menu">Content</label>
+        <section>
+            <label class="block mb-4" for="nav-legal-menu">Content</label>
 
-                <ul
-                    id="nav-meta-menu"
-                    role="navigation"
-                >
+            <ul
+                id="nav-meta-menu"
+                role="navigation"
+            >
 
-                    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-                    {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
-                    <li><a href="{{ .RelPermalink }}">{{ $name }}</a></li>
-                    {{ end }}
-                    {{ end }}
+                {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+                <li><a href="{{ .RelPermalink }}">{{ $name }}</a></li>
+                {{ end }}
+                {{ end }}
 
-                </ul>
-            </section>
+            </ul>
+        </section>
 
-            <section>
-                <label for="nav-connect-menu">Connect</label>
+        <section>
+            <label class="block mb-4" for="nav-connect-menu">Connect</label>
 
-                <ul
-                    id="nav-connect-menu"
-                    role="navigation"
-                >
-                    <li>
-                        <a href="https://twitter.com/csentou">
-                            {{ readFile "static/images/twitter.svg" | safeHTML }}
-                            <span>@csentou</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            {{ readFile "static/images/github.svg" | safeHTML }}
-                            <span>@sentou-sy</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            {{ readFile "static/images/linkedin.svg" | safeHTML }}
-                            <span>Steve Beyer</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
+            <ul
+                id="nav-connect-menu"
+                role="navigation"
+            >
+                <li>
+                    <a href="https://twitter.com/csentou">
+                        {{ readFile "static/images/twitter.svg" | safeHTML }}
+                        <span>@csentou</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        {{ readFile "static/images/github.svg" | safeHTML }}
+                        <span>@sentou-sy</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        {{ readFile "static/images/linkedin.svg" | safeHTML }}
+                        <span>Steve Beyer</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
 
-            <section>
-                <label for="nav-lang-menu">Translations</label>
+        <section>
+            <label class="block mb-4" for="nav-lang-menu">Translations</label>
 
-                {{ partial "lang-menu.html" . }}
-            </section>
-        </nav>
-    </div>
+            {{ partial "lang-menu.html" . }}
+        </section>
+    </nav>
+
 </footer>

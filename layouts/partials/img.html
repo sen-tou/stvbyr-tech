@@ -6,10 +6,10 @@
 
 {{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
 
-{{ $tinyw := default "360x jpg q80" }}
-{{ $smallw := default "544x jpg q80" }}
-{{ $mediumw := default "784x jpg q80" }}
-{{ $largew := default "1500x jpg q80" }}
+{{ $tinyw := default "360x jpg q90" }}
+{{ $smallw := default "544x jpg q90" }}
+{{ $mediumw := default "784x jpg q90" }}
+{{ $largew := default "1500x jpg q90" }}
 
 {{/* resize the src image to the given sizes */}}
 
@@ -29,8 +29,8 @@
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
 
 <img
-  sizes="(min-width: 35em) 1200px, 100vw"
-  srcset='
+    sizes="(min-width: 35em) 1200px, 100vw"
+    srcset='
     {{ if ge $src.Width "360" }}
       {{ with $tiny.Permalink }}{{.}} 360w{{ end }}
     {{ end }}
@@ -43,11 +43,12 @@
     {{ if ge $src.Width "1500" }}
       {{ with $large.Permalink }}, {{.}} 1500w {{ end }}
     {{ end }}'
-  src="{{ $src.Permalink }}"
-  loading="lazy"
-  data-size="{{ $src.Width }}x{{ $src.Height }}"
+    src="{{ $src.Permalink }}"
+    loading="lazy"
+    data-size="{{ $src.Width }}x{{ $src.Height }}"
+    id="header-img"
+    class="w-0 h-0"
 >
-
 
 {{ end }}
 
