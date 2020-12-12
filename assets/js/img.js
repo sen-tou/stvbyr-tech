@@ -1,11 +1,8 @@
-const imgs = document.querySelectorAll('img');
-
-imgs.forEach(img => {
-    
-    const headerContainer = img.closest('.content-header');
-    
+document.addEventListener('DOMContentLoaded', () => {
+    const headerImg = document.querySelector('#header-img');
+    const headerContainer = headerImg.closest('header');
     if (headerContainer) {
-        img.style.display = 'none';
-        headerContainer.style.backgroundImage = 'url("' + (img.currentSrc ? img.currentSrc : img.src) + '")';
+        headerImg.style.display = 'none';
+        headerContainer.style.backgroundImage = 'url("' + (headerImg.currentSrc ? headerImg.currentSrc : headerImg.src) + '")';
     }
 });

@@ -25,9 +25,9 @@
 {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
 
-<img 
-  {{ with .Get "sizes" }}sizes='{{.}}'{{ else }}sizes="(min-width: 35em) 1200px, 100vw"{{ end }}
-  srcset='
+<img
+    {{with .Get "sizes"}}sizes='{{.}}'{{else}}sizes="(min-width: 35em) 1200px, 100vw"{{end}}
+    srcset='
   {{ if ge $src.Width "360" }}
     {{ with $tiny.Permalink }}{{.}} 360w{{ end }}
   {{ end }}
@@ -40,5 +40,7 @@
   {{ if ge $src.Width "1500" }}
     {{ with $large.Permalink }}, {{.}} 1500w {{ end }}
   {{ end }}'
-
-  src="{{ $src.Permalink }}" loading="lazy" data-size="{{ $src.Width }}x{{ $src.Height }}">
+    src="{{ $src.Permalink }}"
+    loading="lazy"
+    data-size="{{ $src.Width }}x{{ $src.Height }}"
+>
