@@ -1,0 +1,10 @@
+<header>
+    {{ partial "img.html" . }}
+
+    <div>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.subtitle }}
+        <span>{{.}}</span>
+        {{ end }}
+    </div>
+</header>
