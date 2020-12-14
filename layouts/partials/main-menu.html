@@ -88,7 +88,7 @@ Menu open: "block", Menu closed: "hidden"
         {{- $currentPage := . -}}
         {{ range sort .Site.Menus.main "Weight" }}
         <a
-            class="text-purple-700 hover:bg-purple-700 hover:text-white text-white block px-3 py-2 rounded-md text-base font-medium"
+            class="text-purple-700 hover:bg-purple-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             href="{{ .URL | absLangURL }}"
         >{{ .Name }}</a>
         {{ end }}
