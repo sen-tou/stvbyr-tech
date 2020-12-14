@@ -2,6 +2,7 @@
 
 html {
     font-size: 14px;
+    @apply bg-purple-50 leading-relaxed;
 }
 
 @screen md {
@@ -11,18 +12,12 @@ html {
 }
 
 p {
-    @apply mb-4 leading-relaxed;    
+    @apply mb-4 ;   
+    @apply text-gray-800;
 }
 
 a {
-    @apply text-purple-700;
-}
-
-h1 {
-    @apply text-4xl text-purple-700;
-}
-h2 {
-    @apply text-3xl text-purple-700;
+    @apply text-indigo-700;
 }
 
 #nav-connect-menu svg {

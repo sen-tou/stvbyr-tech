@@ -2,10 +2,8 @@
 <article class="relative">
     {{ partial "content-header.html" . }}
 
-    <div>
-        {{ partial "breadcrumb.html" . }}
-    </div>
-
+    {{ partial "breadcrumb.html" . }}
+    
     <div class="m-auto max-w-2xl p-2">
         {{ .Content }}
     </div>
