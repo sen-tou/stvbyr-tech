@@ -1,41 +1,37 @@
 {{ define "main" }}
-<header>
-    {{ partial "img.html" . }}
 
-    <div>
-        <h1>{{ .Title }}</h1>
-        {{ with .Params.subtitle }}
-        <span>{{.}}</span>
-        {{ end }}
+{{ partial "content-header.html" . }}
 
-        {{ .Content }}
-    </div>
-</header>
+<div class="m-auto max-w-5xl p-8">
 
-<div>
     {{ partial "breadcrumb.html" . }}
-</div>
 
-<div>
-    {{ range .Pages.ByPublishDate.Reverse }}
-    <article>
-        <header>
-            <h2>
-                <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-            </h2>
-            <p>
-                <time>{{partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate)}}</time>
-                ·
-                {{ i18n "readingTime" .ReadingTime }}
-            </p>
+    <div class="">
+        {{ range .Pages.ByPublishDate.Reverse }}
+        <article class="bg-white rounded-md overflow-hidden mb-16">
+            <header class="h-64 bg-cover bg-center">
 
-            <p>
-                {{ .Summary }}
-            </p>
+                {{ partial "img.html" . }}
 
-            <a href="{{ .Permalink }}">{{ i18n "read-more" . }}</a>
-        </header>
-    </article>
+            </header>
+            <section class="px-8">
+                <h2 class="text-5xl mb-8 mt-4">
+                    <a class="block" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+                </h2>
+
+                <p>
+                    {{ .Summary }} ...
+                </p>
+
+            </section>
+            <footer class="px-8">
+                <p class="text-gray-500">
+                    <time>{{partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate)}}</time>
+                    ·
+                    {{ i18n "readingTime" .ReadingTime }}
+                </p>
+            </footer>
+        </article>
+        {{ end }}
+    </div>
     {{ end }}
-</div>
-{{ end }}

@@ -1,12 +1,10 @@
 ---
-title: "Coding"
+title: "Blog"
 draft: false
 menu: 
     main:
         weight: 5
-translationKey: "coding"
+translationKey: "blog"
 images: 
     - "/images/home-header.png"
 ---
-
-This is the Coding Page Summary

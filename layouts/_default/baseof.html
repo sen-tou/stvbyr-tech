@@ -19,14 +19,16 @@
     {{ partial "header.html" . }}
 
     <main>
-        {{ block "main" . }}
-        {{ end }}
+        {{ block "main" . }}{{ end }}
     </main>
 
     {{ partial "footer.html" . }}
 
-    {{ block "scripts" . }}
-    {{ end }}
+    {{ $img := resources.Get "js/img.js" | js.Build }}
+    {{ $menu := resources.Get "js/toggleMainMenu.js" | js.Build }}
+
+    {{ $js := slice $img $menu | resources.Concat "js/bundle.js" | babel | minify | fingerprint }}
+    <script src="{{ $js.Permalink }}"></script>
 </body>
 
 </html>

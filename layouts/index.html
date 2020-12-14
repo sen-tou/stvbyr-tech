@@ -1,12 +1,8 @@
 {{ define "styles" }}
 {{ end }}
 {{ define "main" }}
-<header>
-    <h1>{{.Title}}</h1>
-    {{ with .Params.subtitle }}
-    <span>{{.}}</span>
-    {{ end }}
-</header>
+
+{{ partial "content-header.html" . }}
 
 <div>
     <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->

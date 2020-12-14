@@ -21,3 +21,4 @@ enableGitInfo: true
 showReadingTime: true
 canonifyURLs: true
 copyright: Steve Beyer
+summaryLength: 50

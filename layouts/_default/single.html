@@ -1,25 +1,9 @@
 {{ define "main" }}
 <article class="relative">
-    <header class="w-full relative h-72 bg-cover bg-center">
-        
-        {{ partial "img.html" . }}
+    {{ partial "content-header.html" . }}
 
-        <div class="flex flex-col items-center justify-center w-full h-full relative z-10">
-            <h1 class="text-white text-lg">{{ .Title }}</h1>
-            {{ with .Params.subtitle }}
-            <span>{{.}}</span>
-            {{ end }}
-
-            {{ if .Date }}
-            <time>{{ partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate) }}</time>
-            {{ end }}
-        </div>
-    </header>
-
-    <div>
-        {{ partial "breadcrumb.html" . }}
-    </div>
-
+    {{ partial "breadcrumb.html" . }}
+    
     <div class="m-auto max-w-2xl p-2">
         {{ .Content }}
     </div>
