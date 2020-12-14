@@ -94,8 +94,3 @@ Menu open: "block", Menu closed: "hidden"
         {{ end }}
     </div>
 </div>
-
-{{ define "scripts" }}
-    {{ $js := resources.Get "js/toggleMainMenu.js" | js.Build "main-menu.js" | minify | fingerprint }}
-    <script src="{{ $js.Permalink }}"></script>
-{{ end }}
