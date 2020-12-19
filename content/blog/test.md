@@ -5,6 +5,8 @@ draft: false
 translationKey: "coding-article-1"
 categories:
     - blogging
+images:
+    - "images/Banner.png"
 ---
 
 ## Das ist die Listenseite von Coding
