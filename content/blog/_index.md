@@ -5,6 +5,5 @@ menu:
     main:
         weight: 5
 translationKey: "blog"
-images: 
-    - "/images/home-header.png"
+image: "/images/home-header.png"
 ---

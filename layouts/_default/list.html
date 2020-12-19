@@ -2,36 +2,13 @@
 
 {{ partial "content-header.html" . }}
 
-<div class="m-auto max-w-5xl p-8">
+<div class="m-auto max-w-5xl p-2 md:p-4">
 
     {{ partial "breadcrumb.html" . }}
 
-    <div class="">
-        {{ range .Pages.ByPublishDate.Reverse }}
-        <article class="bg-white rounded-md overflow-hidden mb-16">
-            <header class="h-64 bg-cover bg-center">
+    {{ $items := .Pages.ByPublishDate.Reverse }}
+    {{ .Scratch.Set "items" $items }}
+    {{ partial "article-list.html" . }}
+</div>
 
-                {{ partial "img.html" . }}
-
-            </header>
-            <section class="px-8">
-                <h2 class="text-5xl mb-8 mt-4">
-                    <a class="block" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-                </h2>
-
-                <p>
-                    {{ .Summary }} ...
-                </p>
-
-            </section>
-            <footer class="px-8">
-                <p class="text-gray-500">
-                    <time>{{partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate)}}</time>
-                    ·
-                    {{ i18n "readingTime" .ReadingTime }}
-                </p>
-            </footer>
-        </article>
-        {{ end }}
-    </div>
-    {{ end }}
+{{ end }}
