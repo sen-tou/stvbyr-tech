@@ -21,4 +21,8 @@ enableGitInfo: true
 showReadingTime: true
 canonifyURLs: true
 copyright: Steve Beyer
-summaryLength: 50
+summaryLength: 30
+
+params:
+    meta:
+        tagline: "Coding and more"

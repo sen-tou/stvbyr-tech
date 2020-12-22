@@ -1,15 +1,16 @@
-{{ if .Params.images }}
+{{ if .Params.image }}
 
-{{ $image := index .Params.images 0 }}
+{{ $image := .Params.image }}
 {{ $src := resources.GetMatch $image }}
 
+{{ if $src }}
 
 {{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
 
-{{ $tinyw := default "360x jpg q90" }}
-{{ $smallw := default "544x jpg q90" }}
+{{ $tinyw := default "640x jpg q90" }}
+{{ $smallw := default "768x jpg q90" }}
 {{ $mediumw := default "784x jpg q90" }}
-{{ $largew := default "1500x jpg q90" }}
+{{ $largew := default "1280x jpg q90" }}
 
 {{/* resize the src image to the given sizes */}}
 
@@ -29,19 +30,19 @@
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
 
 <img
-    sizes="(min-width: 35em) 1200px, 100vw"
+    sizes="100vw"
     srcset='
-    {{ if ge $src.Width "360" }}
-      {{ with $tiny.Permalink }}{{.}} 360w{{ end }}
+    {{ if ge $src.Width "640" }}
+      {{ with $tiny.Permalink }}{{.}} 640w{{ end }}
     {{ end }}
-    {{ if ge $src.Width "544" }}
-      {{ with $small.Permalink }}, {{.}} 544w{{ end }}
+    {{ if ge $src.Width "768" }}
+      {{ with $small.Permalink }}, {{.}} 768w{{ end }}
     {{ end }}
-    {{ if ge $src.Width "784" }}
-      {{ with $medium.Permalink }}, {{.}} 784w{{ end }}
+    {{ if ge $src.Width "1024" }}
+      {{ with $medium.Permalink }}, {{.}} 1024w{{ end }}
     {{ end }}
-    {{ if ge $src.Width "1500" }}
-      {{ with $large.Permalink }}, {{.}} 1500w {{ end }}
+    {{ if ge $src.Width "1280" }}
+      {{ with $large.Permalink }}, {{.}} 1280w {{ end }}
     {{ end }}'
     src="{{ $src.Permalink }}"
     loading="lazy"
@@ -50,4 +51,5 @@
     class="w-0 h-0"
 >
 
+{{ end }}
 {{ end }}

@@ -12,6 +12,7 @@
   "author": "Steve Beyer",
   "license": "Propritary",
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
     "autoprefixer": "^10.1.0",
     "cross-env": "^7.0.3",
     "in-viewport": "^3.6.0",

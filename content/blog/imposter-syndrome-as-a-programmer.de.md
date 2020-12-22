@@ -4,8 +4,7 @@ date: 2020-11-28T20:21:30+01:00
 draft: false
 categories:
     - mental-health
-images:
-    - "/images/Banner.png"
+images: "/images/Banner.png"
 ---
 
 ## Was ist Impostor Syndrom
