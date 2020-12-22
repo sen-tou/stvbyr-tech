@@ -1,5 +1,6 @@
 {{/* get file that matches the filename as specified as src="" in shortcode */}}
 {{ $src := resources.GetMatch (printf "*%s*" (.Get "src")) }}
+{{ $cap := .Get "caption" | default "" }}
 
 {{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
 
@@ -24,23 +25,25 @@
 
 {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
-
-<img
-    sizes="100vw"
-    srcset='
-    {{ if ge $src.Width "640" }}
-      {{ with $tiny.Permalink }}{{.}} 640w{{ end }}
-    {{ end }}
-    {{ if ge $src.Width "768" }}
-      {{ with $small.Permalink }}, {{.}} 768w{{ end }}
-    {{ end }}
-    {{ if ge $src.Width "1024" }}
-      {{ with $medium.Permalink }}, {{.}} 1024w{{ end }}
-    {{ end }}
-    {{ if ge $src.Width "1280" }}
-      {{ with $large.Permalink }}, {{.}} 1280w {{ end }}
-    {{ end }}'
-    src="{{ $src.Permalink }}"
-    loading="lazy"
-    data-size="{{ $src.Width }}x{{ $src.Height }}"
->
+<figure class="mb-8">
+  <img
+      sizes="100vw"
+      srcset='
+      {{ if ge $src.Width "640" }}
+        {{ with $tiny.Permalink }}{{.}} 640w{{ end }}
+      {{ end }}
+      {{ if ge $src.Width "768" }}
+        {{ with $small.Permalink }}, {{.}} 768w{{ end }}
+      {{ end }}
+      {{ if ge $src.Width "1024" }}
+        {{ with $medium.Permalink }}, {{.}} 1024w{{ end }}
+      {{ end }}
+      {{ if ge $src.Width "1280" }}
+        {{ with $large.Permalink }}, {{.}} 1280w {{ end }}
+      {{ end }}'
+      src="{{ $src.Permalink }}"
+      loading="lazy"
+      data-size="{{ $src.Width }}x{{ $src.Height }}"
+  >
+  <figcaption class="text-right text-gray-500 text-sm">{{ $cap }}</figcaption>
+</figure>
