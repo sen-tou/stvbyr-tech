@@ -2,7 +2,7 @@
 
 html {
     font-size: 14px;
-    @apply bg-purple-50 leading-relaxed;
+    /* @apply bg-purple-50 leading-relaxed; */
 }
 
 @screen md {
@@ -12,7 +12,7 @@ html {
 }
 
 p {
-    @apply mb-4 ;   
+    @apply mb-4;   
     @apply text-gray-800;
 }
 
@@ -20,7 +20,35 @@ a {
     @apply text-indigo-700;
 }
 
+h2 {
+    @apply text-4xl;
+    @apply text-indigo-900;
+    @apply mt-16;
+    @apply mb-8;
+}
+
+h3 {
+    @apply text-2xl;
+    @apply text-indigo-900;
+    @apply mt-8;
+    @apply mb-4;
+}
+
 #nav-connect-menu svg {
     width: 1rem;
 }
 
+.highlight {
+    @apply mb-8;
+}
+.highlight pre {
+    @apply p-4;
+}
+
+blockquote {
+    @apply border-l-2 border-indigo-900 p-2 mb-4;
+}
+
+blockquote p {
+    @apply m-0;
+}
