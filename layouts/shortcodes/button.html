@@ -6,5 +6,5 @@
     class="bg-indigo-700 text-white px-3 py-2 rounded-md text-md font-medium"
     href="{{ $href }}"
     alt="{{ $alt }}"
-    {{ with $target }} target="{{ $target }}" {{ end }}
-></a>
+    target="{{ $target }}"
+>{{ .Get "text" }}</a>

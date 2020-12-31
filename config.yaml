@@ -26,3 +26,8 @@ summaryLength: 30
 params:
     meta:
         tagline: "Coding and more"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
