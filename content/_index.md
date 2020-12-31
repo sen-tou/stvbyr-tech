@@ -1,8 +1,6 @@
 ---
 title: "Yerstem"
-date: 2020-11-21T11:33:04+01:00
 draft: false
 translationKey: "home"
+image: "images/home-banner.jpeg"
 ---
-
-This is my HomePage
