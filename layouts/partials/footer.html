@@ -1,30 +1,32 @@
 <footer
     id="page-footer"
-    class="m-auto max-w-2xl"
+    class="bg-purple-900 pt-8"
 >
-    <nav class="xl:flex justify-between">
-        <section>
-            <label for="nav-legal-menu" class="block mb-4">{{ i18n "legal" }}</label>
+    <nav class="m-auto max-w-5xl xl:flex justify-between xl: p-4 text-white text-center xl:text-left">
+        <section class="mb-8">
+            <label for="nav-legal-menu" class="block mb-4 text-2xl">{{ i18n "legal" }}</label>
 
             <ul
                 id="nav-legal-menu"
                 role="navigation"
+                class="flex items-center justify-center"
             >
                 {{- $currentPage := . -}}
                 {{ range .Site.Menus.footer }}
-                <li>
+                <li class="mr-4">
                     <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
                 </li>
                 {{ end }}
             </ul>
         </section>
 
-        <section>
-            <label class="block mb-4" for="nav-legal-menu">Content</label>
+        {{/*  <section class="mb-8">
+            <label for="nav-legal-menu" class="block mb-4 text-2xl">Content</label>
 
             <ul
                 id="nav-meta-menu"
                 role="navigation"
+                class="flex items-center justify-center"
             >
 
                 {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
@@ -34,41 +36,40 @@
                 {{ end }}
 
             </ul>
-        </section>
+        </section>  */}}
 
-        <section>
-            <label class="block mb-4" for="nav-connect-menu">Connect</label>
+        <section class="mb-8">
+            <label for="nav-connect-menu" class="block mb-4 text-2xl">Connect</label>
 
             <ul
                 id="nav-connect-menu"
                 role="navigation"
+                class="flex items-center justify-center"
             >
-                <li>
-                    <a href="https://twitter.com/csentou">
+                <li class="mr-4">
+                    <a href="https://twitter.com/csentou" class="flex " alt="Twitter.com @csentou">
                         {{ readFile "static/images/twitter.svg" | safeHTML }}
-                        <span>@csentou</span>
                     </a>
                 </li>
-                <li>
-                    <a href="">
+                <li class="mr-4">
+                    <a href="" class="flex" alt="Github.com @sentou-sy">
                         {{ readFile "static/images/github.svg" | safeHTML }}
-                        <span>@sentou-sy</span>
                     </a>
                 </li>
-                <li>
+                {{/*  <li>
                     <a href="">
                         {{ readFile "static/images/linkedin.svg" | safeHTML }}
                         <span>Steve Beyer</span>
                     </a>
-                </li>
+                </li>  */}}
             </ul>
         </section>
 
-        <section>
+        {{/*  <section class="mb-8">
             <label class="block mb-4" for="nav-lang-menu">Translations</label>
 
             {{ partial "lang-menu.html" . }}
-        </section>
+        </section>  */}}
     </nav>
 
 </footer>
