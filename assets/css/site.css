@@ -20,6 +20,15 @@ a {
     @apply text-indigo-700;
 }
 
+#page-footer a  {
+    @apply text-white;
+}
+
+#page-footer svg  {
+    @apply fill-current;
+    @apply w-8;
+}
+
 h2 {
     @apply text-4xl;
     @apply text-indigo-900;
@@ -34,10 +43,6 @@ h3 {
     @apply mb-4;
 }
 
-#nav-connect-menu svg {
-    width: 1rem;
-}
-
 .highlight {
     @apply mb-8;
 }
@@ -46,7 +51,10 @@ h3 {
 }
 
 blockquote {
-    @apply border-l-2 border-indigo-900 p-2 mb-4;
+    @apply border-l-2; 
+    @apply border-indigo-900; 
+    @apply p-2;
+    @apply mb-4;
 }
 
 blockquote p {
