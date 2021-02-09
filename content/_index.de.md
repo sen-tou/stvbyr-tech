@@ -1,8 +1,7 @@
 ---
 title: "Yerstem"
+subtitle: "Web Development - Persönlichkeitsentwicklung - Finanzen"
 draft: false
 translationKey: "home"
-image: "home-header.png"
+image: "images/home-header.png"
 ---
-
-Das ist meine Website
