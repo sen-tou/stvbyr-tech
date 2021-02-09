@@ -1,10 +1,10 @@
 <header class="flex justify-center items-center mb-16 bg-indigo-900 bg-cover bg-center relative 
-    aspect-w-2 aspect-h-3 md:aspect-w-2  md:aspect-h-1 lg:aspect-w-3 lg:aspect-h-1">
+    aspect-w-3 aspect-h-4 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-3 lg:aspect-h-1">
 
     {{ partial "img.html" . }}
 
-    <div class="text-center bg-indigo-900 bg-opacity-80 w-full h-full py-32 md:p-16 lg:py-32">
-        <h1 class="text-white text-5xl md:text-4xl lg:text-5xl xl:text-7xl mb-4">{{ .Title }}</h1>
+    <div class="text-center bg-indigo-900 bg-opacity-80 w-full h-full py-16 xl:py-32 px-8">
+        <h1 class="text-white text-4xl md:text-4xl lg:text-5xl xl:text-7xl mb-4">{{ .Title }}</h1>
         {{ with .Params.subtitle }}
         <span class="text-white">{{.}}</span>
         {{ end }}
