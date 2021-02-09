@@ -66,5 +66,6 @@ ul {
 }
 
 li {
-    @apply ml-8 mb-4;
+    @apply ml-8;
+    @apply mb-4;
 }
