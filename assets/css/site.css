@@ -60,3 +60,11 @@ blockquote {
 blockquote p {
     @apply m-0;
 }
+
+ul {
+    @apply list-disc;
+}
+
+li {
+    @apply ml-8 mb-4;
+}
