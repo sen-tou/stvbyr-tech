@@ -3,7 +3,7 @@ title: "Warum du eine README in jedem Projekt haben solltest"
 date: 2021-02-09T17:47:20+01:00
 draft: false
 translationKey: "warum-du-in-jedem-projekt-eine-readme-haben-solltest"
-image: "home-header.png"
+image: "images/readme.jpeg"
 author: Steve Beyer
 categories: 
     - software development
