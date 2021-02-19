@@ -14,7 +14,9 @@ categories:
 
 Ganz einfach gesagt: eine README ist eine Datei, die Informationen zu einem Projekt zur Verfügung stellt. Wie genau so eine README aussieht erfährst du in diesem Artikel. 
 
-Auf deutsch bedeutet "read me", soviel wie "les mich". Das animiert schonmal dazu diese Datei zu lesen. Oft schreibt man den Dateinamen in Großbuchstaben, damit die Aufmerksamkeit als erstes auf diese Datei gelenkt wird. Wenn du VC-Systeme (Version-Controll-System), wie Github benutzt (das solltest du auf jeden Fall), dann wird diese README gleich in der Übersicht des Projekts angezeigt. Sie ist also, die erste Datei, die du in einem Projekt anschaust. Schreibe deshalb, alle wichtigen Informationen in diese Datei.
+Auf deutsch bedeutet "read me", soviel wie "les mich". Das animiert schonmal dazu diese Datei zu lesen. Oft schreibt man den Dateinamen in Großbuchstaben, damit die Aufmerksamkeit als erstes auf diese Datei gelenkt wird. 
+
+Wenn du VC-Systeme (Version-Controll-System), wie Github oder Gitlab benutzt (das solltest du auf jeden Fall), dann wird diese README gleich in der Übersichtseite des Projekts angezeigt. Sie ist also, die erste Datei, die du in einem Projekt anschaust. Schreibe deshalb, alle wichtigen Informationen in diese Datei.
 
 Am häufigsten wird die README als Anleitungen zur Installation oder Konfiguration eines Projektes verwendet. Du kannst, aber alles Mögliche in diese Datei schreiben.
 Ein paar Beispiele:
@@ -27,15 +29,22 @@ Ein paar Beispiele:
 - Ideen: Wünsche, Vorstellungen, Visionen für das Projekt
 - Ziele: Was genau denkt das Projekt ab und für wen ist es geeignet
 
+Egal, was du in deine README scheibst, du solltest einer ordentlichen Struktur folgen. Ich zeige dir im Verlauf des Artikels noch, wie so eine README aussehen könnte.
 
-Ich habe bis jetzt immer von Projekten gesprochen. Aus einem bestimmten Grund. READMEs eigenen sich nicht nur für Software und Programmierung, sondern auch für anderen Sachen. 
+Behalte immer im Hinterkopf, dass du eine README für Andere schreibst. Mit Andere meine ich auch dein zukünftiges Ich. Nach einem Jahr hast du schon keine Ahnung mehr, wie dein Projekt genau funktioniert. Jeder der mit deinem Projekt arbeitet, wird froh sein, wenn du die wichtigsten Aspekte deines Projektes beleuchtest.
 
 ## 5 Gründe, warum eine README in kleinen und großen Projekten Sinn macht
 
 ### 1. Du kannst Entscheidungen leicht nachvollziehen
-Programmieren ist keine Einbahnstraße. Als Software Entwickler kümmerst du dich, um Details. Soll heißen: du nimmst ein komplexes Problem, zerlegst es in seine Einzelteile und entwickelst eine Software, die dieses Problem löst. Meisten kannst du dabei schon vorhandene Lösungen verwenden. Beispiel:    
-### 2. Ideen können schnell aufgeschreiben werden
+Programmieren ist keine Einbahnstraße. Als Software Entwickler kümmerst du dich, um Details. Soll heißen: du nimmst ein komplexes Problem, zerlegst es in seine Einzelteile und entwickelst eine Software, die dieses Problem löst. 
 
+Meisten kannst du dabei schon vorhandene Lösungen verwenden. Ein Framework zum Beispiel, nimmt dir viele Programmierschritte ab, da häufig verwendete Features einer Software (Logging, Datenbankmangement, etc.) bereits umgesetzt sind. Du musst diese dann einach verwenden. 
+
+Allerdings kann es während der Entwicklung passieren, dass du vom Standardpfad abweichen musst. Beispiel: Du möchtest eine ...
+### 2. Ideen können schnell aufgeschreiben werden
+Hast du eine gute Idee für ein weiteres Feature? Oder siehst du an einer Stelle in deinem Projekt Verbesserungsbedarf? Kannst du zum Beispiel ein Refactoring machen? 
+
+Schreibe alle diese Dinge in die Readme. Du wirst sie wahrscheinlich schnell wieder vergessen, wenn du sie nicht aufschreibst.
 ### 3. Komplexe Workflows können erklärt werden
 
 ### 4. Du erleichterst anderen den Einstieg in dein Projekt
