@@ -19,7 +19,7 @@
             {{- $currentPage := . -}}
             {{ range sort .Site.Menus.main "Weight" }}
             <a
-                class="text-indigo-900 hover:bg-indigo-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                class="text-indigo-900 dark:text-indigo-500 hover:bg-indigo-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
                 href="{{ .URL | absLangURL }}"
             >{{ .Name }}</a>
             {{ end }}
@@ -29,7 +29,7 @@
     <div class="flex items-center sm:hidden">
         <!-- Mobile menu button-->
         <button
-            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            class="fixed bottom-4 right-4 z-20 p-5 rounded-full hover:text-white bg-gray-700 border-solid border-2 border-white focus:outline-none ring-0"
             aria-expanded="false"
             id="toggle-main-menu"
         >
@@ -84,14 +84,14 @@ Menu open: "block", Menu closed: "hidden"
 -->
 <div
     id="main-menu"
-    class="hidden sm:hidden"
+    class="hidden sm:hidden fixed bottom-0 left-0 right-0 z-10 bg-white dark:bg-gray-700"
 >
-    <div class="px-2 pt-2 pb-3 space-y-1">
+    <div class="px-2 pt-2 pb-3 space-y-1 mr-24">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         {{- $currentPage := . -}}
         {{ range sort .Site.Menus.main "Weight" }}
         <a
-            class="text-indigo-700 hover:bg-indigo-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            class="text-indigo-700 dark:text-indigo-500 hover:bg-indigo-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             href="{{ .URL | absLangURL }}"
         >{{ .Name }}</a>
         {{ end }}

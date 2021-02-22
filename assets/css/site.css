@@ -2,7 +2,6 @@
 
 html {
     font-size: 18px;
-    /* @apply bg-purple-50 leading-relaxed; */
 }
 
 @screen md {
@@ -14,10 +13,12 @@ html {
 p {
     @apply mb-4;   
     @apply text-gray-800;
+    @apply dark:text-gray-200;
 }
 
 a {
     @apply text-indigo-700;
+    @apply dark:text-indigo-500;
 }
 
 #page-footer a  {
@@ -32,6 +33,7 @@ a {
 h2 {
     @apply text-4xl;
     @apply text-indigo-900;
+    @apply dark:text-indigo-500;
     @apply mt-16;
     @apply mb-8;
 }
@@ -39,6 +41,7 @@ h2 {
 h3 {
     @apply text-2xl;
     @apply text-indigo-900;
+    @apply dark:text-indigo-500;
     @apply mt-8;
     @apply mb-4;
 }
@@ -53,6 +56,7 @@ h3 {
 blockquote {
     @apply border-l-2; 
     @apply border-indigo-900; 
+    @apply dark:text-indigo-500;
     @apply p-2;
     @apply mb-4;
 }

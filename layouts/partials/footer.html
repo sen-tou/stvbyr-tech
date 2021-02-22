@@ -1,6 +1,6 @@
 <footer
     id="page-footer"
-    class="bg-purple-900 pt-8"
+    class="bg-indigo-900 pt-8"
 >
     <nav class="m-auto max-w-5xl xl:flex justify-between xl: p-4 text-white text-center xl:text-left">
         <section class="mb-8">
@@ -9,7 +9,7 @@
             <ul
                 id="nav-legal-menu"
                 role="navigation"
-                class="flex items-center justify-center"
+                class="flex items-center justify-center list-none"
             >
                 {{- $currentPage := . -}}
                 {{ range .Site.Menus.footer }}
@@ -26,7 +26,7 @@
             <ul
                 id="nav-meta-menu"
                 role="navigation"
-                class="flex items-center justify-center"
+                class="flex items-center justify-center list-none"
             >
 
                 {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
@@ -44,7 +44,7 @@
             <ul
                 id="nav-connect-menu"
                 role="navigation"
-                class="flex items-center justify-center"
+                class="flex items-center justify-center list-none"
             >
                 <li class="mr-4">
                     <a href="https://twitter.com/csentou" class="flex " alt="Twitter.com @csentou">

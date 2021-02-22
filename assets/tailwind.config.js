@@ -34,6 +34,7 @@ module.exports = {
             ]
         },
     },
+    darkMode: 'media',
     variants: {},
     plugins: [
         require('@tailwindcss/aspect-ratio'),
