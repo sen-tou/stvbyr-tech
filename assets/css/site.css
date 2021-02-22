@@ -1,7 +1,7 @@
 @import "font.css";
 
 html {
-    font-size: 14px;
+    font-size: 18px;
     /* @apply bg-purple-50 leading-relaxed; */
 }
 
@@ -59,4 +59,13 @@ blockquote {
 
 blockquote p {
     @apply m-0;
+}
+
+ul {
+    @apply list-disc;
+}
+
+li {
+    @apply ml-8;
+    @apply mb-4;
 }

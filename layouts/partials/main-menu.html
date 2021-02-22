@@ -2,7 +2,7 @@
     <div class="flex-1 flex sm:items-stretch sm:justify-between">
         <div class="flex-shrink-0 flex items-center">
             <a
-                href="/"
+                href="{{ .Site.Home.Permalink }}"
                 title="homepage"
                 class="flex items-center"
             >
@@ -82,7 +82,10 @@ Mobile menu, toggle classes based on menu state.
 
 Menu open: "block", Menu closed: "hidden"
 -->
-<div id="main-menu" class="hidden sm:hidden">
+<div
+    id="main-menu"
+    class="hidden sm:hidden"
+>
     <div class="px-2 pt-2 pb-3 space-y-1">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         {{- $currentPage := . -}}

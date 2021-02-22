@@ -23,10 +23,6 @@ canonifyURLs: true
 copyright: Steve Beyer
 summaryLength: 30
 
-params:
-    meta:
-        tagline: "Coding and more"
-
 markup:
   goldmark:
     renderer:
