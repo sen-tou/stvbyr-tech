@@ -11,9 +11,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!-- SEO template changes; source: https://digitalonlinetactics.com/post/blogging/hugo-seo-tips/ -->
 <title>
-  {{- .Title | default site.Title }} {{- default " | " site.Params.meta.titleSeparator -}} {{ if not .IsHome }}{{ site.Title }}{{ else }}{{ site.Params.meta.tagline }}{{ end -}}
+  {{- .Title | default site.Title }} 
+  {{ if not .IsHome }}
+    {{- default " | " site.Params.meta.titleSeparator -}} {{ site.Title }}
+  {{ end -}}
 </title>
-<meta name="title" content="{{- .Title | default site.Title }} {{- default " | " site.Params.meta.titleSeparator -}} {{ if not .IsHome }}{{ site.Title }}{{ else }}{{ site.Params.meta.tagline }}{{ end -}}" />
+<meta name="title" content="
+  {{- .Title | default site.Title }} 
+  {{ if not .IsHome }}
+    {{- default " | " site.Params.meta.titleSeparator -}} {{ site.Title }}
+  {{ end -}}
+" />
 <meta name="description" content="
   {{- with .Description }}
   {{- . | safeHTML }}
