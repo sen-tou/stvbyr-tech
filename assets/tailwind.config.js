@@ -18,6 +18,7 @@ module.exports = {
                 'sans-serif',
             ],
             serif: [
+                'PT Serif',
                 'Georgia',
                 'Cambria',
                 'Times New Roman',

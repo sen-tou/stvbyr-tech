@@ -2,12 +2,8 @@
 
 html {
     font-size: 18px;
-}
-
-@screen md {
-    html {
-        font-size: 18px;
-    }
+    @apply leading-relaxed;
+    @apply tracking-wide;
 }
 
 p {
@@ -21,13 +17,8 @@ a {
     @apply dark:text-indigo-500;
 }
 
-#page-footer a  {
-    @apply text-white;
-}
-
-#page-footer svg  {
-    @apply fill-current;
-    @apply w-8;
+h1,h2,h3 {
+    @apply font-serif;
 }
 
 h2 {
@@ -44,13 +35,6 @@ h3 {
     @apply dark:text-indigo-500;
     @apply mt-8;
     @apply mb-4;
-}
-
-.highlight {
-    @apply mb-8;
-}
-.highlight pre {
-    @apply p-4;
 }
 
 blockquote {
@@ -72,4 +56,20 @@ ul {
 li {
     @apply ml-8;
     @apply mb-4;
+}
+
+.highlight {
+    @apply mb-8;
+}
+.highlight pre {
+    @apply p-4;
+}
+
+#page-footer a  {
+    @apply text-white;
+}
+
+#page-footer svg  {
+    @apply fill-current;
+    @apply w-8;
 }
