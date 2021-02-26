@@ -13,7 +13,7 @@
             >
                 {{- $currentPage := . -}}
                 {{ range .Site.Menus.footer }}
-                <li class="mr-4">
+                <li class="mr-4 ml-0">
                     <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
                 </li>
                 {{ end }}
@@ -46,12 +46,12 @@
                 role="navigation"
                 class="flex items-center justify-center list-none"
             >
-                <li class="mr-4">
+                <li class="mr-4 ml-0">
                     <a href="https://twitter.com/csentou" class="flex " alt="Twitter.com @csentou">
                         {{ readFile "static/images/twitter.svg" | safeHTML }}
                     </a>
                 </li>
-                <li class="mr-4">
+                <li class="mr-4 ml-0">
                     <a href="" class="flex" alt="Github.com @sentou-sy">
                         {{ readFile "static/images/github.svg" | safeHTML }}
                     </a>
@@ -65,11 +65,11 @@
             </ul>
         </section>
 
-        {{/*  <section class="mb-8">
-            <label class="block mb-4" for="nav-lang-menu">Translations</label>
+        <section class="mb-8">
+            <label for="nav-connect-menu" class="block mb-4 text-2xl">Translations</label>
 
             {{ partial "lang-menu.html" . }}
-        </section>  */}}
+        </section>
     </nav>
 
 </footer>

@@ -19,20 +19,18 @@ a {
 
 h1,h2,h3 {
     @apply font-serif;
+    @apply text-indigo-900;
+    @apply dark:text-indigo-500;
 }
 
 h2 {
     @apply text-4xl;
-    @apply text-indigo-900;
-    @apply dark:text-indigo-500;
     @apply mt-16;
     @apply mb-8;
 }
 
 h3 {
     @apply text-2xl;
-    @apply text-indigo-900;
-    @apply dark:text-indigo-500;
     @apply mt-8;
     @apply mb-4;
 }
