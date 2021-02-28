@@ -4,9 +4,9 @@
   "description": "Yerstem website",
   "main": "index.js",
   "scripts": {
-    "dev": "hugo server -D --disableFastRender --bind 192.168.178.42 --baseURL http://192.168.178.42",
+    "dev": "hugo server -D --disableFastRender",
     "build": "cross-env NODE_ENV=production hugo --verbose --gc --minify",
-    "build:example": "cross-env NODE_ENV=production hugo --verbose --gc --minify -s exampleSite --themesDir=../..",
+    "build:example": "cross-env NODE_ENV=production hugo --verbose --gc --minify --baseURL http://yerstem.project",
     "start": "hugo --gc"
   },
   "author": "Steve Beyer",

@@ -8,7 +8,6 @@
 
             <ul
                 id="nav-legal-menu"
-                role="navigation"
                 class="flex items-center justify-center list-none"
             >
                 {{- $currentPage := . -}}
@@ -25,7 +24,6 @@
 
             <ul
                 id="nav-meta-menu"
-                role="navigation"
                 class="flex items-center justify-center list-none"
             >
 
@@ -43,16 +41,15 @@
 
             <ul
                 id="nav-connect-menu"
-                role="navigation"
                 class="flex items-center justify-center list-none"
             >
                 <li class="mr-4 ml-0">
-                    <a href="https://twitter.com/csentou" class="flex " alt="Twitter.com @csentou">
+                    <a role="button" aria-label="Link to twitter.com profile @csentou" href="https://twitter.com/csentou" class="flex">
                         {{ readFile "static/images/twitter.svg" | safeHTML }}
                     </a>
                 </li>
                 <li class="mr-4 ml-0">
-                    <a href="" class="flex" alt="Github.com @sentou-sy">
+                    <a role="button" aria-label="Link to github.com profile sentou-sy" href="https://github.com/sentou-sy" class="flex">
                         {{ readFile "static/images/github.svg" | safeHTML }}
                     </a>
                 </li>
