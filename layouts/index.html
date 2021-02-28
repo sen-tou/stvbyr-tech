@@ -2,11 +2,11 @@
 
 {{ partial "content-header.html" . }}
 
-<div class="m-auto max-w-5xl p-4 md:p-4">
+<div class="m-auto max-w-5xl ">
     <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
     {{.Content}}
 
-    <h2>Recent Blogposts</h2>
+    <h2 class="text-4xl my-16">Recent Blogposts</h2>
     {{ $items := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{ .Scratch.Set "items" $items }}
     {{ partial "article-list.html" . }}
