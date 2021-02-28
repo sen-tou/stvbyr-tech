@@ -2,27 +2,13 @@
 
 {{ partial "content-header.html" . }}
 
-<div class="m-auto max-w-5xl ">
+<div class="m-auto max-w-5xl px-4">
     <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
     {{.Content}}
 
-    <h2 class="text-4xl my-16">Recent Blogposts</h2>
+    <h2 class="text-4xl my-16">{{ i18n "recent-blogposts" }}</h2>
     {{ $items := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{ .Scratch.Set "items" $items }}
     {{ partial "article-list.html" . }}
-
-    <div class="grid md:grid-cols-2">
-        <div class="order-2">
-            <h2>Hi, I'm Steve.</h2>
-
-            <p>I'm a full stack software developer from germany. I like a variety of things such as programming, web design and always crave to learn more. On this site I want to write about my learnings including but not limited to web developement.</p>
-        
-            <a class="inline-block bg-indigo-700 text-white px-3 py-2 rounded-md" href="{{ ref . "about" }}">Read More</a>
-        </div>
-        <div class="flex justify-center items-center order-1">
-            {{ $src := resources.GetMatch "images/profile_home.JPG" }}
-            <img class="rounded-full w-96" src="{{ $src.Permalink }}" loading="lazy" />
-        </div>
-    </div>
 </div>
 {{ end }}
