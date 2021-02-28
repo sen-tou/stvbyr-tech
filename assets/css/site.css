@@ -14,13 +14,13 @@ p {
 
 a {
     @apply text-indigo-700;
-    @apply dark:text-indigo-500;
+    @apply dark:text-indigo-300;
 }
 
 h1,h2,h3 {
     @apply font-serif;
     @apply text-indigo-900;
-    @apply dark:text-indigo-500;
+    @apply dark:text-indigo-300;
 }
 
 h2 {
@@ -38,7 +38,7 @@ h3 {
 blockquote {
     @apply border-l-2; 
     @apply border-indigo-900; 
-    @apply dark:text-indigo-500;
+    @apply dark:text-indigo-300;
     @apply p-2;
     @apply mb-4;
 }
