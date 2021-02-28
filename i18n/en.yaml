@@ -1,6 +1,6 @@
 readingTime:
     one: "1 min read"
-    other: "{{ .RadingTime }} min read"
+    other: "{{ .ReadingTime }} min read"
 read-more:
     other: Read more
 legal:
