@@ -21,7 +21,7 @@ enableGitInfo: true
 showReadingTime: true
 canonifyURLs: true
 copyright: Steve Beyer
-summaryLength: 30
+summaryLength: 20
 
 markup:
   goldmark:
