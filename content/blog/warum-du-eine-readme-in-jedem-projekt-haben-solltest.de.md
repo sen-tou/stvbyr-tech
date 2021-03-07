@@ -12,24 +12,20 @@ categories:
 
 ## Was ist eine README?
 
-Ganz einfach gesagt: eine README ist eine Datei, die Informationen zu einem Projekt zur Verfügung stellt. Wie genau so eine README aussieht erfährst du in diesem Artikel. 
+Ganz einfach gesagt: eine README ist eine Datei, die Informationen zu einem Projekt zur Verfügung stellt. Auf deutsch bedeutet "read me", soviel wie "les mich". Das animiert schonmal dazu diese Datei zu lesen. Oft schreibt man den Dateinamen in Großbuchstaben, damit die Aufmerksamkeit als erstes auf diese Datei gelenkt wird. 
 
-Auf deutsch bedeutet "read me", soviel wie "les mich". Das animiert schonmal dazu diese Datei zu lesen. Oft schreibt man den Dateinamen in Großbuchstaben, damit die Aufmerksamkeit als erstes auf diese Datei gelenkt wird. 
+Wenn du  Github oder Gitlab benutzt (das solltest du auf jeden Fall), dann wird diese README gleich in der Übersichtseite des Projekts angezeigt. Sie ist also, die erste Datei, die du in einem Projekt anschaust. Weil sie der erste Anlaufpunkt für dein Projekt ist, solltest du alles wichtige hier reinschreiben. Fasse ich dich aber, wenn möglich, kurz. Erkläre nur, die wichtigsten Dinge und las allgemeine Sachen weg. Zum Beispiel solltest du nicht erklären, wie bestimmte Teile eines Frameworks, das du benutzt, funktionieren, sondern nur erklären, welche Besonderheiten diese oder jene Funktion hat.
 
-Wenn du VC-Systeme (Version-Controll-System), wie Github oder Gitlab benutzt (das solltest du auf jeden Fall), dann wird diese README gleich in der Übersichtseite des Projekts angezeigt. Sie ist also, die erste Datei, die du in einem Projekt anschaust. Schreibe deshalb, alle wichtigen Informationen in diese Datei.
-
-Am häufigsten wird die README als Anleitungen zur Installation oder Konfiguration eines Projektes verwendet. Du kannst, aber alles Mögliche in diese Datei schreiben.
-Ein paar Beispiele:
-- Workflows: Wie genau interagieren, die verschiedenen Teile deines Projektes miteinander
-- Externe : Mit welches externen Tools interagiert dein Projekt 
-- API: Wie sieht die Schnittstelle zu deinem Projekt aus. Wie kommuniziert es nach außen.
+Am häufigsten wird die README als Anleitungen zur Installation oder Konfiguration eines Projektes verwendet. Du kannst, aber alles Mögliche in diese Datei schreiben. 
+Hier mal ein paar Beispiele:
+- Workflows: Wie genau interagieren, die verschiedenen Teile deines Projektes miteinander. Damit ersparst du Anderen, stundenlange arbeit, denn sie müssen sich nicht durch tausende Zeilen an Quellcode wühlen, um die Funktionsweise deines Projektes zu verstehen.
+- Externe Bibliotheken/Tools: Mit welches externen Tools interagiert dein Projekt? Hier kommt es vor allem darauf an, die Schnittstellen genau zu beschreiben. Was für Daten werden übermittelt? Wie oft? In welchen Formaten?
+- API: Wie sieht die Schnittstelle zu deinem Projekt aus? Wie kommunizieren andere Programme mit meinem Projekt? Hier spielen auch sicherheitsrelevante Aspekte mit. 
 - FAQ: Beantworten von häufigen Fragen im Bezug auf dein Projekt
-- Lizenzen: Unter welchen Bedingungen dürfen andere dein Projekt nutzen
+- Lizenzen: Unter welchen Bedingungen dürfen andere dein Projekt nutzen. Das ist meistens nur für öffentliche Projekte von Interesse, aber du solltest dir genau überlegen, was 
 - Todos: Alle offenen Punkte, die noch zu erledigen sind
 - Ideen: Wünsche, Vorstellungen, Visionen für das Projekt
 - Ziele: Was genau denkt das Projekt ab und für wen ist es geeignet
-
-Egal, was du in deine README scheibst, du solltest einer ordentlichen Struktur folgen. Ich zeige dir im Verlauf des Artikels noch, wie so eine README aussehen könnte.
 
 Behalte immer im Hinterkopf, dass du eine README für Andere schreibst. Mit Andere meine ich auch dein zukünftiges Ich. Nach einem Jahr hast du schon keine Ahnung mehr, wie dein Projekt genau funktioniert. Jeder der mit deinem Projekt arbeitet, wird froh sein, wenn du die wichtigsten Aspekte deines Projektes beleuchtest.
 
@@ -46,6 +42,7 @@ Hast du eine gute Idee für ein weiteres Feature? Oder siehst du an einer Stelle
 
 Schreibe alle diese Dinge in die Readme. Du wirst sie wahrscheinlich schnell wieder vergessen, wenn du sie nicht aufschreibst.
 ### 3. Komplexe Workflows können erklärt werden
+Nehmen wir ein einfaches Beispiel. Du hast ein Kontaktformular auf einer Website. Der Kunde füllt, das Formular aus und erwartet irgendwann eine E-Mail vom Supportteam zurück. Allerdings gibt es auch noch eine Newsletterfunktion. Und je nachdem, welche Selectbox, der Kunde auswält erscheinen verschiedene weitere Felder. All das wird irgendwo hingeschickt und verarbeitet. Und dann gibt es auch noch verschiedene Postfächer, an die so eine Anfrage geht und... Du sieht schon, ich hätte mir jetzt noch genügend weitere "Features" für so ein Kontaktformular ausdenken können. Je komplexer dein Projekt wird, desto mehr Teilnehmer, Bedingungen und Fälle gibt es zu berücksichtigen. Stellt dir vor du kommst in ein neues Team und wirst mit so einem Projekt konfrontiert. Es ist, die Hölle. Du hast nun zwei Möglichkeiten: dich wie ein Maulwurf durch den Code wühlen oder kündigen. Mit einer Readme hast du innerhalb kurzer Zeit einen Überblick über das Projekt.
 
 ### 4. Du erleichterst anderen den Einstieg in dein Projekt
 Es gibt nichts schlimmeres für einen Software Entwickler, als in ein neues Team zu kommen und eine Codebase vorzufinden, die keinerlei Dokumentation besitzt. Man schaut sprichwörtlich, wie das Schwein ins Uhrwerk. 
