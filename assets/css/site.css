@@ -1,5 +1,3 @@
-@import "font.css";
-
 html {
     font-size: 18px;
     @apply leading-relaxed;
@@ -7,7 +5,7 @@ html {
 }
 
 p {
-    @apply mb-4;   
+    @apply mb-4;
     @apply text-gray-800;
     @apply dark:text-gray-200;
 }
@@ -17,7 +15,9 @@ a {
     @apply dark:text-indigo-300;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     @apply font-serif;
     @apply text-indigo-900;
     @apply dark:text-indigo-300;
@@ -36,8 +36,8 @@ h3 {
 }
 
 blockquote {
-    @apply border-l-2; 
-    @apply border-indigo-900; 
+    @apply border-l-2;
+    @apply border-indigo-900;
     @apply dark:text-indigo-300;
     @apply p-2;
     @apply mb-4;
@@ -59,15 +59,28 @@ li {
 .highlight {
     @apply mb-8;
 }
+
 .highlight pre {
     @apply p-4;
 }
 
-#page-footer a  {
+#page-footer a {
     @apply text-white;
 }
 
-#page-footer svg  {
+#page-footer svg {
     @apply fill-current;
     @apply w-8;
+}
+
+.hero {
+    height: calc(100vh - 6rem + 0.5rem);
+    /* 100 view height - heigth of menu - half of its padding */
+}
+
+@screen lg {
+    .hero {
+        height: calc(100vh - 8rem + 0.5rem);
+        /* 100 view height - heigth of menu - half of its padding */
+    }
 }
