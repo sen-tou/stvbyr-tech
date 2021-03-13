@@ -1,9 +1,7 @@
-const themeDir = __dirname + '/../';
-
 module.exports = {
     purge: {
         content: [
-            themeDir + 'layouts/**/*.html',
+            __dirname + '/../layouts/**/*.html',
         ],
     },
     theme: {
