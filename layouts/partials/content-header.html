@@ -8,7 +8,7 @@
         <span class="text-white">{{.}}</span>
         {{ end }}
         {{ with .Params.date }}
-        <time class="text-white">{{partial "date.html" (dict "date" . "language" $.Page.Language "monate" $.Site.Data.monate)}}</time>
+        {{partial "date.html" (dict "date" . "language" $.Page.Language "monate" $.Site.Data.monate) }}
         {{ end }}
     </div>
 </header>

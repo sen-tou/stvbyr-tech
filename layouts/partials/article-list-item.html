@@ -25,7 +25,7 @@
         </section>
         <footer>
             <p class="text-grey-300 mb-0">
-                <time>{{partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate)}}</time>
+                {{ partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate) }}
                 ·
                 {{ i18n "readingTime" . }}
             </p>
