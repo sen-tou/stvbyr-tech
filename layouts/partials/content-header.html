@@ -1,5 +1,4 @@
-<header class="flex justify-center items-center mb-16 bg-indigo-900 bg-cover bg-center relative 
-    aspect-w-3 aspect-h-4 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-3 lg:aspect-h-1">
+<header class="hero flex justify-center items-center mb-16 bg-indigo-900 bg-cover bg-center relative ">
 
     {{ partial "img.html" . }}
 
@@ -9,7 +8,7 @@
         <span class="text-white">{{.}}</span>
         {{ end }}
         {{ with .Params.date }}
-        <span class="text-white">{{.}}</span>
+        {{partial "date.html" (dict "date" . "language" $.Page.Language "monate" $.Site.Data.monate) }}
         {{ end }}
     </div>
 </header>

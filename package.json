@@ -1,12 +1,12 @@
 {
-  "name": "yerstem",
+  "name": "Steve Beyer",
   "version": "0.0.1",
-  "description": "Yerstem website",
+  "description": "Steve Beyer Website",
   "main": "index.js",
   "scripts": {
     "dev": "hugo server -D --disableFastRender",
     "build": "cross-env NODE_ENV=production hugo --verbose --gc --minify",
-    "build:example": "cross-env NODE_ENV=production hugo --verbose --gc --minify --baseURL http://yerstem.project",
+    "build:example": "cross-env NODE_ENV=production hugo --verbose --gc --minify --baseURL http://steve-beyer.project",
     "start": "hugo --gc"
   },
   "author": "Steve Beyer",
@@ -18,7 +18,7 @@
     "in-viewport": "^3.6.0",
     "postcss": "^8.2.1",
     "postcss-cli": "^8.3.0",
-    "postcss-import": "^13.0.0",
+    "postcss-import": "^14.0.0",
     "tailwindcss": "^2.0.2"
   },
   "browserslist": [

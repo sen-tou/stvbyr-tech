@@ -10,7 +10,7 @@
 
     {{ $items := .Pages.ByPublishDate.Reverse }}
     {{ .Scratch.Set "items" $items }}
-    {{ partial "article-list.html" . }}
+    {{ partial "note-list.html" . }}
 </div>
 
 {{ end }}
