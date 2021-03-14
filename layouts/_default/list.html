@@ -4,6 +4,10 @@
 
     <h1 class="text-4xl my-16">{{ .Page.Title }}</h1>
 
+    {{ with .Content }}
+        {{ . }}
+    {{ end }}
+
     {{ $items := .Pages.ByPublishDate.Reverse }}
     {{ .Scratch.Set "items" $items }}
     {{ partial "article-list.html" . }}
