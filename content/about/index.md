@@ -5,6 +5,8 @@ menu:
     main:
         weight: 100
 translationKey: "about"
+type: "about"
+layout: "index"
 ---
 
 ## This is my About page
