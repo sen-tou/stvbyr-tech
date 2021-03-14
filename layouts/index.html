@@ -7,7 +7,7 @@
     {{.Content}}
 
     <h2 class="text-4xl my-16">{{ i18n "recent-blogposts" }}</h2>
-    {{ $items := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ $items := where site.RegularPages "Type" "in" "blog" }}
     {{ .Scratch.Set "items" $items }}
     {{ partial "article-list.html" . }}
 </div>
