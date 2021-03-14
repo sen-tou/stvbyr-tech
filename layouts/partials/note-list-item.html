@@ -1,0 +1,17 @@
+<li class="mb-8 ml-0">
+    <div class="bg-white dark:bg-gray-900 rounded-xl p-2 px-4 shadow-xl lg:mt-0">
+        <section>
+            <h2 class="text-lg my-0 lg:text-2xl">
+                <a
+                    class="block"
+                    href="{{ .Permalink }}"
+                >
+                    {{ .Title | markdownify }}
+                    <small class="text-grey-300 mb-0">
+                        ({{ partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate) }})
+                    </small>
+                </a>
+            </h2>
+        </section>
+    </div>
+</li>
