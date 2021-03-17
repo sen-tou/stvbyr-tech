@@ -1,12 +1,14 @@
 {
-  "name": "Steve Beyer",
+  "name": "steve-beyer-website",
   "version": "0.0.1",
   "description": "Steve Beyer Website",
   "main": "index.js",
   "scripts": {
-    "dev": "hugo server -D --disableFastRender",
-    "build": "cross-env NODE_ENV=production hugo --verbose --gc --minify",
-    "build:example": "cross-env NODE_ENV=production hugo --verbose --gc --minify --baseURL http://steve-beyer.project",
+    "dev": "cross-env NODE_ENV=development hugo server -D --disableFastRender",
+    "build": "cross-env NODE_ENV=production hugo --gc --minify",
+    "build:preview": "cross-env NODE_ENV=production hugo --buildFuture --gc --minify -b $DEPLOY_PRIME_URL",
+    "build:branch": "cross-env NODE_ENV=production hugo --gc --minify -b $DEPLOY_PRIME_URL",
+    "build:example": "cross-env NODE_ENV=production hugo --gc --minify --baseURL http://steve-beyer.local",
     "start": "hugo --gc"
   },
   "author": "Steve Beyer",
