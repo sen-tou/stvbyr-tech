@@ -24,7 +24,7 @@ Ganz einfach gesagt: eine README ist eine Datei, die Informationen zu einem Proj
 
 Wenn du Github oder Gitlab benutzt (das solltest du auf jeden Fall), dann wird diese README gleich in der Übersichtseite des Projekts angezeigt. Sie ist also, die erste Datei, die du in einem Projekt anschaust. 
 
-Weil sie der erste Anlaufpunkt für dein Projekt ist, solltest du alles wichtige hier reinschreiben. Fasse ich dich aber, wenn möglich, kurz. Erkläre nur, die wichtigsten Dinge und las allgemeine Sachen weg. 
+Weil sie der erste Anlaufpunkt für dein Projekt ist, solltest du alles wichtige hier reinschreiben. Fasse dich aber, wenn möglich kurz. Erkläre nur, die wichtigsten Dinge und las allgemeine Sachen weg. 
 
 Du solltest nicht erklären, wie bestimmte Teile eines Frameworks, das du benutzt, funktionieren, sondern nur erklären, welche Besonderheiten diese oder jene Funktion hat.
 
@@ -53,12 +53,16 @@ Als Software Entwickler kümmerst du dich, um Details. Soll heißen: du nimmst e
 
 Meistens kannst du dabei schon vorhandene Lösungen verwenden. Ein Framework zum Beispiel, nimmt dir viele Programmierschritte ab, da häufig verwendete Features einer Software (Logging, Datenbankmanagement, etc.) bereits umgesetzt sind. Du musst diese dann einach verwenden. Diese sind ebenfalls durch deren Maintainer dokumentiert.
 
-Allerdings kann es während der Entwicklung passieren, dass du vom Standardpfad abweichen musst oder du etwas gänzlich Neues entwickeln musst.
+Meistens wirst du aber etwas neues entwickeln müssen, welches deinen Anforderungen oder des Kunden entspricht. Überlege dir, was wichtig ist und schreibe alles auf. Exportierst du zum Beispiel Daten in eine CSV-Dateien, könntest du kurz den Aufbau beschreiben. Also kurz aufzeigen, welche Felder es gibt, unter welchen Bedingungen Sie gefüllt werden und wo genau die Informationen herkommmen.
+
+Allerdings kann es während der Entwicklung passieren, dass du vom Standardpfad abweichen musst. Ich musste zum Beispiel, das Formularmodul von Symfony stark umbiegen, da die Anforderungen vom Kunden mit den Standardtools nicht umsetzbar waren. Zugegeben, aus heutiger Sicht hätte ich vielleicht auf das Modul verzichten sollen und gleich eine eigene Implementierung umsetzen sollen. Das macht aber nichts, den aus diesem Projekt konnte ich viele Learnings mitnehmen. 
+
+Um zum Thema zurückzukommen: ich habe alle Workflows aufgeschrieben, um meinen Kollegen die Arbeit so einfach, wie möglich zu machen. Am Ende sparst du dir auch wertvolle Zeit. Jede mögliche Frage, die du in deiner README beantwortest musst du nicht in einem persönlichen Gespräch oder per E-Mail beantworten.
 
 ### 2. Ideen können schnell aufgeschrieben werden
 Hast du eine gute Idee für ein weiteres Feature? Oder siehst du an einer Stelle in deinem Projekt Verbesserungsbedarf? Kannst du zum Beispiel ein Refactoring machen? 
 
-Schreibe alle diese Dinge in die Readme. Du wirst sie wahrscheinlich schnell wieder vergessen, wenn du sie nicht aufschreibst.
+Schreibe alle diese Dinge in die Readme. Du wirst sie wahrscheinlich schnell wieder vergessen, wenn du sie nicht aufschreibst. 
 ### 3. Komplexe Workflows können erklärt werden
 Nehmen wir ein einfaches Beispiel. Du hast ein Kontaktformular auf einer Website. Der Kunde füllt, das Formular aus und erwartet irgendwann eine E-Mail vom Supportteam zurück. Allerdings gibt es auch noch eine Newsletterfunktion. Und je nachdem, welche Selectbox, der Kunde auswählt erscheinen verschiedene weitere Felder. All das wird irgendwo hingeschickt und verarbeitet. Und dann gibt es auch noch verschiedene Postfächer, an die so eine Anfrage geht und... 
 
