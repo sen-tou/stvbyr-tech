@@ -38,11 +38,11 @@ layout: "about"
 
 Each content file/post gets a default content type assigned. Usually this is the name of the subfolder in `content` where the post lives in. So for example a `content/blog/php.md` would get the type `blog`.
 
-There is a special case. All files directly under `content` are of type `page` and also all index files (but *not* the ones with underscore) in subfolders are of type `page` as well. Keep that in mind when specifing a layout.
+There is a special case though. All files directly under `content` are of type `page` and also all index files (but *not* the ones with underscore) in subfolders are of type `page` as well. Keep that in mind when specifing a layout.
 
 You can also specify the content type in frontmatter. This simply tells hugo which layouts subfolder it should use to load the templates from. For example `type: "notes"` would make hugo search in the `layouts/notes` folder.
 
-Combining both `type` and `layout` you can precisely define what template to use.
+Combining both `type` and `layout` you can precisely define what template to use. The template path for this example is: `layouts/special/super.html`.
 
 ```markdown
 ---
