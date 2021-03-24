@@ -1,7 +1,6 @@
 ---
 title: "Warum du eine README in jedem Projekt haben solltest"
 date: 2021-02-09T17:47:20+01:00
-draft: false
 translationKey: "warum-du-in-jedem-projekt-eine-readme-haben-solltest"
 image: "images/readme.jpeg"
 author: Steve Beyer
@@ -13,7 +12,9 @@ categories:
 
 Ich kenne keinen Entwickler, der gerne Dokumentation schreibt. Dafür kenne ich Genug, die den Teufel an die Wand malen, sobald keine Vorhanden ist. Zurecht.
 
-Wenn du exzellente Software schreiben möchtest, kommst du um eine gute Dokumentation nicht herum. Dein Code kann noch so gut durchdacht und professionell geschrieben sein, ohne Dokumentation ist das aber leider nutzlos. Was ich hier nicht behandeln möchte sind Kommentare. Das ist sowieso immer ein Diskussionsthema, ob überhaupt, wie viel und wann Kommentare benutzt werden sollten. 
+Wenn du exzellente Software schreiben möchtest, kommst du um eine gute Dokumentation nicht herum. Dein Code kann noch so gut durchdacht und professionell geschrieben sein, ohne Dokumentation ist das aber leider nutzlos. 
+
+Was ich hier nicht behandeln möchte sind Kommentare. Das ist sowieso immer ein Diskussionsthema, ob überhaupt, wie viel und wann Kommentare benutzt werden sollten. 
 
 README to the rescue! So schwer ist das aber gar nicht. Alles was du brauchst ist eine einfache Textdatei. Bevorzugt im Markdownformat. Und zusätzlich noch ein bisschen Struktur.
 
@@ -111,4 +112,10 @@ Dieser Bereich kann sehr viel Zeit einsparen. Je mehr Fragen du beantwortest, de
 ```
 ## Fazit
 
-Probiere es einfach aus. Du wirst die Vorteile in deinen Projekten sehen.
+In diesem Artikel habe ich nur an der Oberfläche gekratzt. Es gibt viele Möglichkeiten eine README zu schreiben. 
+
+Bilder und Videos sind auch in Markdown möglich. Gerade Overflächen und UI sind Bilder und Videos von Vorteil. 
+
+Auf Github kann man auch Dateien innerhalb des Dokuments direkt verlinken. Das funktioniert dann so ähnlich wie Wikipedia.
+
+Du siehst, man kann viele mit Markdown machen. Probiere es einfach aus. Du wirst die Vorteile in deinen Projekten sehen.
