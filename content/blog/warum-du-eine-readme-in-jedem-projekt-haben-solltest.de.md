@@ -13,7 +13,7 @@ categories:
 
 Ich kenne keinen Entwickler, der gerne Dokumentation schreibt. Dafür kenne ich Genug, die den Teufel an die Wand malen, sobald keine Vorhanden ist. Zurecht.
 
-Wenn du exzellente Software schreiben möchtest, kommst du um eine gute Dokumentation nicht herum. Dein Code kann noch so gut durchdacht und professionell geschrieben sein, ohne Dokumentation ist das aber leider nutzlos.
+Wenn du exzellente Software schreiben möchtest, kommst du um eine gute Dokumentation nicht herum. Dein Code kann noch so gut durchdacht und professionell geschrieben sein, ohne Dokumentation ist das aber leider nutzlos. Was ich hier nicht behandeln möchte sind Kommentare. Das ist sowieso immer ein Diskussionsthema, ob überhaupt, wie viel und wann Kommentare benutzt werden sollten. 
 
 README to the rescue! So schwer ist das aber gar nicht. Alles was du brauchst ist eine einfache Textdatei. Bevorzugt im Markdownformat. Und zusätzlich noch ein bisschen Struktur.
 
@@ -24,28 +24,28 @@ Ganz einfach gesagt: eine README ist eine Datei, die Informationen zu einem Proj
 
 Wenn du Github oder Gitlab benutzt (das solltest du auf jeden Fall), dann wird diese README gleich in der Übersichtseite des Projekts angezeigt. Sie ist also, die erste Datei, die du in einem Projekt anschaust. 
 
-Weil sie der erste Anlaufpunkt für dein Projekt ist, solltest du alles wichtige hier reinschreiben. Fasse dich aber, wenn möglich kurz. Erkläre nur, die wichtigsten Dinge und las allgemeine Sachen weg. 
+Weil sie der erste Anlaufpunkt für dein Projekt ist, solltest du alles wichtige hier reinschreiben. Fasse dich aber, wenn möglich kurz. Erkläre nur, die wichtigsten Dinge und las allgemeine Sachen weg. Eine README ist kein Roman.
 
 Du solltest nicht erklären, wie bestimmte Teile eines Frameworks, das du benutzt, funktionieren, sondern nur erklären, welche Besonderheiten diese oder jene Funktion hat.
 
 Nenne auch andere Ressourcen, die dein Projekt betreffen. Hast du eine große API, kann es Sinn machen eine externe Dokumentation zu verwenden. Verlinke diese einfach unter dem Punk "API Dokumentation".
 
-Bei einer Bibliothek macht es Sinn Beispielszenarien durchzuspielen. Konkrete kleine Codeschnippsel, die anderen Entwicklern helfen können deine Bibliothek zu verweden.
+Bei einer Bibliothek macht es Sinn Beispielszenarien durchzuspielen. Konkrete kleine Codeschnippsel, die Anderen Entwicklern helfen können deine Bibliothek zu verweden.
 
 Am häufigsten wird die README als Anleitungen zur Installation oder Konfiguration eines Projektes verwendet. Du kannst, aber alles Mögliche in diese Datei schreiben. 
 Hier mal ein paar Beispiele:
-- Workflows: Wie genau interagieren, die verschiedenen Teile deines Projektes miteinander. Damit ersparst du Anderen, stundenlange arbeit, denn sie müssen sich nicht durch tausende Zeilen an Quellcode wühlen, um die Funktionsweise deines Projektes zu verstehen.
+- Workflows: Wie genau interagieren, die verschiedenen Teile deines Projektes miteinander? Damit ersparst du Anderen, stundenlange Arbeit, denn sie müssen sich nicht durch tausende Zeilen an Quellcode wühlen, um die Funktionsweise deines Projektes zu verstehen.
 - Externe Bibliotheken/Tools: Mit welches externen Tools interagiert dein Projekt? Hier kommt es vor allem darauf an, die Schnittstellen genau zu beschreiben. Was für Daten werden übermittelt? Wie oft? In welchen Formaten?
-- API: Wie sieht die Schnittstelle zu deinem Projekt aus? Wie kommunizieren andere Programme mit meinem Projekt? Hier spielen auch sicherheitsrelevante Aspekte mit. 
-- FAQ: Beantworten von häufigen Fragen im Bezug auf dein Projekt
-- Lizenzen: Unter welchen Bedingungen dürfen andere dein Projekt nutzen. Das ist meistens nur für öffentliche Projekte von Interesse, aber du solltest dir genau überlegen, was 
-- Todos: Alle offenen Punkte, die noch zu erledigen sind
-- Ideen: Wünsche, Vorstellungen, Visionen für das Projekt
-- Ziele: Was genau denkt das Projekt ab und für wen ist es geeignet
+- API: Wie sieht die Schnittstelle zu deinem Projekt aus? Wie kommunizieren andere Programme mit meinem Projekt? Kostet das was? Hier spielen auch sicherheitsrelevante Aspekte mit, zum Beispiel wie authentifizieren sich andere Dienste mit deiner API? 
+- FAQ: Gibt es häufige Fragen im Bezug auf dein Projekt?
+- Lizenzen: Unter welchen Bedingungen dürfen andere dein Projekt nutzen? Das ist meistens nur für öffentliche Projekte von Interesse, aber du solltest dir genau überlegen, was 
+- Todos: Was muss noch erledigt werden?
+- Ideen: Welche Wünsche, Vorstellungen und Visionen hast du für das Projekt?
+- Ziele: Was genau deckt das Projekt ab und für wen ist es geeignet?
 
 Behalte immer im Hinterkopf, dass du eine README für Andere schreibst. Mit Andere meine ich auch dein zukünftiges Ich. Nach einem Jahr hast du schon keine Ahnung mehr, wie dein Projekt genau funktioniert. Jeder der mit deinem Projekt arbeitet, wird froh sein, wenn du die wichtigsten Aspekte deines Projektes beleuchtest.
 
-## 5 Gründe, warum eine README in kleinen und großen Projekten Sinn macht
+## 4 Gründe, warum eine README in kleinen und großen Projekten Sinn macht
 
 ### 1. Du kannst Entscheidungen leicht nachvollziehen
 
@@ -63,29 +63,31 @@ Um zum Thema zurückzukommen: ich habe alle Workflows aufgeschrieben, um meinen 
 Hast du eine gute Idee für ein weiteres Feature? Oder siehst du an einer Stelle in deinem Projekt Verbesserungsbedarf? Kannst du zum Beispiel ein Refactoring machen? 
 
 Schreibe alle diese Dinge in die Readme. Du wirst sie wahrscheinlich schnell wieder vergessen, wenn du sie nicht aufschreibst. 
+
+Schreibst du deine Ideen auf machst du es auch Anderen einfacher mit deinem Projekt zu interagieren. Diese Ideen können sie sich nämlich nehmen und in einem separaten Branch umsetzen und einen Prototyp entwickeln. 
+
 ### 3. Komplexe Workflows können erklärt werden
 Nehmen wir ein einfaches Beispiel. Du hast ein Kontaktformular auf einer Website. Der Kunde füllt, das Formular aus und erwartet irgendwann eine E-Mail vom Supportteam zurück. Allerdings gibt es auch noch eine Newsletterfunktion. Und je nachdem, welche Selectbox, der Kunde auswählt erscheinen verschiedene weitere Felder. All das wird irgendwo hingeschickt und verarbeitet. Und dann gibt es auch noch verschiedene Postfächer, an die so eine Anfrage geht und... 
 
 Du sieht schon, ich hätte mir jetzt noch genügend weitere "Features" für so ein Kontaktformular ausdenken können. Je komplexer dein Projekt wird, desto mehr Teilnehmer, Bedingungen und Fälle gibt es zu berücksichtigen. 
 
-Stell dir vor du kommst in ein neues Team und wirst mit so einem Projekt konfrontiert. Es ist, die Hölle. Mit einer Readme hast du innerhalb kurzer Zeit einen Überblick über das Projekt und kannst einfach an den aktuellen Stand anknüpfen.
+Stell dir vor du kommst in ein neues Team und wirst mit so einem Projekt konfrontiert, das keinlei Dokumentation hat. 
 
-### 4. Du erleichterst anderen den Einstieg in dein Projekt
+Es ist, die Hölle. 
 
-Es gibt nichts schlimmeres für einen Software Entwickler, als in ein neues Team zu kommen und eine Codebase vorzufinden, die keinerlei Dokumentation besitzt. Man schaut sprichwörtlich, wie das Schwein ins Uhrwerk. 
+Mit einer Readme hast du innerhalb kurzer Zeit einen Überblick über das Projekt und kannst einfach an den aktuellen Stand anknüpfen.
 
+### 4. Du kannst Markdown verwenden
 
-### 5. Du kannst Markdown verwenden
+Markdown ist eine coole und nützliche Sprache. Sie ist vor allem eines: *einfach*. Du brauchst nur deinen Texteditor. Da niemand gerne Dokumentation schreibt, sollte der Prozess so einfach, wie möglich und nicht unnötig kompliziert sein.
 
-Markdown ist eine coole und vor allem nützliche Sprache. Sie ist eines: einfach. Du brauchst nur deinen Texteditor. Da niemand gerne Dokumentation schreibt, sollte der Prozess so einfach, wie möglich und nicht unnötig kompliziert sein.
-
-Die Features von Markdown umfassen zum Beispiel Listen, Tabellen, Links und vieles mehr. Eben fast alles, das HTML auch kann, nur ohne das nervige Markup. Das ist übrigens auch der Grund, warum immer mehr CMS-Systeme, wie zum Beispiel hugo auf Markdown setzen.
+Die Features von Markdown umfassen zum Beispiel Listen, Tabellen, Links und vieles mehr. Eben fast alles, das HTML auch kann, nur ohne das nervige Markup. Das ist übrigens auch der Grund, warum immer mehr CMS-Systeme, wie zum Beispiel Hugo auf Markdown setzen.
 
 Bonus: Markdown lässt sich ganz einfach in HTML und sogar PDFs umwandeln. Somit kann ich meine ganze Dokumentation ganz einfach als PDF exportieren und teilen.
 
 ## Wie sieht so eine README aus?
 
-Wie ich schon erwähnt habe, gibt es nicht DIE eine README. Jedes Projekt ist unterscheidlich und hat verschiedene Anforderungen. Ich habe dennoch versucht, ein paar allgemeine Gliederungspunkte herauszusuchen, die ich auch in meinen Projekten verwendet habe.
+Wie ich schon erwähnt habe, gibt es nicht *DIE* eine README. Jedes Projekt ist unterscheidlich und hat verschiedene Anforderungen. Ich habe dennoch versucht, ein paar allgemeine Gliederungspunkte herauszusuchen, die ich auch in meinen Projekten verwendet habe.
 
 ```markdown
 # Projectname
