@@ -1,7 +1,6 @@
 ---
 title: "How to Use a Specific Layout for an Article in Hugo"
 date: 2021-03-18T06:04:38+01:00
-draft: true
 translationKey: "how-to-use-a-specific-layout-for-an-article-in-hugo"
 image: "home-header.png"
 categories: 
