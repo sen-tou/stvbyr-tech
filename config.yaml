@@ -24,6 +24,8 @@ copyright: Steve Beyer
 summaryLength: 20
 
 markup:
-  goldmark:
-    renderer:
-      unsafe: true
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        style: native
