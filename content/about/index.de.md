@@ -5,6 +5,7 @@ menu:
     main:
         weight: 100
 translationKey: "about"
+layout: "about"
 ---
 
 ## Ich bin Steve

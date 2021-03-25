@@ -1,5 +1,6 @@
 html {
     font-size: 18px;
+    font-weight: 300;
     @apply leading-relaxed;
     @apply tracking-wide;
 }
