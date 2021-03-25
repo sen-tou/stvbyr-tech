@@ -92,7 +92,7 @@ Bonus: Markdown lässt sich ganz einfach in HTML und sogar PDFs umwandeln. Somit
 
 Wie ich schon erwähnt habe, gibt es nicht *DIE* eine README. Jedes Projekt ist unterscheidlich und hat verschiedene Anforderungen. Ich habe dennoch versucht, ein paar allgemeine Gliederungspunkte herauszusuchen, die ich auch in meinen Projekten verwendet habe.
 
-```markdown
+{{< highlight markdown "linenos=table" >}}
 # Projectname
 
 ## About
@@ -111,12 +111,13 @@ Diesen Bereich sehe ich nicht so oft in Open Source Projekten. Ich erkläre in d
 
 Dieser Bereich kann sehr viel Zeit einsparen. Je mehr Fragen du beantwortest, desto unwahrscheinlicher ist es, das dir jemand eine Frage stellt. Klingt komisch oder? Support für dein Projekt ist dringend nötig, aber je weniger aktive Zeit du damit verbringst, desto mehr Zeit kannst du in die Programmierung stecken. Sammle deshalb immer alle Fragen und beantworte sie hier. 
 
-```
+{{< / highlight >}}
+
 ## Fazit
 
 In diesem Artikel habe ich nur an der Oberfläche gekratzt. Es gibt viele Möglichkeiten eine README zu schreiben. 
 
-Bilder und Videos sind auch in Markdown möglich. Gerade Overflächen und UI sind Bilder und Videos von Vorteil. 
+Bilder und Videos sind auch in Markdown möglich. Gerade um funktionsreiche Oberflächen und UI zu beschreiben sind Bilder und Videos von Vorteil. 
 
 Auf Github kann man auch Dateien innerhalb des Dokuments direkt verlinken. Das funktioniert dann so ähnlich wie Wikipedia.
 
