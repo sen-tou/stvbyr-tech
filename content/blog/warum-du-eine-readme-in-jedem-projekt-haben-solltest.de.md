@@ -12,7 +12,7 @@ categories:
 
 Ich kenne keinen Entwickler, der gerne Dokumentation schreibt. Dafür kenne ich Genug, die den Teufel an die Wand malen, sobald keine Vorhanden ist. Zurecht.
 
-Wenn du exzellente Software schreiben möchtest, kommst du um eine gute Dokumentation nicht herum. Dein Code kann noch so gut durchdacht und professionell geschrieben sein, ohne Dokumentation ist das aber leider nutzlos. 
+Wenn du exzellente Software schreiben möchtest, kommst du um eine gute Dokumentation nicht herum. Dein Code kann noch so gut durchdacht und professionell geschrieben sein, ohne Dokumentation wird es schwer werden dein Projekt zu pflegen. 
 
 Was ich hier nicht behandeln möchte sind Kommentare. Das ist sowieso immer ein Diskussionsthema, ob überhaupt, wie viel und wann Kommentare benutzt werden sollten. 
 
@@ -39,7 +39,7 @@ Hier mal ein paar Beispiele:
 - Externe Bibliotheken/Tools: Mit welches externen Tools interagiert dein Projekt? Hier kommt es vor allem darauf an, die Schnittstellen genau zu beschreiben. Was für Daten werden übermittelt? Wie oft? In welchen Formaten?
 - API: Wie sieht die Schnittstelle zu deinem Projekt aus? Wie kommunizieren andere Programme mit meinem Projekt? Kostet das was? Hier spielen auch sicherheitsrelevante Aspekte mit, zum Beispiel wie authentifizieren sich andere Dienste mit deiner API? 
 - FAQ: Gibt es häufige Fragen im Bezug auf dein Projekt?
-- Lizenzen: Unter welchen Bedingungen dürfen andere dein Projekt nutzen? Das ist meistens nur für öffentliche Projekte von Interesse, aber du solltest dir genau überlegen, was 
+- Lizenzen: Unter welchen Bedingungen dürfen andere dein Projekt nutzen? Das ist meistens nur für öffentliche Projekte von Interesse, aber du solltest dir genau überlegen, welche Lizenz du verwenden möchtest. Für Open Source Projekte wird häufig MIT verwendet. 
 - Todos: Was muss noch erledigt werden?
 - Ideen: Welche Wünsche, Vorstellungen und Visionen hast du für das Projekt?
 - Ziele: Was genau deckt das Projekt ab und für wen ist es geeignet?
@@ -52,13 +52,13 @@ Behalte immer im Hinterkopf, dass du eine README für Andere schreibst. Mit Ande
 
 Als Software Entwickler kümmerst du dich, um Details. Soll heißen: du nimmst ein komplexes Problem, zerlegst es in seine Einzelteile und entwickelst eine Software, die dieses Problem löst. 
 
-Meistens kannst du dabei schon vorhandene Lösungen verwenden. Ein Framework zum Beispiel, nimmt dir viele Programmierschritte ab, da häufig verwendete Features einer Software (Logging, Datenbankmanagement, etc.) bereits umgesetzt sind. Du musst diese dann einach verwenden. Diese sind ebenfalls durch deren Maintainer dokumentiert.
+Meistens kannst du dabei schon vorhandene Lösungen verwenden. Ein Framework zum Beispiel, nimmt dir viele Programmierschritte ab, da häufig verwendete Features einer Software (Logging, Datenbankmanagement, etc.) bereits umgesetzt sind. Du musst diese dann einach verwenden. Diese sind (hoffetnlich) durch deren Maintainer dokumentiert.
 
-Meistens wirst du aber etwas neues entwickeln müssen, welches deinen Anforderungen oder des Kunden entspricht. Überlege dir, was wichtig ist und schreibe alles auf. Exportierst du zum Beispiel Daten in eine CSV-Dateien, könntest du kurz den Aufbau beschreiben. Also kurz aufzeigen, welche Felder es gibt, unter welchen Bedingungen Sie gefüllt werden und wo genau die Informationen herkommmen.
+Meistens wirst du aber etwas neues entwickeln müssen, welches deinen Anforderungen oder des Kunden entspricht. Überlege dir, was wichtig ist und schreibe alles auf. Exportierst du zum Beispiel Daten in eine CSV-Dateien, könntest du kurz den Aufbau beschreiben. Also kurz aufzeigen, welche Felder es gibt, unter welchen Bedingungen sie gefüllt werden und wo genau die Informationen herkommmen.
 
 Allerdings kann es während der Entwicklung passieren, dass du vom Standardpfad abweichen musst. Ich musste zum Beispiel, das Formularmodul von Symfony stark umbiegen, da die Anforderungen vom Kunden mit den Standardtools nicht umsetzbar waren. Zugegeben, aus heutiger Sicht hätte ich vielleicht auf das Modul verzichten sollen und gleich eine eigene Implementierung umsetzen sollen. Das macht aber nichts, den aus diesem Projekt konnte ich viele Learnings mitnehmen. 
 
-Um zum Thema zurückzukommen: ich habe alle Workflows aufgeschrieben, um meinen Kollegen die Arbeit so einfach, wie möglich zu machen. Am Ende sparst du dir auch wertvolle Zeit. Jede mögliche Frage, die du in deiner README beantwortest musst du nicht in einem persönlichen Gespräch oder per E-Mail beantworten.
+Um zum Thema zurückzukommen: ich habe alle Workflows aufgeschrieben, um mir und meinen Kollegen die Arbeit so einfach, wie möglich zu machen. Am Ende sparst du dir wertvolle Zeit. Jede mögliche Frage, die du in deiner README beantwortest musst du später nicht in einem persönlichen Gespräch oder per E-Mail beantworten.
 
 ### 2. Ideen können schnell aufgeschrieben werden
 Hast du eine gute Idee für ein weiteres Feature? Oder siehst du an einer Stelle in deinem Projekt Verbesserungsbedarf? Kannst du zum Beispiel ein Refactoring machen? 
@@ -72,17 +72,19 @@ Nehmen wir ein einfaches Beispiel. Du hast ein Kontaktformular auf einer Website
 
 Du sieht schon, ich hätte mir jetzt noch genügend weitere "Features" für so ein Kontaktformular ausdenken können. Je komplexer dein Projekt wird, desto mehr Teilnehmer, Bedingungen und Fälle gibt es zu berücksichtigen. 
 
-Stell dir vor du kommst in ein neues Team und wirst mit so einem Projekt konfrontiert, das keinlei Dokumentation hat. 
+Stell dir vor du kommst in ein neues Team und wirst mit so einem Projekt konfrontiert, das keinerlei Dokumentation hat. 
 
 Es ist, die Hölle. 
 
-Mit einer Readme hast du innerhalb kurzer Zeit einen Überblick über das Projekt und kannst einfach an den aktuellen Stand anknüpfen.
+Mit einer Readme hast du innerhalb kurzer Zeit einen Überblick über das Projekt. Du kannst einfach an den aktuellen Stand anknüpfen und die komplexen Workflows dahinter verstehen.
 
 ### 4. Du kannst Markdown verwenden
 
 Markdown ist eine coole und nützliche Sprache. Sie ist vor allem eines: *einfach*. Du brauchst nur deinen Texteditor. Da niemand gerne Dokumentation schreibt, sollte der Prozess so einfach, wie möglich und nicht unnötig kompliziert sein.
 
 Die Features von Markdown umfassen zum Beispiel Listen, Tabellen, Links und vieles mehr. Eben fast alles, das HTML auch kann, nur ohne das nervige Markup. Das ist übrigens auch der Grund, warum immer mehr CMS-Systeme, wie zum Beispiel Hugo auf Markdown setzen.
+
+Und selbst wenn du keinen Parser  zur Verfügung hast (die meistsen IDEs und Editoren wie zum Beispiel Visual Studio Code unterstützen Markdown nativ), ist Markdown nur ein Textformat. Übersichtlich und einfach zu schreiben.
 
 Bonus: Markdown lässt sich ganz einfach in HTML und sogar PDFs umwandeln. Somit kann ich meine ganze Dokumentation ganz einfach als PDF exportieren und teilen.
 
