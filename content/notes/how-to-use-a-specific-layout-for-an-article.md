@@ -15,13 +15,13 @@ Single posts for example use the `layouts/_default/single.html` template by defa
 
 Consider the following structure: `content/about/index.md`. 
 
-This would render the about page under `/about` using the default `single.html` template. 
+This would render the about page under `/about` using the default `layouts/_default/single.html` template. 
 
 Now in the frontmatter of that post you can use `layout: "about"` for example. What this line tells hugo is that it should look into the `layouts/_default` folder and search for a `about.html` template.
 
-This an example from my about page. It uses the `layouts/_default/about.html` as template.
+This is an example from my about page. It uses the `layouts/_default/about.html` as template.
 
-```markdown
+{{< highlight markdown "linenos=table" >}}
 ---
 title: "About me"
 draft: false
@@ -31,7 +31,7 @@ menu:
 translationKey: "about"
 layout: "about"
 ---
-```
+{{< / highlight >}}
 
 ## Using Frontmatter Type
 
@@ -43,7 +43,7 @@ You can also specify the content type in frontmatter. This simply tells hugo whi
 
 Combining both `type` and `layout` you can precisely define what template to use. The template path for this example is: `layouts/special/super.html`.
 
-```markdown
+{{< highlight markdown "linenos=table" >}}
 ---
 title: "Super special blog post"
 draft: false
@@ -54,4 +54,4 @@ translationKey: "about"
 type: "special"
 layout: "super"
 ---
-```
+{{< / highlight >}}

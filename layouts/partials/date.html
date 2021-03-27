@@ -1,7 +1,7 @@
-<time datetime="{{ .date.Format "2006-01-02" }}">
+<time datetime="{{ .date }}">
 {{ if eq "de" .language.Lang }}
 {{ .date.Day }}. {{ index .monate (printf "%d" .date.Month) }} {{ .date.Year }}
 {{ else }}
-{{ .date.Format "January 2, 2006" }}
+{{ .date.Format "Jan 2, 2006" }}
 {{ end }}
 </time>

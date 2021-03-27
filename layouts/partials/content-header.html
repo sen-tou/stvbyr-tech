@@ -1,14 +1,29 @@
-<header class="hero flex justify-center items-center mb-16 bg-indigo-900 bg-cover bg-center relative ">
-
-    {{ partial "img.html" . }}
-
-    <div class="text-center bg-indigo-900 bg-opacity-40 w-full h-full py-16 xl:py-32 px-8">
-        <h1 class="text-white text-4xl md:text-4xl lg:text-5xl xl:text-7xl mb-4">{{ .Title }}</h1>
-        {{ with .Params.subtitle }}
-        <span class="text-white">{{.}}</span>
-        {{ end }}
-        {{ with .Params.date }}
-        {{partial "date.html" (dict "date" . "language" $.Page.Language "monate" $.Site.Data.monate) }}
-        {{ end }}
+<header class="max-w-xl m-auto relative">
+    <div class="h-64 flex items-center justify-center overflow-hidden">
+        {{ partial "img.html" . }}
     </div>
+
+    <h1 class="p-2">{{ .Title | markdownify }}</h1>
+
+    <div class="flex flex-wrap items-center p-2">
+        {{ with .Params.author }}
+        {{- $image := resources.Get "images/steve-beyer.jpg" }}
+        {{- $image := $image.Resize "35x" }}
+        <img
+            src="{{ $image.Permalink }}"
+            class="rounded-full mr-2"
+        > <span class="mr-4 text-sm">{{.}}</span>
+        {{ end }}
+ 
+        {{ if .Params.date }}
+            <small class="text-xs mr-2">
+                {{partial "date.html" (dict "date" .Params.date "language" $.Page.Language "monate" $.Site.Data.monate) }}
+                ·
+                {{ i18n "readingTime" . }}
+            </small>
+        {{ end }} 
+    </div>
+
+   
 </header>
+<hr class="my-4 w-1/12 m-auto"/>
