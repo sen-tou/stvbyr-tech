@@ -1,16 +1,25 @@
 {{ if .Params.image }}
 
 {{ $image := .Params.image }}
+{{ $desc := .Params.imageDesc }}
 {{ $src := resources.GetMatch $image }}
 
 {{ if $src }}
 
 {{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
 
-{{ $tinyw := default "640x jpg q90" }}
-{{ $smallw := default "768x jpg q90" }}
-{{ $mediumw := default "784x jpg q90" }}
-{{ $largew := default "1280x jpg q90" }}
+{{ $quality := "x jpg q90" }}
+{{ $tinySize := "640" }}
+{{ $smallSize := "768" }}
+{{ $mediumSize := "1024" }}
+{{ $largeSize := "1280" }}
+{{ $hugeSize := "1536" }}
+
+{{ $tinyw := print $tinySize $quality }}
+{{ $smallw := print $smallSize $quality }}
+{{ $mediumw := print $mediumSize $quality }}
+{{ $largew := print $largeSize $quality }}
+{{ $hugew := print $hugeSize $quality }}
 
 {{/* resize the src image to the given sizes */}}
 
@@ -18,6 +27,7 @@
 {{ .Scratch.Set "small" ($src.Resize $smallw) }}
 {{ .Scratch.Set "medium" ($src.Resize $mediumw) }}
 {{ .Scratch.Set "large" ($src.Resize $largew) }}
+{{ .Scratch.Set "huge" ($src.Resize $largew) }}
 
 {{/* add the processed images to the scratch */}}
 
@@ -25,31 +35,20 @@
 {{ $small := .Scratch.Get "small" }}
 {{ $medium := .Scratch.Get "medium" }}
 {{ $large := .Scratch.Get "large" }}
+{{ $huge := .Scratch.Get "huge" }}
 
 {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
 
-<img
-    sizes="100vw"
-    srcset='
-    {{ if ge $src.Width "640" }}
-      {{ with $tiny.Permalink }}{{.}} 640w{{ end }}
-    {{ end }}
-    {{ if ge $src.Width "768" }}
-      {{ with $small.Permalink }}, {{.}} 768w{{ end }}
-    {{ end }}
-    {{ if ge $src.Width "1024" }}
-      {{ with $medium.Permalink }}, {{.}} 1024w{{ end }}
-    {{ end }}
-    {{ if ge $src.Width "1280" }}
-      {{ with $large.Permalink }}, {{.}} 1280w {{ end }}
-    {{ end }}'
-    src="{{ $src.Permalink }}"
-    loading="lazy"
-    data-size="{{ $src.Width }}x{{ $src.Height }}"
-    id="header-img"
-    style="width: 1px !important; height: 1px !important;"
->
+<picture>
+    {{ with $tiny.Permalink }} <source srcset="{{.}}" media="(max-width: {{ $tinySize }})" />{{ end }}
+    {{ with $small.Permalink }} <source srcset="{{.}}" media="(max-width: {{ $smallSize }}px)" />{{ end }}
+    {{ with $medium.Permalink }} <source srcset="{{.}}" media="(max-width: {{ $mediumSize }}px)" />{{ end }}
+    {{ with $large.Permalink }} <source srcset="{{.}}" media="(max-width: {{ $largeSize }}px)" />{{ end }}
+    {{ with $huge.Permalink }} <source srcset="{{.}}" media="(max-width: {{ $hugeSize }}px)" />{{ end }}
+
+    <img src="{{ $src.Permalink }}" data-size="{{ $src.Width }}x{{ $src.Height }}" alt="{{ with $desc }} {{.}} {{ else }} Cover image for {{ .Params.title }} {{ end }}"/>
+</picture>
 
 {{ end }}
 {{ end }}
