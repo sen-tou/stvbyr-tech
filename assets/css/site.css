@@ -1,12 +1,12 @@
 html {
-    font-size: 18px;
-    font-weight: 300;
+    @apply text-lg;
+    @apply font-light;
     @apply leading-relaxed;
     @apply tracking-wide;
 }
 
 p {
-    @apply mb-4;
+    @apply mb-6;
     @apply text-gray-800;
     @apply dark:text-gray-200;
 }
@@ -24,17 +24,29 @@ h3 {
     @apply dark:text-indigo-300;
 }
 
-h2 {
+h1 {
     @apply text-4xl;
-    @apply mt-16;
-    @apply mb-8;
+    @apply mt-2;
+    @apply mb-4;
+}
+
+h2 {
+    @apply text-3xl;
+    @apply mt-2;
+    @apply mb-2;
 }
 
 h3 {
-    @apply text-2xl;
-    @apply mt-8;
-    @apply mb-4;
+    @apply text-xl;
+    @apply mt-2;
+    @apply mb-2;
 }
+
+h4,h5,h6 {
+    @apply font-bold;
+}
+
+
 
 blockquote {
     @apply border-l-2;
@@ -57,6 +69,25 @@ li {
     @apply mb-4;
 }
 
+dd > code,
+dd > tt,
+p > code,
+p > tt,
+td > code,
+td > tt {
+    @apply break-words;
+    @apply p-0.5;
+    @apply rounded-sm;
+    @apply bg-purple-100;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+figcaption {
+    @apply italic;
+    @apply text-sm;
+}
+
 .highlight {
     @apply mb-8;
 }
@@ -72,16 +103,4 @@ li {
 #page-footer svg {
     @apply fill-current;
     @apply w-8;
-}
-
-.hero {
-    height: calc(100vh - 6rem + 0.5rem);
-    /* 100 view height - heigth of menu - half of its padding */
-}
-
-@screen lg {
-    .hero {
-        height: calc(100vh - 8rem + 0.5rem);
-        /* 100 view height - heigth of menu - half of its padding */
-    }
 }
