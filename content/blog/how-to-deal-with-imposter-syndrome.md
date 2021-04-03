@@ -21,12 +21,17 @@ But before I go into more details about imposter syndrome and my experiences wit
 
 ## I don't fit for the job
 
-When I was fresh out of school I didn't know what to do. I went to different job events to figure out what I wanted to do. Software Development stroke my eye. So I thought, why not be a programmer? I enlisted myself for a workshop (it was free and hold by a local school) that thaught basics of programming. Simple HTML, CSS and also some protcol and server basics.
+When I was fresh out of school I didn't know what to do. I went to different job events to figure out what I wanted to do. Software Development stroke my eye. So I thought, why not be a programmer? I enlisted myself for a workshop (it was free and hold by a local school) that thaught basics of programming. Simple HTML, CSS, JS and also some protcol/server basics.
 
-You wanna know how I feelt during this week? I felt out of place. I felt dumb, because it seemed that everyone in this workshop knew a lot more than me. Which was not the case. I had a lot of questions the hole time but I was too afraid to ask them. I thought: If I ask this question now everyone would know that I am bad at programming and everyone would think that I don't belong.
+You wanna know how I feelt most of the time during this week? I felt out of place. I felt dumb, because it seemed that everyone in this workshop knew a lot more than me. Which was not the case. I had a lot of questions the hole time but I was too afraid to ask them. I thought: If I ask this question now everyone would know that I am bad at programming and everyone would think that I don't belong.
 
-Crazy right? Well, looking at now I think that was crazy. This course was meant for people that NEVER had anything to do with programming but still I thought I had to know everything that was thaught during the workshop.
+Crazy right? Well, looking at now I think that was crazy. This course was meant for people that *NEVER* had anything to do with programming but still I thought I had to know everything that was thaught during the workshop.
 
+After that experience I wanted to quit and search for another path that I could pursue. But, luckily, after a discussion with my parents I decided against quitting. I did an apprenticeship and eventually landed in web development where I am still today. 
+
+And I love it.
+
+From my todays point of view I couldn't imagine my a life without programming. What shocks me is that I almost didn't chose this path. Just because I feelt that I don't belong or didn't have the skills to do it.
 ##  What causes Imposter Syndrome?
 
 The 
