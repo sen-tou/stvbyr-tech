@@ -31,7 +31,9 @@ After that experience I wanted to quit and search for another path that I could 
 
 And I love it.
 
-From my todays point of view I couldn't imagine my a life without programming. What shocks me is that I almost didn't chose this path. Just because I feelt that I don't belong or didn't have the skills to do it.
+From my todays point of view I couldn't imagine my a life without coding. What shocks me is that I almost didn't chose this path. Just because I feelt inferior and that I don't belong or didn't have the skills to do it.
+
+
 ##  What causes Imposter Syndrome?
 
 The 
@@ -41,3 +43,13 @@ The
 In my 6 years of being a web developer now I couldn't think of a time where I needed the complex theoretic bulk stuff. You know things like data structures and waterfall methods. Hence a lot of companies what people to answer questions 
 
 ## What can I do
+
+Dealing with imposter syndrome is a process. Their is no short path. At least I don't know of any. To be quiet honest I don't think that this feeling will go away and will stick. So what can I do?
+
+As we've seen, imposter syndrome stems a lot from the environment that you're in. Do you were praised for your talents? Were sourrounded by people that thinks they're better than you and project their expectations on you? 
+
+In those situations you learn that only your talent is of value and if you don't provide you think that you are a failure. You will create such high expectations for yourself that you often times quit or don't even start. 
+
+Are you a perfectionist? This is what I'm talking about. 
+
+Changing 
