@@ -17,7 +17,7 @@ So in other words: you feel like your current knowledge and skillset is not enou
 
 From what I experienced, almost all developers are affected by imposter syndrome. So the first good thing about this is: your not alone. Plus their are a lot of resources in the wild that help with coping.
 
-But before I go into more details about imposter syndrome and my experiences with it I want you to know that I am not a professional. This is purly my opinions, experiences and point of view. So if you feel like you need help: talk to someone, a friend, a family member or a professional.
+But before I go into more details about imposter syndrome and my experiences with it I want you to know that I am not a professional. This is purly my opinions, experiences and point of view. So if you feel like you need help: please talk to someone, a friend, a family member or a professional.
 
 ## I don't fit for the job
 
@@ -44,12 +44,16 @@ In my 6 years of being a web developer now I couldn't think of a time where I ne
 
 ## What can I do
 
-Dealing with imposter syndrome is a process. Their is no short path. At least I don't know of any. To be quiet honest I don't think that this feeling will go away and will stick. So what can I do?
+Dealing with imposter syndrome is a process. Their is no short path. At least I don't know of any. To be quiet honest I don't think that this feeling will ever go away and will stick. So what can I do?
 
-As we've seen, imposter syndrome stems a lot from the environment that you're in. Do you were praised for your talents? Were sourrounded by people that thinks they're better than you and project their expectations on you? 
+As we've seen, imposter syndrome stems a lot from the environment that you're in. Do you were praised for your talents (and not your work)? Were you sourrounded by people that thinks they're better than you and did they project their expectations on you? 
 
-In those situations you learn that only your talent is of value and if you don't provide you think that you are a failure. You will create such high expectations for yourself that you often times quit or don't even start. 
+In those situations you learn that only your talent is of value and if you don't provide that value you think that you are a failure. You will create such high expectations for yourself that you often times quit or don't even start. 
 
 Are you a perfectionist? This is what I'm talking about. 
 
 Changing 
+
+I mentioned that a lot of programmers have had imposter syndrom or dealing with it right now. What helped me tremendeously was to talk about it with fellow developers or colleagues. Having people that go through the same things as you do can lead to very insightful conversations that actually help both parts.
+
+## Conclusion
