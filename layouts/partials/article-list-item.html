@@ -1,24 +1,26 @@
-<article class="bg-white dark:bg-gray-900 rounded-md p-6 mb-6">
-    <header>
+<article class="bg-white dark:bg-gray-900 rounded-md overflow-hidden mb-6">
+    <header class="flex justify-center items-center max-h-48 overflow-hidden">
         {{ partial "img.html" . }}
     </header>
 
-    <h2>
-        <a
-            class="block"
-            href="{{ .Permalink }}"
-        >{{ .Title | markdownify }}</a>
-    </h2>
-
-    <p>
-        {{ .Summary }}
-    </p>
-
-    <footer>
-        <p class="text-grey-300 mb-0">
-            {{ partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate) }}
-            ·
-            {{ i18n "readingTime" . }}
+    <div class="p-6">
+        <h2>
+            <a
+                class="block"
+                href="{{ .Permalink }}"
+            >{{ .Title | markdownify }}</a>
+        </h2>
+    
+        <p>
+            {{ .Summary }}
         </p>
-    </footer>
+
+        <footer>
+            <p class="text-grey-300 mb-0">
+                {{ partial "date.html" (dict "date" .Date "language" $.Page.Language "monate" $.Site.Data.monate) }}
+                ·
+                {{ i18n "readingTime" . }}
+            </p>
+        </footer>
+    </div>
 </article>
