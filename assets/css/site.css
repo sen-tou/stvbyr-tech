@@ -1,8 +1,11 @@
+* {
+    @apply box-border;
+}
+
 html {
     @apply text-lg;
-    @apply font-light;
+    @apply font-normal;
     @apply leading-relaxed;
-    @apply tracking-wide;
 }
 
 p {
@@ -18,35 +21,30 @@ a {
 
 h1,
 h2,
-h3 {
-    @apply font-serif;
+h3,
+h4,
+h5,
+h6 {
     @apply text-indigo-900;
     @apply dark:text-indigo-300;
-}
-
-h1 {
-    @apply text-4xl;
+    @apply font-bold;
     @apply mt-2;
     @apply mb-4;
 }
 
+h1 {
+    @apply text-4xl;
+    @apply text-center;
+    @apply mb-8;
+}
+
 h2 {
-    @apply text-3xl;
-    @apply mt-2;
-    @apply mb-2;
+    @apply text-xl;
 }
 
 h3 {
     @apply text-xl;
-    @apply mt-2;
-    @apply mb-2;
 }
-
-h4,h5,h6 {
-    @apply font-bold;
-}
-
-
 
 blockquote {
     @apply border-l-2;

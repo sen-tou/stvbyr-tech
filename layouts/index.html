@@ -1,14 +1,16 @@
+{{ define "header" }}
+<section id="home-header" class="py-48 px-4 sm:px-16 -mt-12">
+    {{ partial "img.html" . }}
+    <h1 class="text-2xl sm:text-4xl">{{ .Params.subtitle }}</h1>
+</section>
+{{ end }}
+
 {{ define "main" }}
 
-{{/*  {{ partial "content-header.html" . }}  */}}
+{{.Content}}
 
-<div class="m-auto max-w-5xl px-4">
-    <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
-    {{.Content}}
+{{ $items := where site.RegularPages "Type" "in" "blog" }}
+{{ .Scratch.Set "items" $items }}
+{{ partial "article-list.html" . }}
 
-    <h2 class="text-4xl my-16">{{ i18n "recent-blogposts" }}</h2>
-    {{ $items := where site.RegularPages "Type" "in" "blog" }}
-    {{ .Scratch.Set "items" $items }}
-    {{ partial "article-list.html" . }}
-</div>
 {{ end }}

@@ -2,8 +2,19 @@
 <article class="relative">
     {{ partial "content-header.html" . }}
 
-    <div class="m-auto max-w-xl p-4 md:p-4">    
-        {{ .Content }}
-    </div>
+    {{ .Content }}
+
+    {{ if .Params.date }}
+
+    <footer>
+        <small class="text-xs mr-2">
+            {{partial "date.html" (dict "date" .Params.date "language" $.Page.Language "monate" $.Site.Data.monate) }}
+            ·
+            {{ i18n "readingTime" . }}
+        </small>
+
+    </footer>
+    
+    {{ end }}
 </article>
 {{ end }}

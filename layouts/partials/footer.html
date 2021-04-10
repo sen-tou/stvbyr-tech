@@ -2,43 +2,8 @@
     id="page-footer"
     class="bg-indigo-900 pt-8"
 >
-    <nav class="m-auto max-w-5xl xl:flex justify-between xl: p-4 text-white text-center xl:text-left">
-        <section class="mb-8">
-            <label for="nav-legal-menu" class="block mb-4 text-2xl">{{ i18n "legal" }}</label>
-
-            <ul
-                id="nav-legal-menu"
-                class="flex items-center justify-center list-none"
-            >
-                {{- $currentPage := . -}}
-                {{ range .Site.Menus.footer }}
-                <li class="mr-4 ml-0">
-                    <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-                </li>
-                {{ end }}
-            </ul>
-        </section>
-
-        {{/*  <section class="mb-8">
-            <label for="nav-legal-menu" class="block mb-4 text-2xl">Content</label>
-
-            <ul
-                id="nav-meta-menu"
-                class="flex items-center justify-center list-none"
-            >
-
-                {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-                {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
-                <li><a href="{{ .RelPermalink }}">{{ $name }}</a></li>
-                {{ end }}
-                {{ end }}
-
-            </ul>
-        </section>  */}}
-
-        <section class="mb-8">
-            <label for="nav-connect-menu" class="block mb-4 text-2xl">Connect</label>
-
+    <nav class="m-auto py-8 max-w-2xl lg:flex justify-between text-white">
+        <div class="mb-8 lg:mb-0">
             <ul
                 id="nav-connect-menu"
                 class="flex items-center justify-center list-none"
@@ -60,13 +25,43 @@
                     </a>
                 </li>  */}}
             </ul>
-        </section>
+        </div>
 
-        <section class="mb-8">
+        <div>
+            <ul
+                id="nav-legal-menu"
+                class="flex items-center justify-center list-none"
+            >
+                {{- $currentPage := . -}}
+                {{ range .Site.Menus.footer }}
+                <li class="mr-4 ml-0 text-xs">
+                    <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{/*<section class="mb-8">
             <label for="nav-connect-menu" class="block mb-4 text-2xl">Translations</label>
 
             {{ partial "lang-menu.html" . }}
-        </section>
+        </section> */}}
+
+        {{/*  <section class="mb-8">
+            <label for="nav-legal-menu" class="block mb-4 text-2xl">Content</label>
+
+            <ul
+                id="nav-meta-menu"
+                class="flex items-center justify-center list-none"
+            >
+
+                {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+                <li><a href="{{ .RelPermalink }}">{{ $name }}</a></li>
+                {{ end }}
+                {{ end }}
+
+            </ul>
+        </section>  */}}
     </nav>
 
 </footer>
