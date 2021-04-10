@@ -1,16 +1,13 @@
 {{ define "main" }}
 
-<div class="m-auto max-w-5xl p-4 md:p-4">
+<h1>{{ .Page.Title }}</h1>
 
-    <h1>{{ .Page.Title }}</h1>
+{{ with .Content }}
+    {{ . }}
+{{ end }}
 
-    {{ with .Content }}
-        {{ . }}
-    {{ end }}
-
-    {{ $items := .Pages.ByPublishDate.Reverse }}
-    {{ .Scratch.Set "items" $items }}
-    {{ partial "note-list.html" . }}
-</div>
+{{ $items := .Pages.ByPublishDate.Reverse }}
+{{ .Scratch.Set "items" $items }}
+{{ partial "note-list.html" . }}
 
 {{ end }}

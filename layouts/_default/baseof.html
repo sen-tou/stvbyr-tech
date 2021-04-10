@@ -19,7 +19,9 @@
     {{ partial "header.html" . }}
 
     <main>
-        {{ block "main" . }}{{ end }}
+        <div class="m-auto max-w-2xl">
+            {{ block "main" . }}{{ end }}
+        </div>
     </main>
 
     {{ partial "footer.html" . }}

@@ -1,9 +1,7 @@
 {{ define "main" }}
 <article class="relative">
     {{ partial "content-header.html" . }}
-
-    <div class="m-auto max-w-xl p-4 md:p-4">    
-        {{ .Content }}
-    </div>
+  
+    {{ .Content }}
 </article>
 {{ end }}
