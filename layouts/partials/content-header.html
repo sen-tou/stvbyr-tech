@@ -3,7 +3,7 @@
         {{ partial "img.html" . }}
     </div>
 
-    <h1 class="p-2">{{ .Title | markdownify }}</h1>
+    <h1>{{ .Title | markdownify }}</h1>
 
     <div class="flex flex-wrap items-center p-2">
         {{ with .Params.author }}
