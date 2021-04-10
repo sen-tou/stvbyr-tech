@@ -1,29 +1,16 @@
-<header class="max-w-xl m-auto relative">
-    <div class="h-64 flex items-center justify-center overflow-hidden">
-        {{ partial "img.html" . }}
-    </div>
-
+<header>
     <h1>{{ .Title | markdownify }}</h1>
 
-    <div class="flex flex-wrap items-center p-2">
+    <div class="flex items-center justify-center py-4">
         {{ with .Params.author }}
-        {{- $image := resources.Get "images/steve-beyer.jpg" }}
-        {{- $image := $image.Resize "35x" }}
-        <img
-            src="{{ $image.Permalink }}"
-            class="rounded-full mr-2"
-        > <span class="mr-4 text-sm">{{.}}</span>
+        <span class="mr-4 text-sm">by {{.}}</span>
         {{ end }}
- 
-        {{ if .Params.date }}
-            <small class="text-xs mr-2">
-                {{partial "date.html" (dict "date" .Params.date "language" $.Page.Language "monate" $.Site.Data.monate) }}
-                ·
-                {{ i18n "readingTime" . }}
-            </small>
-        {{ end }} 
     </div>
 
-   
+    <hr class="my-4 w-2/12 m-auto"/>
+
+    <div class="max-h-72 mb-8 -mx-32 flex items-center justify-center overflow-hidden rounded-md">
+        {{ partial "img.html" . }}
+    </div>
+    
 </header>
-<hr class="my-4 w-1/12 m-auto"/>
