@@ -1,5 +1,6 @@
 ---
 title: "How to Deal With Imposter Syndrome As A Developer"
+summary: "Learn how I dealt with Imposter Syndrome so that you can do too."
 date: 2021-04-01T07:19:07+02:00
 draft: true
 translationKey: "how-to-deal-with-imposter-syndrome-as-a-developer"
