@@ -16,16 +16,22 @@
 </head>
 
 <body>
-    {{ partial "header.html" . }}
+    {{ block "page-header" . }}
+        {{ partial "page-header.html" . }}
+    {{ end }}
 
     <main>
         {{ block "header" . }}{{ end }}
-        <div class="max-w-2xl p-4 mx-auto overflow-hidden sm:overflow-visible">
-            {{ block "main" . }}{{ end }}
-        </div>
+        {{ block "container" . }}
+            <div class="max-w-2xl p-4 mx-auto overflow-hidden sm:overflow-visible">
+                {{ block "main" . }}{{ end }}
+            </div>
+        {{ end }}
     </main>
 
-    {{ partial "footer.html" . }}
+    {{ block "page-footer" . }}
+        {{ partial "page-footer.html" . }}
+    {{ end }}
 
     {{ $img := resources.Get "js/img.js" | js.Build }}
     {{ $menu := resources.Get "js/toggleMainMenu.js" | js.Build }}
