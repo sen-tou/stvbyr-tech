@@ -86,10 +86,6 @@
     font-display: swap;
 }
 
-* {
-    @apply box-border;
-}
-
 html {
     @apply text-lg;
     @apply font-normal;
@@ -124,6 +120,7 @@ h1 {
     @apply text-4xl;
     @apply text-center;
     @apply mb-8;
+    @apply mt-16;
 }
 
 h2 {
