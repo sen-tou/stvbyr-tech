@@ -1,6 +1,235 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-@import "tailwindcss/screens";
-@import "assets/css/font.css";
-@import "assets/css/site";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Serif";
+    src: url("/fonts/PTSerif-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Serif";
+    src: url("/fonts/PTSerif-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Serif";
+    src: url("/fonts/PTSerif-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Serif";
+    src: url("/fonts/PTSerif-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("/fonts/Lora-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("/fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype");
+    font-style: italic;
+}
+
+* {
+    @apply box-border;
+}
+
+html {
+    @apply text-lg;
+    @apply font-normal;
+    @apply leading-relaxed;
+}
+
+p {
+    @apply mb-6;
+    @apply text-gray-800;
+    @apply dark:text-gray-200;
+}
+
+a {
+    @apply text-indigo-700;
+    @apply dark:text-indigo-300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply text-indigo-900;
+    @apply dark:text-indigo-300;
+    @apply font-bold;
+    @apply mt-2;
+    @apply mb-4;
+}
+
+h1 {
+    @apply text-4xl;
+    @apply text-center;
+    @apply mb-8;
+}
+
+h2 {
+    @apply text-xl;
+}
+
+h3 {
+    @apply text-xl;
+}
+
+blockquote {
+    @apply border-l-2;
+    @apply border-indigo-900;
+    @apply dark:text-indigo-300;
+    @apply p-2;
+    @apply mb-4;
+}
+
+blockquote p {
+    @apply m-0;
+}
+
+ul {
+    @apply list-disc;
+}
+
+li {
+    @apply ml-8;
+    @apply mb-4;
+}
+
+dd > code,
+dd > tt,
+p > code,
+p > tt,
+td > code,
+td > tt {
+    @apply break-words;
+    @apply p-0.5;
+    @apply rounded-sm;
+    @apply bg-purple-100;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+figcaption {
+    @apply italic;
+    @apply text-sm;
+}
+
+.highlight {
+    @apply mb-8;
+}
+
+.highlight pre {
+    @apply p-4;
+}
+
+#page-footer a {
+    @apply text-white;
+}
+
+#page-footer svg {
+    @apply fill-current;
+    @apply w-8;
+}

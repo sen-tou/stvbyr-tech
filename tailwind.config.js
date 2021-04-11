@@ -1,9 +1,7 @@
 module.exports = {
-    purge: {
-        content: [
-            __dirname + '/../layouts/**/*.html',
-        ],
-    },
+    // mode: 'jit',
+    darkMode: 'media',
+    purge: ['./layouts/**/*.html'],
     theme: {
         screens: {
             'sm': '672px'
@@ -36,9 +34,4 @@ module.exports = {
             ]
         },
     },
-    darkMode: 'media',
-    variants: {},
-    plugins: [
-        require('@tailwindcss/aspect-ratio'),
-    ]
 };
