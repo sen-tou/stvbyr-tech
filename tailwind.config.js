@@ -1,5 +1,5 @@
 module.exports = {
-    // mode: 'jit',
+    // mode: 'jit', // enable when hugo supports this feature
     darkMode: 'media',
     purge: ['./layouts/**/*.html'],
     theme: {
@@ -17,7 +17,6 @@ module.exports = {
                 'sans-serif',
             ],
             serif: [
-                'Lora',
                 'Georgia',
                 'Cambria',
                 'Times New Roman',
