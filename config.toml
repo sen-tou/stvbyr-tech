@@ -1,4 +1,4 @@
-baseURL = "https://steve-beyer.com/"
+baseURL = "https://reyste.com/"
 canonifyURLs = true
 copyright = "Steve Beyer"
 defaultContentLanguage = "en"
@@ -6,21 +6,20 @@ enableGitInfo = true
 showReadingTime = true
 title = "Steve Beyer"
 
+disableKinds = ["section"]
+
+[Taxonomies]
+categories = "categories"
+
 [languages]
 
 [languages.en]
 languageName = "English"
 weight = 1.0
 
-[languages.en.taxonomies]
-categories = "categories"
-
 [languages.de]
 languageName = "Deutsch"
 weight = 2.0
-
-[languages.de.taxonomies]
-categories = "Kategorien"
 
 [markup]
 

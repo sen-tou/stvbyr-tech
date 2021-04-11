@@ -27,6 +27,15 @@
             </ul>
         </div>
 
+        <div class="text-center">
+            {{ with .Site.GetPage "taxonomy" "categories" }} 
+                <a href="{{ .Permalink }}" >{{ .Title }}</a>
+            {{ end }}
+            {{ with .Site.GetPage "taxonomy" "Kategorien" }} 
+                <a href="{{ .Permalink }}" >{{ .Title }}</a>
+            {{ end }}
+        </div>
+
         <div>
             <ul
                 id="nav-legal-menu"
@@ -40,28 +49,5 @@
                 {{ end }}
             </ul>
         </div>
-        {{/*<section class="mb-8">
-            <label for="nav-connect-menu" class="block mb-4 text-2xl">Translations</label>
-
-            {{ partial "lang-menu.html" . }}
-        </section> */}}
-
-        {{/*  <section class="mb-8">
-            <label for="nav-legal-menu" class="block mb-4 text-2xl">Content</label>
-
-            <ul
-                id="nav-meta-menu"
-                class="flex items-center justify-center list-none"
-            >
-
-                {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-                {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
-                <li><a href="{{ .RelPermalink }}">{{ $name }}</a></li>
-                {{ end }}
-                {{ end }}
-
-            </ul>
-        </section>  */}}
     </nav>
-
 </footer>
