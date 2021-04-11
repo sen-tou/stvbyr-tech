@@ -1,3 +1,4 @@
+{{ $color := .Scratch.Get "navTextColor" }}
 <div class="flex justify-between items-center h-12">
     <div class="flex-1 flex sm:items-stretch sm:justify-between">
         <div class="flex-shrink-0 flex items-center">
@@ -11,7 +12,7 @@
                     src="/images/Logo2.svg"
                     alt="Steve Beyer"
                 >
-                <span class="text-xl text-indigo-900 dark:text-indigo-300 ml-4">reyste.com</span>
+                <span class='text-xl text-indigo-900 dark:text-indigo-300 ml-4 {{ $color }}'>reyste.com</span>
             </a>
             
         </div>
@@ -20,7 +21,7 @@
             {{- $currentPage := . -}}
             {{ range sort .Site.Menus.main "Weight" }}
             <a
-                class="text-indigo-900 dark:text-indigo-300 hover:bg-indigo-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                class='text-indigo-900 dark:text-indigo-300 hover:bg-indigo-700 hover:text-white px-3 py-2 rounded-md text-md font-medium {{ $color }}'
                 href="{{ .URL | absLangURL }}"
             >{{ .Name }}</a>
             {{ end }}

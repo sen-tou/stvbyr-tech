@@ -233,3 +233,7 @@ figcaption {
     @apply fill-current;
     @apply w-8;
 }
+
+.index-nav-color {
+    @apply text-white;
+}
