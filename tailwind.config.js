@@ -1,9 +1,7 @@
 module.exports = {
-    purge: {
-        content: [
-            __dirname + '/../layouts/**/*.html',
-        ],
-    },
+    // mode: 'jit', // enable when hugo supports this feature
+    darkMode: 'media',
+    purge: ['./layouts/**/*.html'],
     theme: {
         screens: {
             'sm': '672px'
@@ -19,7 +17,6 @@ module.exports = {
                 'sans-serif',
             ],
             serif: [
-                'Lora',
                 'Georgia',
                 'Cambria',
                 'Times New Roman',
@@ -36,9 +33,4 @@ module.exports = {
             ]
         },
     },
-    darkMode: 'media',
-    variants: {},
-    plugins: [
-        require('@tailwindcss/aspect-ratio'),
-    ]
 };

@@ -1,7 +1,12 @@
+{{ define "page-header" }}
+    {{ .Scratch.Set "navTextColor" "index-nav-color" }}
+    {{ partial "page-header.html" . }}
+{{ end }}
+
 {{ define "header" }}
-<section id="home-header" class="py-48 px-4 sm:px-16 -mt-12">
-    {{ partial "img.html" . }}
-    <h1 class="text-2xl sm:text-4xl">{{ .Params.subtitle }}</h1>
+<section id="home-header" class="py-64 px-4 sm:px-16 -mt-14 mb-16 bg-cover bg-center bg-no-repeat">
+    <div class="w-0 h-0">{{ partial "img.html" . }}</div>
+    <h1 class="text-2xl sm:text-4xl text-white">{{ .Params.subtitle }}</h1>
 </section>
 {{ end }}
 

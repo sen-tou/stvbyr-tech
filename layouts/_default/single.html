@@ -1,20 +1,7 @@
 {{ define "main" }}
 <article class="relative">
     {{ partial "content-header.html" . }}
-
     {{ .Content }}
-
-    {{ if .Params.date }}
-
-    <footer>
-        <small class="text-xs mr-2">
-            {{partial "date.html" (dict "date" .Params.date "language" $.Page.Language "monate" $.Site.Data.monate) }}
-            ·
-            {{ i18n "readingTime" . }}
-        </small>
-
-    </footer>
-    
-    {{ end }}
+    {{ partial "content-footer.html" . }}
 </article>
 {{ end }}
