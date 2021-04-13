@@ -17,9 +17,9 @@ categories = "categories"
 languageName = "English"
 weight = 1.0
 
-[languages.de]
-languageName = "Deutsch"
-weight = 2.0
+# [languages.de]
+# languageName = "Deutsch"
+# weight = 2.0
 
 [markup]
 
