@@ -12,10 +12,64 @@ categories:
     - productivity
 ---
 
-I don't know a single developer that loves to write documentation. But in contrast I know a lot that scream when there isn't one. Right so.
+I don't know a single developer that loves to write documentation. But in contrast I know a lot that scream when there isn't one.
 
-I you want to write excellent software you have to have good documentation. You could have the best code on the earth but without docs you will have a hard time manintaining it. 
-
-What I don't want to do with this article: Comments. There is a lot of discussion around whether to use them at all, how much and when.
+I you want to write excellent software you have to be good documentation writer. You could have the best code on the earth but without docs you will have a hard time manintaining it, and others too. 
 
 README to the rescue! But it's not hard to write documentation. All you need is a simple text file. Preferably Markdown and good structure.
+
+What I don't want to talk in this article are comments and tests. There is a lot of discussion around whether to use comments at all, how much and when or whether or not test scripts function as documentation or not.
+
+In this blog post I wanna focus on how READMEs can improve your life as a developer.
+
+## What is a README?
+
+In simple words: a README is just a file that holds information about your project. But what information? That depends on the project itself as I will show you.
+
+You will often see that the filename of a README is written in capital letters to emphasize the meaning of the file. Your eyes will be drawn to it and it is probably the first file that you will look at.
+
+On Github or Gitlab and probably other version control systems too, the README will be parsed and rendered as plain HTML to your browser. If you look at any repository on Github the text that is shown under the source files is actually the README.
+
+Because the README is the first starting point of your project you should write *EVERYTHING* important regarding your project. But be precise here. This is not a some kind of book. Just mention the parts that are most important to you.
+
+A bad example would be to describe functionality of a framework that you are using. Those already have documentations that you should reference if you have to.
+
+A good example would be to describe how *YOUR* code interacts with the third party framework. Make sure that you higlight the why and how so that you can reason about it.
+
+Lets look at another example. If you expose an API that others can use than every endpoint, their responses and all common possible requests should be documented. You don't wanna leave room for interpretation.
+
+This argument does not only apply to open source projects though where strangers use your code. It also applies for companies that have multiple development teams. It might be that you develope a service that other teams can use. 
+
+If you don't document that service how should they know what your service is able to do? Should they call you and ask for it? Obviously that is not a good idea. 
+
+In this example it would be nice if you showed some common screnarios of how to use your code. Some concrete examples that are easy to follow. So if someone wants to use your code they have a starting point that they can build upon.
+
+All of the above sounds a little bit like you have to follow a set of rules. But that's far from true.
+
+Creating a README is not a static process. You decide what's important to write down. A README is supposed to be a helping friend that you can always come back to. Not a list of things that don't matter just because someone said that you should include it in you README.
+
+## You can comprehend decisions
+
+As a software developer you are responsible for the details. You take a problem and break it down to simple consumable steps and implement them.
+
+Most of the time you can use existing solutions. A Framework is just a collection of different common features that every appplication needs. (logging, database management, validation, etc.) You just have to use it and you're set to go. Most of them have excelent documentation as well.
+
+But their will come times when you need to leave the default path and bend the system to your specification. 
+
+I used the [form bundle](https://symfony.com/doc/current/forms.html) for symfony in one project. This bundles makes it very easy to build forms and map them to your database with validation built in. I had to add another layer of complexity in order to implement the specification of the customer. This extra layer is not something that you would usually do with this form module. 
+
+At leat that's what I thought. I didn't have to bend the form module in the way that I did because the module had those feature build in. But I was not aware of them. I should have read the docs more carefully because then I would been aware of it. The feature was data transformers btw. So here is another tip: write good documentation but also read carefully.
+
+Anyways I wrote everything down. I described why I chose to implement it and how I used it in the project. Because of that documentation a colleague made me aware that there is in fact a native symfony implementation that could transform data. We refactored everything to use the native functionality.
+
+The gist of this story is that documentation can help you and your team. 
+
+It can also save you a lot of time. Every question that you answer in your README is a question that you don't have to answer in meetings or emails. Someone wants to know how a service in your projects works? Direct them to the documentation where everything is described.
+
+## Catching Ideas
+
+Do you have an Idea for a new feature? Can you see areas of your project where you can make improvements? Can you do a refactoring?
+
+Illuminating the future of your project is as important as keeping track of existing code. I often get linghtning like inspirations that vanish as fast as they appeared. I made it a habit to write all of them down. Sometimes that is just a piece of paper but if it's an idea for your project you can just dump it into the README.
+
+If you keep track of your ideas you also make it easy for others to contribute. They can just take on of those idea and develope it in a seperate branch and make a pull request.  
