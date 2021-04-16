@@ -93,3 +93,19 @@ And there is no documentation. Maybe not even tests. (I know I didn't want to ta
 It's hell! What would you do now?
 
 With a simple README in the project you would be able to get a quick overview on how the forms logic actually works.
+
+## You can use Markdown
+
+Markdown is propably the most used formatting language on the internet today. A lot of companies use it. You can edit your twitch profile with markdown for example. 
+
+The reason for this is that you can pick up markdown in no time. You just need a simple text editor and a markdown cheat sheet to get used to the syntax.
+
+You can do almost all things that you would do with HTML. Tables, Lists, Heading, Bold, Italic and many more. It's so powerful that even CMS Systems use markdown instead of wysiwyg-editors.
+
+I said almost because it depends of the kind of renderer that you use. Some don't support the full range of markdown.  
+
+In order to parse markdown you need a tool that parses it. A lot of editors and IDEs include markdown support by default now. So you can render your markdown directly in the editor. 
+
+But you don't necessarily need to render it. Markdown is still a text format. You can just open it up and start reading.
+
+Bonus: You can even export Markdown files as PDFs. So if you wanna send your README to someone that shouldn't be able to edit it you can export it as PDF and send it via email.
