@@ -109,3 +109,69 @@ In order to parse markdown you need a tool that parses it. A lot of editors and 
 But you don't necessarily need to render it. Markdown is still a text format. You can just open it up and start reading.
 
 Bonus: You can even export Markdown files as PDFs. So if you wanna send your README to someone that shouldn't be able to edit it you can export it as PDF and send it via email.
+
+## How does a README look like?
+
+You can see there is a lot you can do with a README. Every project is different so your will your requirements for a README. I tried to collect some of the main keypoints that could be useful for you.
+
+{{< highlight markdown "linenos=table" >}}
+# Projectname
+
+## About / Description
+
+A short description about the goals of your project and which 
+problems it solves. Describe the what, why and how.
+
+## Installation
+
+Keep this part short and simple. Also keep in mind who might 
+read your README. Write this section as if your reader is an 
+absolute beginner. Direct them to other resources (composer, 
+npm, other tooling, etc.) if needed. Answer the following 
+questions: How can others install your project depending on 
+the environments you support? What do they need to configure 
+to get it running?
+
+## Update
+
+If you allow updates between different versions describe them 
+here. Also keep this section as simple as possible.
+
+## API / Code Examples / Usage
+
+If others can interact with your code you should describe how
+ they supposed to do it. Depending on the complexity you can 
+ show some common use cases of your code. Provide links to 
+ concrete examples or show the source code with markdown syntaxt
+```php
+<?php
+
+echo "This is how you easily include source code in any language";
+```
+
+## Configuration
+
+Similar to the previous point but here you can describe which 
+configuration options can be provided to adjust the workflow 
+of your code. You can often see this in libraries that 
+configure their behaivior via constructor (php) or with 
+configuration objects (js).  
+
+## Depenencies
+
+This is a section that I don't see often. In addition of just 
+pulling in libraries I try to describe *WHY* I include these 
+libraries. This follows a "less dependencies as possible" 
+principle. To reason about a project you also have to reason 
+about its dependencies. 
+
+## FAQ
+
+This is one of my favorite sections because it can save you so 
+much time. Collect common question regarding your project and 
+answer them here. With time you get a sense of which questions 
+get asked often. So it is convenient to answer them in one place 
+so that you don't have to answer them yourself for example in 
+personal discussions.
+
+{{< / highlight >}}
