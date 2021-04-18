@@ -1,13 +1,19 @@
 <header>
     <h1>{{ .Title | markdownify }}</h1>
-
+    
+    {{ with .Params.author }}
     <div class="flex items-center justify-center py-4">
-        {{ with .Params.author }}
         <span class="mr-4 text-sm">by {{.}}</span>
-        {{ end }}
     </div>
+    {{ end }}
 
-    <hr class="my-4 w-2/12 m-auto border-indigo-300"/>
+    {{ if .Params.date }}
+    <div class="flex items-center justify-center py-4">
+        <small class="text-xs text-center mr-2">
+            {{partial "date.html" (dict "date" .Params.date "language" $.Page.Language "monate" $.Site.Data.monate) }}
+        </small>
+    </div>
+    {{ end }}
 
     <div class="max-h-72 mb-8 -mx-32 flex items-center justify-center overflow-hidden rounded-md">
         {{ partial "img.html" . }}
