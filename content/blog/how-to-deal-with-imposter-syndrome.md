@@ -38,9 +38,7 @@ But lets first learn where imposter syndrome comes from.
 
 ##  What causes Imposter Syndrome?
 
-The 
-
-
+It's a highly discussed topic where imposter syndrome comes from. Some say it stems from your personality traits such as perfectionism or anxiety. Others think that your family and the environment that you were raised in are determining factor. 
 
 In my 6 years of being a web developer now I couldn't think of a time where I needed the complex theoretic bulk stuff. You know things like data structures and waterfall methods. Hence a lot of companies what people to answer questions 
 
