@@ -54,7 +54,13 @@ In those situations you learn that only your talent is of value and if you don't
 
 So the first tip that I can give is to observe your surroundings. Ask yourself. Is there something or someone who makes me feel inferior? Is the environment that I find myself in helping me or is it holding me back? 
 
-If you find yourself in an environment that harms you, you have to change that environment. Well this is easier said than done. 
+If you find yourself in an environment that harms you, you have to change that environment.
+
+Start with the people that you spend the most time with. It doesn't matter if at home or at your job. There is a famous quote:
+> You're The Average Of The Five People You Spend The Most Time With
+> -- <cite>Jim Rohn</cite>
+
+I don't agree 100% with this quote but it's a fact that your social group influences you.
 
 What helped me tremendously was to talk about it with fellow developers or colleagues. Having people that go through the same things as you do can lead to very insightful conversations that actually help both parts.
 
