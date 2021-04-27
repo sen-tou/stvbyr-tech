@@ -30,18 +30,18 @@
       sizes="100vw"
       srcset='
       {{ if ge $src.Width "640" }}
-        {{ with $tiny.Permalink }}{{.}} 640w{{ end }}
+        {{ with $tiny.RelPermalink }}{{.}} 640w{{ end }}
       {{ end }}
       {{ if ge $src.Width "768" }}
-        {{ with $small.Permalink }}, {{.}} 768w{{ end }}
+        {{ with $small.RelPermalink }}, {{.}} 768w{{ end }}
       {{ end }}
       {{ if ge $src.Width "1024" }}
-        {{ with $medium.Permalink }}, {{.}} 1024w{{ end }}
+        {{ with $medium.RelPermalink }}, {{.}} 1024w{{ end }}
       {{ end }}
       {{ if ge $src.Width "1280" }}
-        {{ with $large.Permalink }}, {{.}} 1280w {{ end }}
+        {{ with $large.RelPermalink }}, {{.}} 1280w {{ end }}
       {{ end }}'
-      src="{{ $src.Permalink }}"
+      src="{{ $src.RelPermalink }}"
       loading="lazy"
       data-size="{{ $src.Width }}x{{ $src.Height }}"
   >

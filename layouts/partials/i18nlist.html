@@ -1,5 +1,5 @@
 {{ if .IsTranslated }}
 {{ range .Translations }}
-{{ .Language.LanguageName }}: <a href="{{ .Permalink }}">{{ .Title }}</a>
+{{ .Language.LanguageName }}: <a href="{{ .RelPermalink }}">{{ .Title }}</a>
 {{ end }}
 {{ end }}

@@ -45,7 +45,7 @@
 
 
 <!-- SEO tags for Hugo; source: https://jeremyjaymes.com/hugo-seo-markup-template/ -->
-<link rel="canonical" href="{{ .Permalink }}" />
+<link rel="canonical" href="{{ .RelPermalink }}" />
 
 {{ if ne site.Params.seo.twitter.card "disable" }}
   <!-- Twitter Card -->
@@ -54,7 +54,7 @@
   <meta name="twitter:title" content="
     {{- .Title | default site.Title }} {{- default " | " site.Params.meta.titleSeparator -}} {{ if not .IsHome }}{{ site.Title }}{{ else }}{{ site.Params.meta.tagline }}{{ end -}}
   " />
-  <meta name="twitter:url" content="{{ .Permalink }}" />
+  <meta name="twitter:url" content="{{ .RelPermalink }}" />
   {{ if site.Params.seo.twitter.handle -}}
     <meta name="twitter:site" content="@{{ site.Params.seo.twitter.handle }}" /> <!-- @publisher_handle -->
   {{- end }}
@@ -75,7 +75,7 @@
   <meta property="og:site_name" content="{{ site.Title }}" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
-  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:url" content="{{ .RelPermalink }}" />
   {{ if site.Params.facebook.appID }}
   <meta property="fb:app_id" content="{{ site.Params.facebook.appID }}" />
   {{ end }}
@@ -83,7 +83,7 @@
     {{ $src := resources.GetMatch .Params.image }}
     {{ if $src }}
         {{ $img := ($src.Resize "500x jpg q85") }}
-        <meta property="og:image" content="{{ $img.Permalink }}" />
+        <meta property="og:image" content="{{ $img.RelPermalink }}" />
     {{ end }}
   {{- end }} <!-- reso 200px x 200px to 1200px x 1200px -->
 {{ end }}
@@ -107,7 +107,7 @@
       "@context": "http://schema.org", 
       "@type": "WebSite", 
       "url": {{ site.BaseURL }}, {{/*
-      When in a script tag, Hugo automatically adds quotes around all Hugo tags, eg, {{ }}. However, if quotes are added manually (like "{{ .Permalink }}"), Hugo adds back-slashes in neighborhood of forward slashes. safeHTML tag doesn't work either as of v0.57.2 see: https://discourse.gohugo.io/t/x26rsquo-bad-escape-sequence-in-string-for-json-ld 
+      When in a script tag, Hugo automatically adds quotes around all Hugo tags, eg, {{ }}. However, if quotes are added manually (like "{{ .RelPermalink }}"), Hugo adds back-slashes in neighborhood of forward slashes. safeHTML tag doesn't work either as of v0.57.2 see: https://discourse.gohugo.io/t/x26rsquo-bad-escape-sequence-in-string-for-json-ld 
       
       url: Specifies the URL of the site being searched. Set to the canonical homepage of your site.
       */}}

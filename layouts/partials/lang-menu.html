@@ -5,7 +5,7 @@
 >
     {{ range sort $.Site.Home.AllTranslations "Weight" }}
     {{ if ne $curLang .Language}}
-    <li class="ml-0"><a href="{{ .Permalink }}"><img
+    <li class="ml-0"><a href="{{ .RelPermalink }}"><img
                 src="/images/{{ .Language }}-flag.svg"
                 style="height: 1em"
                 alt="{{ .Language.LanguageName }}"

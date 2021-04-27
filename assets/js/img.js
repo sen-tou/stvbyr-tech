@@ -7,13 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function substituteImageForBackground(image, container) {
-    const setCurrentSrc = function () {
-        if (container) {
-            image.style.display = 'none';
-            container.style.backgroundImage = `url("${
-                image.currentSrc ? image.currentSrc : image.src
-            }")`;
-        }
+    if(!image || !container) {
+        return;
+    }
+    const setCurrentSrc = () => {
+        image.style.display = 'none';
+        container.style.backgroundImage = `url("${
+            image.currentSrc ? image.currentSrc : image.src
+        }")`;
     };
 
     setCurrentSrc();
