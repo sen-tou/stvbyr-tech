@@ -1,13 +1,15 @@
 ---
 title: "How to Use a Specific Layout for an Article in Hugo"
+summary: "Sometimes you just want to use a unique template for a post or list. In hugo there is a template"
 date: 2021-03-18T06:04:38+01:00
+draft: false
 translationKey: "how-to-use-a-specific-layout-for-an-article-in-hugo"
 image: "home-header.png"
 categories: 
     - hugo
 ---
 
-Sometimes you just want to use a unqiue template for a post or list. In hugo there is a template [lookup order](https://gohugo.io/templates/lookup-order/) in which the template files are getting loaded but you can also specify the exact template that you want. The hugo docs explain how [content organization](https://gohugo.io/content-management/organization/) works.
+Sometimes you just want to use a unique template for a post or list. In hugo there is a template [lookup order](https://gohugo.io/templates/lookup-order/) in which the template files are getting loaded but you can also specify the exact template that you want. The hugo docs explain how [content organization](https://gohugo.io/content-management/organization/) works.
 
 ## Using Frontmatter Layout
 
@@ -37,7 +39,7 @@ layout: "about"
 
 Each content file/post gets a default content type assigned. Usually this is the name of the subfolder in `content` where the post lives in. So for example a `content/blog/php.md` would get the type `blog`.
 
-There is a special case though. All files directly under `content` are of type `page` and also all index files (but *not* the ones with underscore) in subfolders are of type `page` as well. Keep that in mind when specifing a layout.
+There is a special case though. All files directly under `content` are of type `page` and also all index files (but *not* the ones with underscore) in subfolders are of type `page` as well. Keep that in mind when specifying a layout.
 
 You can also specify the content type in frontmatter. This simply tells hugo which layouts subfolder it should use to load the templates from. For example `type: "notes"` would make hugo search in the `layouts/notes` folder.
 
