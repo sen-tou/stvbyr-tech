@@ -29,10 +29,10 @@
 
         <div class="text-center">
             {{ with .Site.GetPage "taxonomy" "categories" }} 
-                <a href="{{ .Permalink }}" >{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}" >{{ .Title }}</a>
             {{ end }}
             {{ with .Site.GetPage "taxonomy" "Kategorien" }} 
-                <a href="{{ .Permalink }}" >{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}" >{{ .Title }}</a>
             {{ end }}
         </div>
 

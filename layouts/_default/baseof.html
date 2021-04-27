@@ -6,10 +6,10 @@
 
     {{ if .Site.IsServer }}
     {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./postcss.config.js") }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
     {{ else }}
     {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./postcss.config.js") | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
     {{ end }}
 
     {{ block "styles" . }}{{ end }}
@@ -37,7 +37,7 @@
     {{ $menu := resources.Get "js/toggleMainMenu.js" | js.Build }}
 
     {{ $js := slice $img $menu | resources.Concat "js/bundle.js" | babel | minify | fingerprint }}
-    <script src="{{ $js.Permalink }}"></script>
+    <script src="{{ $js.RelPermalink }}"></script>
 </body>
 
 </html>

@@ -41,13 +41,13 @@
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
 
 <picture>
-    {{ with $tiny.Permalink }} <source srcset="{{.}}" media="(max-width: {{ $tinySize }})" />{{ end }}
-    {{ with $small.Permalink }} <source srcset="{{.}}" media="(max-width: {{ $smallSize }}px)" />{{ end }}
-    {{ with $medium.Permalink }} <source srcset="{{.}}" media="(max-width: {{ $mediumSize }}px)" />{{ end }}
-    {{ with $large.Permalink }} <source srcset="{{.}}" media="(max-width: {{ $largeSize }}px)" />{{ end }}
-    {{ with $huge.Permalink }} <source srcset="{{.}}" media="(max-width: {{ $hugeSize }}px)" />{{ end }}
+    {{ with $tiny.RelPermalink }} <source srcset="{{.}}" media="(max-width: {{ $tinySize }})" />{{ end }}
+    {{ with $small.RelPermalink }} <source srcset="{{.}}" media="(max-width: {{ $smallSize }}px)" />{{ end }}
+    {{ with $medium.RelPermalink }} <source srcset="{{.}}" media="(max-width: {{ $mediumSize }}px)" />{{ end }}
+    {{ with $large.RelPermalink }} <source srcset="{{.}}" media="(max-width: {{ $largeSize }}px)" />{{ end }}
+    {{ with $huge.RelPermalink }} <source srcset="{{.}}" media="(max-width: {{ $hugeSize }}px)" />{{ end }}
 
-    <img src="{{ $src.Permalink }}" data-size="{{ $src.Width }}x{{ $src.Height }}" alt="{{ with $desc }} {{.}} {{ else }} Cover image for {{ .Params.title }} {{ end }}"/>
+    <img src="{{ $src.RelPermalink }}" data-size="{{ $src.Width }}x{{ $src.Height }}" alt="{{ with $desc }} {{.}} {{ else }} Cover image for {{ .Params.title }} {{ end }}"/>
 </picture>
 
 {{ end }}
