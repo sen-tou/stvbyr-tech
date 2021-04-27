@@ -15,7 +15,7 @@ Programming is something that really excites me. There is so much to learn and s
 
 ## How did you come to development?
 
-The funny things is: I almost wouldn't have gotten into tech at all. I wrote a little bit about [how i dealt with imposter syndrome]({{< relref "/blog/how-to-deal-with-imposter-syndrome.md" >}}) very early on.
+<!-- The funny things is: I almost wouldn't have gotten into tech at all. I wrote a little bit about [how i dealt with imposter syndrome]({{< relref "/blog/how-to-deal-with-imposter-syndrome.md" >}}) very early on. -->
 
 I graduated high school in 2012 and did an apprentice ship afterwards. My official job title is IT specialist for application development but web developer sounds cooler to me so I stick with that.
 
