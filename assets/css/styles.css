@@ -162,6 +162,7 @@ td > tt {
     @apply p-0.5;
     @apply rounded-sm;
     @apply bg-purple-100;
+    @apply dark:bg-gray-900;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 }
