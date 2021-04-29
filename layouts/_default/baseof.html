@@ -4,6 +4,9 @@
 <head>
     {{ partial "seo.html" . }}
 
+    {{ $style := resources.Get "css/fonts.css" | postCSS (dict "config" "./postcss.config.js") | minify | fingerprint }}
+    <link rel="stylesheet preload" as="style" crossorigin="anonymous" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
     {{ if .Site.IsServer }}
     {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./postcss.config.js") }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
