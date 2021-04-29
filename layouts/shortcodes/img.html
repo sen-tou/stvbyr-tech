@@ -4,46 +4,34 @@
 
 {{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
 
-{{ $tinyw := default "640x jpg q90" }}
-{{ $smallw := default "768x jpg q90" }}
-{{ $mediumw := default "784x jpg q90" }}
-{{ $largew := default "1280x jpg q90" }}
+{{ $quality := "x jpg q90" }}
+{{ $tinySize := "640" }}
+{{ $smallSize := "768" }}
+{{ $mediumSize := "1024" }}
+
+{{ $tinyw := print $tinySize $quality }}
+{{ $smallw := print $smallSize $quality }}
+{{ $mediumw := print $mediumSize $quality }}
 
 {{/* resize the src image to the given sizes */}}
 
 {{ .Scratch.Set "tiny" ($src.Resize $tinyw) }}
 {{ .Scratch.Set "small" ($src.Resize $smallw) }}
 {{ .Scratch.Set "medium" ($src.Resize $mediumw) }}
-{{ .Scratch.Set "large" ($src.Resize $largew) }}
 
 {{/* add the processed images to the scratch */}}
 
 {{ $tiny := .Scratch.Get "tiny" }}
 {{ $small := .Scratch.Get "small" }}
 {{ $medium := .Scratch.Get "medium" }}
-{{ $large := .Scratch.Get "large" }}
 
 {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
-<figure class="mb-8">
-  <img
-      sizes="100vw"
-      srcset='
-      {{ if ge $src.Width "640" }}
-        {{ with $tiny.RelPermalink }}{{.}} 640w{{ end }}
-      {{ end }}
-      {{ if ge $src.Width "768" }}
-        {{ with $small.RelPermalink }}, {{.}} 768w{{ end }}
-      {{ end }}
-      {{ if ge $src.Width "1024" }}
-        {{ with $medium.RelPermalink }}, {{.}} 1024w{{ end }}
-      {{ end }}
-      {{ if ge $src.Width "1280" }}
-        {{ with $large.RelPermalink }}, {{.}} 1280w {{ end }}
-      {{ end }}'
-      src="{{ $src.RelPermalink }}"
-      loading="lazy"
-      data-size="{{ $src.Width }}x{{ $src.Height }}"
-  >
-  <figcaption class="text-right text-grey-300 text-sm">{{ $cap }}</figcaption>
-</figure>
+
+<picture>
+    {{ with $tiny.RelPermalink }} <source srcset="{{.}}" media="(max-width: {{ $tinySize }})" />{{ end }}
+    {{ with $small.RelPermalink }} <source srcset="{{.}}" media="(max-width: {{ $smallSize }}px)" />{{ end }}
+    {{ with $medium.RelPermalink }} <source srcset="{{.}}" media="(max-width: {{ $mediumSize }}px)" />{{ end }}
+
+    <img src="{{ $medium.RelPermalink }}" data-size="{{ $medium.Width }}x{{ $medium.Height }}" width="{{ $medium.Width }}" height="{{ $medium.Height }}"alt="{{ with $cap }} {{.}} {{ else }} Cover image for {{ .Params.title }} {{ end }}"/>
+</picture>
