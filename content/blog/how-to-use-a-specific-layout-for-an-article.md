@@ -1,7 +1,7 @@
 ---
 title: "How to Use a Specific Layout for an Article in Hugo"
 summary: "Sometimes you just want to use a unique template for a post or list. In hugo there is a template"
-date: 2021-03-18T06:04:38+01:00
+date: 2021-04-28T06:04:38+01:00
 draft: false
 translationKey: "how-to-use-a-specific-layout-for-an-article-in-hugo"
 image: "home-header.png"

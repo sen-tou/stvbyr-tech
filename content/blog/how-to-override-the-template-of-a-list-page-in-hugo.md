@@ -1,7 +1,7 @@
 ---
 title: "How to Override the Template of a List Page in Hugo"
 summary: "The default template that hugo uses to render lists is `layouts/_default/list.html`"
-date: 2021-03-13T13:46:47+01:00
+date: 2021-04-29T13:46:47+01:00
 draft: false
 translationKey: "how-to-override-the-template-of-a-list-page-in-hugo"
 categories: 
