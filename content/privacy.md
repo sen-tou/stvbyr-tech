@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-date: 2021-04-27T11:33:04+01:00
+date: 2021-05-01T11:33:04+01:00
 draft: false
 translationKey: "privacy"
 menu: 
@@ -30,9 +30,6 @@ Steve Beyer<br>
 Peniger Straße 7<br>
 09212 Limbach-Oberfrohna<br>
 Germany
- 
-Telephone: 'phone'<br>
-Email: 'email'
 
 ## II. The rights of users and data subjects
 
@@ -97,11 +94,17 @@ Initially, this data includes such things as your IP address, the date and time 
 
 The following social networks are integrated into our site by linked graphics:
 
-### twitter
+### Twitter
 
 Twitter Inc., 795 Folsom St., Suite 600, San Francisco, CA 94107, USA
 
 Privacy Policy: <a href="https://twitter.com/privacy" target="_blank" rel="noopener">https://twitter.com/privacy</a>
+
+### Github
+
+GitHub, Inc., 88 Colin P Kelly Junior Street San Francisco, CA 94107 USA
+
+Privacy Policy: <a href="https://docs.github.com/en/github/site-policy/github-privacy-statement" target="_blank" rel="noopener">https://docs.github.com/en/github/site-policy/github-privacy-statement</a>
 
 ### YouTube
 
@@ -129,4 +132,4 @@ The legal basis for collecting and processing this information is Art. 6 Para. 1
 
 If you do not agree to this processing, you have the option of preventing the installation of cookies by making the appropriate settings in your browser. Further details can be found in the section about cookies above.
 
-<a href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html" target="_blank" rel="noopener">Model Data Protection Statement</a> for <a href="https://www.ratgeberrecht.eu/" target="_blank" rel="noopener">Anwaltskanzlei Weiß &amp; Partner</a>
+<a href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html" target="_blank" rel="noopener">Model Data Protection Statement</a> from <a href="https://www.ratgeberrecht.eu/" target="_blank" rel="noopener">Anwaltskanzlei Weiß &amp; Partner</a> with additions by the the controller.
