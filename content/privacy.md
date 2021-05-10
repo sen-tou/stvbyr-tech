@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-date: 2021-05-01T11:33:04+01:00
+date: 2021-05-10T11:33:04+01:00
 draft: false
 translationKey: "privacy"
 menu: 
@@ -118,18 +118,20 @@ LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Irland
 
 Privacy Policy: <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener">https://www.linkedin.com/legal/privacy-policy</a>
 
+<!-- 
 <h4>Amazon Associates (PartnerNet)</h4> 
 
 Our website participates in the Amazon Associates program, known as PartnerNet in German. This is a service provided by Amazon Europe Core S.à r.l., 5 Rue Plaetis, 2338 Luxembourg, Luxembourg. Advertisements from Amazon.de are placed on our website via the Amazon Associates program. If you click on one of these advertisements, you will be redirected to the corresponding offer on the Amazon website. If you subsequently decide to purchase the advertised product there, we will receive a commission from Amazon.
 
 Amazon uses cookies to allow this service to work. With the help of these cookies, Amazon can verify that you were forwarded from our website to its website.
 
-Amazon offers further information about data protection at this link:
+Amazon offers further information about data protection at this link: 
+
 
 <a href="https://www.amazon.de/gp/help/customer/display.html?nodeId=201909010." target="_blank" rel="noopener">https://www.amazon.de/gp/help/customer/display.html?nodeId=201909010.</a>
 
 The legal basis for collecting and processing this information is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in ensuring that our commissions are processed and paid by Amazon.
 
 If you do not agree to this processing, you have the option of preventing the installation of cookies by making the appropriate settings in your browser. Further details can be found in the section about cookies above.
-
+-->
 <a href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html" target="_blank" rel="noopener">Model Data Protection Statement</a> from <a href="https://www.ratgeberrecht.eu/" target="_blank" rel="noopener">Anwaltskanzlei Weiß &amp; Partner</a> with additions by the the controller.
