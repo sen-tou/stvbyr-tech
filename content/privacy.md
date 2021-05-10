@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-date: 2021-05-10T11:33:04+01:00
+date: 2021-05-10T00:33:04+01:00
 draft: false
 translationKey: "privacy"
 menu: 
@@ -62,7 +62,7 @@ The website is hosted on netlify (privacy: https://www.netlify.com/privacy, GDPR
 
 #### a) Session cookies 
 
-We use cookies on our website. Cookies are small text files or other storage technologies stored on your computer by your browser. These cookies process certain specific information about you, such as your browser, location data, or IP address.
+We may use cookies on our website. Cookies are small text files or other storage technologies stored on your computer by your browser. These cookies process certain specific information about you, such as your browser, location data, or IP address.
 
 This processing makes our website more user-friendly, efficient, and secure, allowing us, for example, to display our website in different languages or to offer a shopping cart function.
 
