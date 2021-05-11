@@ -19,11 +19,11 @@ I graduated high school in 2012 and did an apprentice ship afterwards. My offici
 
 ## What will you write on this blog?
 
-I just made the decision to write a blog. My intention is to provide the knowledge that I collect over time on here. I learned so much from other people on the internet that write blogs just like these so why not add some value (hopefully) to the mix?
+I just made the decision to write a blog. My intention is to provide the knowledge that I collect over time on here. I learned so much from other people on the internet so why not add some value (hopefully) to the mix?
 ## What else?
 
 In my spare time I read a lot of books. The topics range over psychology, personal growth, investing, organization, sci-fi and fantasy. The latest books I've read were Atomic Habits by James Clear, 1984 by George Orwell, Bobiverse 1-3 by Dennis E. Taylor (waiting for part 4 to be translated to german).
 
 As a little site hustle if mine is designing T-Shirts and sell them on Merch by Amazon. This is a good practice to learn the basics of marketing. I am at the beginning still but I hope to generate a little pocket money for myself in the process.
 
-If you wanna reach out to me just DM me on [Twitter](https://twitter.com/csentou). 
+If you wanna reach out to me just DM me on [Twitter](https://twitter.com/stvbyr). 
