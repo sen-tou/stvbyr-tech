@@ -1,6 +1,6 @@
 ---
 title: "Why you should put a README into every project"
-summary: "You probably think: That's to much work, I don't do that. But hear me out. I will give you some good reasons why you should include a README."
+summary: "You probably think: That's too much work, I don't do that. But hear me out. I will give you some good reasons why you should include a README."
 date: 2021-04-27T17:46:09+01:00
 draft: false
 translationKey: "why-you-should-put-a-readme-into-every-project"
