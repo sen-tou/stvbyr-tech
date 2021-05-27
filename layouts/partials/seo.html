@@ -5,6 +5,14 @@
     {{ $socialProfiles_len = len site.Params.social.profiles }}
 {{ end }}
 
+{{ $socialImg := 0 }}
+{{ if .Params.image }}
+    {{ $socialImg = resources.GetMatch .Params.image }}
+    {{ if $socialImg }}
+        {{ $socialImg = ($socialImg.Resize "180x jpg q85") }}
+    {{ end }}
+{{ end }} <!-- reso 200px x 200px to 1200px x 1200px -->
+
 <meta name="robots" content="index, follow" />
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -88,16 +96,12 @@
     {{- end }}
   
     {{ if not .IsHome }}
-        {{ if .Params.image }}
-            {{ $src := resources.GetMatch .Params.image }}
-            {{ if $src }}
-                {{ $img := ($src.Resize "180x jpg q85") }}
-                <meta property="twitter:image" content="{{ $img.RelPermalink }}" />
-            {{ end }}
-        {{ end }} <!-- reso 200px x 200px to 1200px x 1200px -->
+        {{ if $socialImg }}
+            <meta property="twitter:image" content="{{ $socialImg.Permalink }}" />
+        {{ end }}
     {{ else }}
         {{ if site.Params.brand.logo_500px }}
-            <meta name="twitter:image" content="{{ site.Params.brand.logo_500px }}" />
+            <meta name="twitter:image" content="{{ print site.BaseURL site.Params.brand.logo_500px }}" />
         {{ end }}
     {{ end }}
 {{ end }}
@@ -131,16 +135,12 @@
         <meta property="fb:app_id" content="{{ site.Params.facebook.appID }}" />
     {{ end }}
     {{ if not .IsHome }}
-        {{ if .Params.image }}
-            {{ $src := resources.GetMatch .Params.image }}
-            {{ if $src }}
-                {{ $img := ($src.Resize "180x jpg q85") }}
-                <meta property="twitter:image" content="{{ $img.RelPermalink }}" />
-            {{ end }}
-        {{ end }} <!-- reso 200px x 200px to 1200px x 1200px -->
-        {{ else }}
+        {{ if $socialImg }}
+            <meta property="twitter:image" content="{{ $socialImg.Permalink }}" />
+        {{ end }}
+    {{ else }}
         {{ if site.Params.brand.logo_500px }}
-            <meta name="twitter:image" content="{{ site.Params.brand.logo_500px }}" />
+            <meta name="twitter:image" content="{{ print site.BaseURL site.Params.brand.logo_500px }}" />
         {{ end }}
     {{ end }}
 {{ end }}
@@ -174,7 +174,7 @@
             "name": {{ site.Params.meta.author }}
         },
         {{ if site.Params.brand.logo_500px }}
-        "logo": {{ site.Params.brand.logo_500px }},
+        "logo": {{ print site.BaseURL site.Params.brand.logo_500px }},
         {{ end }}
         "description": {{- with .Description }}
             {{- . | safeHTML }}
@@ -232,7 +232,7 @@
                 {{- end }}
                 {{- end -}},
             {{ if site.Params.brand.logo_500px }}
-            "logo": {{ site.Params.brand.logo_500px }},
+            "logo": {{ print site.BaseURL site.Params.brand.logo_500px }},
             {{ end }}
             {{ if .Params.image -}}
             "image": {{ .Params.image }},
@@ -271,7 +271,7 @@
                 "name": {{ site.Params.meta.author }}
             },
             {{ if site.Params.brand.logo_500px }}
-            "logo": {{ site.Params.brand.logo_500px }},
+            "logo": {{ print site.BaseURL site.Params.brand.logo_500px }},
             {{ end }}
             {{ if .Params.image -}}
             "image": {{ .Params.image }},
