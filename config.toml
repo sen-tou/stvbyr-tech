@@ -30,3 +30,21 @@ unsafe = true
 
 [markup.highlight]
 style = "native"
+
+[Params]
+
+[Params.seo.twitter]
+handle = "stvbyr"
+
+[Params.brand]
+logo_500px = "/apple-icon-180x180.png"
+
+[Params.meta]
+author = "Steve Beyer"
+description = "My name is Steve Beyer and on this blog you find all kinds of tech related articles mostly around php, software design and personal growth."
+
+[Params.social]
+
+[Params.social.profiles]
+twitter = "https://twitter.com/stvbyr"
+github = "https://github.com/stvbyr"

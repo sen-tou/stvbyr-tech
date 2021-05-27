@@ -1,7 +1,7 @@
 ---
 title: "Legal Notice"
-date: 2021-05-01T11:33:04+01:00
-draft: true
+date: 2021-05-27T00:33:04+01:00
+draft: false
 translationKey: "legal-Notice"
 menu: 
     footer:

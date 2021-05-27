@@ -4,26 +4,25 @@
 {{ end }}
 
 {{ define "header" }}
-<section
-    id="home-header"
-    class="py-8 px-4 sm:px-16 -mt-14 mb-16 bg-cover bg-center bg-no-repeat"
->
-    <div class="w-0 h-0">
-        <div class="w-0 h-0">
-            <picture>
-                {{ $img := resources.Get "images/home-header.jpg" }}
-                <img
-                    src="{{ $img.RelPermalink }}"
-                    data-size="1920x400"
-                    width="1920"
-                    height="400"
-                    alt=" Cover image for Steve Beyer "
-                    style="display: none;"
-                >
-            </picture>
+<section class="py-8 px-4 sm:px-16 my-16">
+    <div class="flex flex-col items-center justify-center">
+        <picture class="w-64 h-64 rounded-full overflow-hidden">
+            {{ $img := resources.Get "images/me.jpg" }}
+            <img
+                src="{{ $img.RelPermalink }}"
+                data-size="512x512"
+                width="512"
+                height="512"
+                alt="Cover image for Steve Beyer"
+            >
+        </picture>
+        <h1 class="text-2xl sm:text-4xl text-white">{{ .Params.subtitle }}</h1>
+
+        <div class="mb-8 lg:mb-0">
+            {{ partial "social-connect-buttons.html" . }}
         </div>
     </div>
-    <h1 class="text-2xl sm:text-4xl text-white">{{ .Params.subtitle }}</h1>
+    
 </section>
 {{ end }}
 
