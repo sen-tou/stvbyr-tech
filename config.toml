@@ -37,7 +37,7 @@ style = "native"
 handle = "stvbyr"
 
 [Params.brand]
-logo_500px = "/apple-icon-180x180.png"
+logo_500px = "apple-icon-180x180.png"
 
 [Params.meta]
 author = "Steve Beyer"
