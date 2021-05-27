@@ -101,11 +101,6 @@ figcaption {
     @apply text-white;
 }
 
-#page-footer svg {
-    @apply fill-current;
-    @apply w-8;
-}
-
 .index-nav-color {
     @apply text-white;
 }

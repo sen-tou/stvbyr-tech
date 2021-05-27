@@ -4,27 +4,7 @@
 >
     <nav class="m-auto py-8 max-w-2xl lg:flex justify-between text-white">
         <div class="mb-8 lg:mb-0">
-            <ul
-                id="nav-connect-menu"
-                class="flex items-center justify-center list-none"
-            >
-                <li class="mr-4 ml-0">
-                    <a role="button" aria-label="Link to twitter.com profile @stvbyr" href="https://twitter.com/stvbyr" class="flex">
-                        {{ readFile "static/images/twitter.svg" | safeHTML }}
-                    </a>
-                </li>
-                <li class="mr-4 ml-0">
-                    <a role="button" aria-label="Link to github.com profile stvbyr" href="https://github.com/stvbyr" class="flex">
-                        {{ readFile "static/images/github.svg" | safeHTML }}
-                    </a>
-                </li>
-                {{/*  <li>
-                    <a href="">
-                        {{ readFile "static/images/linkedin.svg" | safeHTML }}
-                        <span>Steve Beyer</span>
-                    </a>
-                </li>  */}}
-            </ul>
+            {{ partial "social-connect-buttons.html" . }}
         </div>
 
         {{/*  <div class="text-center">
