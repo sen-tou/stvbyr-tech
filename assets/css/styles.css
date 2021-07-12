@@ -95,6 +95,8 @@ figcaption {
 
 .highlight pre {
     @apply p-4;
+    white-space: pre-wrap;
+    @apply text-xs;
 }
 
 #page-footer a {
