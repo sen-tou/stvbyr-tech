@@ -24,6 +24,7 @@ module.exports = {
                 'serif',
             ],
             mono: [
+                'Cascadia Code PL',
                 'Menlo',
                 'Monaco',
                 'Consolas',
