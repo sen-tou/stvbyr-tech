@@ -1,4 +1,4 @@
-{{- $pageurl := .RelPermalink -}}
+{{- $pageurl := .Permalink -}}
 {{- $subject := .Params.title -}}
 
 <style>
@@ -6,6 +6,7 @@
 </style>
 
 <!-- Sharingbutton Facebook -->
+<!--
 <a
     class="inline-block no-underline text-indigo-900 dark:text-white fill-current mr-2"
     href="https://facebook.com/sharer/sharer.php?u={{- $pageurl -}}"
@@ -27,7 +28,7 @@
         </div>
     </div>
 </a>
-
+-->
 <!-- Sharingbutton Twitter -->
 <a
     class="inline-block no-underline text-indigo-900 dark:text-white fill-current mr-2"
@@ -52,6 +53,7 @@
 </a>
 
 <!-- Sharingbutton E-Mail -->
+<!--
 <a
     class="inline-block no-underline text-indigo-900 dark:text-white fill-current mr-2"
     href='mailto:?{{- (querify "subject" $subject) | safeHTML -}}%0a%0a&amp;{{- (querify "body" $pageurl) | safeHTML -}}'
@@ -73,6 +75,7 @@
         </div>
     </div>
 </a>
+-->
 
 <!-- Sharingbutton LinkedIn -->
 <a
@@ -97,7 +100,9 @@
     </div>
 </a>
 
+
 <!-- Sharingbutton XING -->
+<!--
 <a
     class="inline-block no-underline text-indigo-900 dark:text-white fill-current mr-2"
     href='https://www.xing.com/app/user?op=share;{{- (querify "url" $pageurl) | safeHTML -}};{{- (querify "title" $subject) | safeHTML -}}%0a%0a'
@@ -119,3 +124,4 @@
         </div>
     </div>
 </a>
+-->
