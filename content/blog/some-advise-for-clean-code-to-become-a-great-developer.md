@@ -14,15 +14,15 @@ Initially I wanted to make it more generic but it got pretty code heavy. I still
 
 For the coding examples I am using TypeScript.
 
-So here are (x) things that I believe you should know and expect.
+So here are (x) things that I believe you should know to become a great developer.
 
-## You get better if you actually code yourself
+## You Get Better If You Actually Code
 
 This is kind of obvious right? 
 
 But with youtube and course platforms it is easy to distract yourself. Tutorial hell is a thing.
 
-Watching many many videos and reading blogs can help you. In addition though you have to use what you've seen in a real project.
+Watching videos and reading blogs can help you. In addition though you have to use what you've seen in a real project.
 
 The best way to do this is to always start small. Make a todo app!
 
@@ -31,15 +31,17 @@ Uhgh, another todo app? Yes that's right. Make it.
 A todo app is actually a very good start because you get to practice different concepts such as 
 * create, read, update and delete todos.
 * listing todos (collections/arrays), bulk remove checked todos (collections/arrays again)
+* manipulation of different objects/types
 
-After you did this try to enhance your todo app or better: Come up with your own project.
+After you did this try to enhance your todo app or better: Come up with your own ideas.
 
-Do you have a problem that you can automate? Or a problem that you need to solve?
+Do you have a problem that you can automate? Or a problem that you need to solve? Look around you. Look at friends and family. How could software help them?
 
-Look around you. Look at friends and family. How could software help them?
+If you can't come up with anything just use quick google search "[technology] project ideas". There are a lot of lists with bigger and smaller projects that you can do. Some of them include images with the end results so that you have a reference you can use to implement the project.
 
-* Come up with your own project idea and implement what you saw in the tutorial. Try to explore more than what you just saw. 
-* Write tutorials for others so that you can consolidate your knowledge.
+Last but not least write tutorials for yourself! You don't have to publish them. Just write little instructions with examples. Explain what you just learned in your own words. Put in examples or side by side comparisons that act as reference. 
+
+This technique uses the same principles that you learned in school. If you write something in your own words and explain it to yourself the concepts will sink in faster.
 
 ## Write Code For Other Humans
 
@@ -120,19 +122,19 @@ For the second one the code is the single source of truth. That means that the f
 
 That's the key point. You are using ACTUAL code to describe what should happen. You're not using a comment that is not executed.
 
-Again, why is this better? You can now make assumptions about the code that you are using.
+Again, why is this better? 
+
+You can now make assumptions about the code that you are using.
 
 If your function signature looks like this `first_array_element(arr: any[]): any` you can easily write a test for it without even looking at its code.
 
 This is because the function name tells you that it gives you the first element of an array. You can test for that.
 
-If the function does not work like that the function has a bug or is wrongly named.
-
-This raises the question: Why should I use a comment to describe a functionality when I can use a proper code for it? 
+If the function does not work in that way, the function either has a bug or is wrongly named.
 
 Don't be afraid to capsule logic into functions. Even if it's one or two lines of code.
 
-Let's come back to the first example again You could change the expression for `increasedCounter`.
+Let's come back to the first example again. You could change the expression for `increasedCounter`.
 ```typescript
 // map over counters array and increase them by x
 const increasedCounters = counters.map(counter => counter + 100);
@@ -143,7 +145,7 @@ Now you have a comment that suggests the wrong thing. The code still works but i
 
 "I could also forget to change the function name." Sure but it's much more likely that you change a function name than correcting a comment (personal experience).
 
-Also consider that my examples are kept short and simple to not make things more complicated.
+To be fair my examples are kept short and simple to not make things more complicated.
 
 In the real world those comments are more complex and obvious mistakes are not that obvious anymore.
 
@@ -174,11 +176,11 @@ const worldedStrings = addWorldToStrings(['Hello', 'You are the']);
 ```
 Don't be confused by that. This is TypeScript specific. What it basically does is  it allows the "map part" to be used on strings and numbers. Making it more versatile. It uses function overload to deal with the types.
 
-But again there are no comments. Everything is described with code directly.
+There are no comments. Everything is described with code directly.
 
-One more thing to comments. If you need comments and there is no way around it always describe the goal of the code is and NOT what is does. 
+One more thing to comments. If you need comments and there is no way around it always describe the goal of the code is and NOT what it does. 
 
-In the first example we can see that we map over the counters. The code is tells us. The comment is therefore useless. 
+In the first example we can see that we map over the counters. The code is telling us. The comment says the exact same thing. Why using a comment then? It's just useless at this point. 
 
 What could be the goal? 
 
@@ -196,7 +198,7 @@ Then your first program is always of type "if this happens then do that, then do
 
 I certainly was introduced exactly this way, but maybe I am wrong and this has changed over the past years.
 
-Anyhow this type of programming often is often translated into other paradigms. 
+Anyhow this type of programming is often translated into other paradigms. 
 
 What does that mean?
 
@@ -213,12 +215,6 @@ In short: a huge number of code bases are a mess. More so in smaller companies.
 I don't wanna attack anyone here. I think that (especially) universities don't teach clean code that well. At lot developers that I know say that they had to relearn a lot when they worked at real projects.
 
 I wanted to give an introduction of why I think splitting concerns is a crucial concept to learn and to criticize the way programming is taught in school a little bit.
-
-Don't feel discouraged now. Programming is a never ending learning experience. Everyone started somewhere.
-
-As a small insert the first advice that I wanna give you: If you have the opportunity, always let more experienced developers review your code if you're just getting started.
-
-Listen to them. You don't have to always agree and discussion is encouraged. Just be open to critique and think about it.
 
 But let's look at some code to better understand what splitting concerns means in practice.
 
@@ -287,12 +283,12 @@ function updatePersonAndSendEmail(person: Person) {
 }
 
 // same functionality as in the first example
-const person = new Person('Bob');
-person.name = 'Max';
+const person = new Person('bob');
+person.name = 'max';
 updatePersonAndSendEmail(person);
 
 // just save to the Database
-person.name = 'Beth';
+person.name = 'beth';
 (new Database).updatePerson(person);
 ```
 While this code is still far from perfect we managed to make our code more modular and split concerns into different classes.
@@ -309,20 +305,87 @@ Instead of using one method that is not extendible we used different classes and
 
 ### Think About Your Public API Twice. 
 
-* Be careful what you expose
-* Be private by default
-* Renaming a public function name can break systems.
+When composing your code it is important to think about how other code can interact with your code.
 
-## Legacy code is the norm
+Consider this `Todo` class.
 
-Speaking about legacy code. There are the norm. You will be dealing with those on a regular basis. 
+```typescript
+class Todo {
+    private finished: boolean = false;
+    private lastChanged: Date;
+    public title: string;
 
-* 70/30 is my ratio of legacy 
-* Make improvements one step at a time
-* Rewrite small bits and don't add more confusing code.
+    constructor(title: string) {
+        this.title = title;
+        this.lastChanged = new Date();
+    }
 
-## Listen and discuss to push code quality
+    done() {
+        this.finished = true;
+        this.lastChanged = new Date();
+    }
+}
 
+
+const todo = new Todo('Do laundry');
+todo.done();
+```
+We can create a new todos with the `new` operator and give each todo a title. When we finish the todo we mark it as `done`.
+
+Now we have to define what "done" means. In our case we want to mark the todo as finished and save the exact date this happened.
+
+What we don't what is that anyone can mark a todo as finished and don't update the lastChanged date. And vice versa.
+
+Therefore our properties need to be private so that no one can change them once the todo is created.
+
+The only public interface that we have is the `done` method.
+
+This way we make sure that `finished` and `lastChanged` are set at the same time.
+
+The property `title` is public, why? This is because we want to change the title if needed and also access it later to show it in some list or something.
+
+What can we learn from this?
+* make everything private by default, this way you can't accidentally change a property that you are not allowed to change
+* also make methods private if you don't want any outside code to use that functionality
+* if you want to change a property which has no specific constraints to it (such the title) it is ok to make it public
+* if you want read access but deny write access use a getter method to retrieve that property
+
+Make sure you name your properties and functions properly. Once you make something public others can use it in their code. This is especially important for third party vendors.
+
+Renaming something is a breaking change most of the time. Be aware of that.
+## Legacy Code Is The Norm
+
+Unless you are working for a new startup chances are that you will work with already existing code.
+
+For me legacy code means old code. Depending on the project this means that the code could be legacy one year after it was first written.
+
+For the majority of companies I would guess that you will be working with legacy code 70% of the time. I have no exact numbers here I just took that from experience.
+
+This means that you will spend a good amount of time improving and extending code that someone else wrote. Or even your past self.
+
+It's important that improvements are made, at all.
+
+Every time I work with legacy code I take a portion of time and try to improve it just a bit.
+
+That could mean that I refactor it to be more modular or understandable. If the code does not have a test yet I will add it.
+
+Making little improvements one step at the time will add up over the long run. 
+
+This is because time and budget has a limit. Most companies can't afford a rewrite of their software.
+
+To sum this up: If legacy code is the norm we should aim to make it "less legacy" and strive for cleaner code. Because it help you and others to maintain software more easily.
+
+> Leave the code cleaner than you found it.
+>
+> -- <cite>Robert C. Martin (Uncle Bob)</cite>
+
+## Listen And Discuss To Push Code Quality
+
+Don't feel discouraged now. Programming is a never ending learning experience. Everyone started somewhere.
+
+As a small insert the first advice that I wanna give you: If you have the opportunity, always let more experienced developers review your code if you're just getting started.
+
+Listen to them. You don't have to always agree and discussion is encouraged. Just be open to critique and think about it.
 * Listen to what others say. Especially from senior peers. They were where your are. Think about it. Try to implement it yourself and figure out if it works out for you.
 * If you have advice or criticism say it. Ask the other if you can make comments. This will ensure that they are ready for it. Having an opinion and articulating it pushes for code quality.
 
