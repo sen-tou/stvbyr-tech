@@ -1,14 +1,15 @@
 ---
-title: "Some Advise For Clean Code To Become A Great Developer"
+title: "Some Advise To Become A Great Developer"
 date: 2021-06-06T10:35:43+02:00
 draft: true
+# image: 'images/great-developer.png'
 ---
 
 I am a software developer for almost 8 years now. There is a lot that has changed during those years. I learned a lot. Both on the technological side but also as a human being. 
 
 Last night I was thinking what a good software developer should have besides knowing his tech stack. 
 
-This article is mostly targeted to new developers who just started their coding journey but these things also happen to more experienced developers. It's a good reminder to use good coding practices.
+This article is mostly targeted to newer developers who just started their coding journey but these things also happen to more experienced developers. It's a good reminder to use good coding practices.
 
 Initially I wanted to make it more generic but it got pretty code heavy. I still think the title fits though.
 
@@ -16,6 +17,7 @@ For the coding examples I am using TypeScript.
 
 So here are (x) things that I believe you should know to become a great developer.
 
+{{<toc />}}
 ## You Get Better If You Actually Code
 
 This is kind of obvious right? 
@@ -394,3 +396,5 @@ Listen to them. You don't have to always agree and discussion is encouraged. Jus
 ## Google is your friend
 
 [^1]: [Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship](https://www.goodreads.com/quotes/835238-indeed-the-ratio-of-time-spent-reading-versus-writing-is)
+
+## Conclusion
