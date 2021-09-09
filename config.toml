@@ -4,7 +4,7 @@ copyright = "Steve Beyer"
 defaultContentLanguage = "en"
 enableGitInfo = true
 showReadingTime = true
-title = "Steve Beyer"
+title = "stvbyr.tech"
 
 disableKinds = ["section"]
 
@@ -29,7 +29,9 @@ weight = 1.0
 unsafe = true
 
 [markup.highlight]
-style = "native"
+style = "paraiso-dark"
+tabWidth = 2
+lineNos = true
 
 [Params]
 

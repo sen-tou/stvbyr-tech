@@ -21,6 +21,7 @@ What I don't want to talk in this article are comments and tests. There is a lot
 
 In this blog post I wanna focus on how READMEs can improve your life as a developer.
 
+{{<toc />}}
 ## What is a README?
 
 In simple words: a README is just a file that holds information about your project. But what information? That depends on the project itself.
