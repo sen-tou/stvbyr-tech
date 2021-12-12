@@ -18,7 +18,7 @@
     "cross-env": "^7.0.3",
     "in-viewport": "^3.6.0",
     "postcss": "^8.3.5",
-    "postcss-cli": "^8.3.0",
+    "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
     "tailwindcss": "^2.0.0"
   },
