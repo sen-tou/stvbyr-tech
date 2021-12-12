@@ -1,7 +1,7 @@
 module.exports = {
     // mode: 'jit', // enable when hugo supports this feature
     darkMode: 'media',
-    purge: ['./layouts/**/*.html'],
+    content: ['./layouts/**/*.html'],
     theme: {
         screens: {
             'sm': '672px'
