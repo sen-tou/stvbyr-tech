@@ -1,26 +1,15 @@
-# src: https://appsectribe.medium.com/automerge-github-dependabot-alerts-with-github-actions-7cd6f5763750
-name: "Dependabot Automerge - Action"
+# @see src: https://github.com/marketplace/actions/dependabot-auto-merge
+name: auto-merge
 
-on: pull_request
-
-permissions:
-  pull-requests: write
-  issues: write
-  contents: write
+on:
+    pull_request:
 
 jobs:
-  worker:
-    runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
-    steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v1.1.1
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Enable auto-merge for Dependabot PRs
-        if: ${{steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
-        run: gh pr merge --auto --merge "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    auto-merge:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: ahmadnassri/action-dependabot-auto-merge@v2
+              with:
+                  target: minor
+                  github-token: ${{secrets.GITHUB_TOKEN}}
