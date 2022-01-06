@@ -6,7 +6,7 @@ draft: false
 translationKey: "how-to-use-a-specific-layout-for-an-article-in-hugo"
 image: "home-header.png"
 categories: 
-    - hugo
+    - Hugo
 ---
 
 Sometimes you just want to use an unique template for a post or list. In hugo there is a template [lookup order](https://gohugo.io/templates/lookup-order/) in which the template files are getting loaded but you can also specify the exact template that you want. The hugo docs explain how [content organization](https://gohugo.io/content-management/organization/) works.

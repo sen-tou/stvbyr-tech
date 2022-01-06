@@ -6,7 +6,8 @@ summary: "If you are using Obsidian on more than one devices, using multiple con
 translationKey: "use-multiple-obsidian-md-config-folders-and-sync-with-github"
 # image: "home-header.png"
 categories: 
-    - javascript
+    - Obsidian.md
+    - Productivity
 ---
 
 [Obsidian](https://obsidian.md/) is a great tool for collecting knowledge and connecting ideas together. I use it on many devices.
