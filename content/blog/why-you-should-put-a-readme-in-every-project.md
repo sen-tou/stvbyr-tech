@@ -7,8 +7,8 @@ translationKey: "why-you-should-put-a-readme-into-every-project"
 image: "images/readme.jpeg"
 author: Steve Beyer
 categories: 
-    - software development
-    - productivity
+    - Software Development
+    - Productivity
 ---
 
 I don't know a single developer that loves to write documentation. But in contrast I know a lot that scream when there isn't one.

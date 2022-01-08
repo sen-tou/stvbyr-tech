@@ -6,7 +6,7 @@ draft: false
 translationKey: "get-mapped-object-inside-a-callback-function"
 # image: "home-header.png"
 categories: 
-    - javascript
+    - Javascript
 ---
 
 Sometimes when using array map you maybe want to access the referenced object that is mapped over.

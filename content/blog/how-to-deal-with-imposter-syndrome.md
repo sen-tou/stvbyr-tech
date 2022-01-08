@@ -6,7 +6,7 @@ draft: true
 translationKey: "how-to-deal-with-imposter-syndrome-as-a-developer"
 image: "home-header.png"
 categories: 
-    - mental health
+    - Mental Health
 ---
 
 Imposter Syndrome is another one of those buzzwords. [Wikipedia](https://en.wikipedia.org/wiki/Impostor_syndrome) says:
