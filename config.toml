@@ -29,9 +29,10 @@ weight = 1.0
 unsafe = true
 
 [markup.highlight]
-style = "paraiso-dark"
+style = "rrt"
 tabWidth = 2
 lineNos = true
+noclasses = false
 
 [Params]
 
@@ -43,7 +44,7 @@ logo_500px = "apple-icon-180x180.png"
 
 [Params.meta]
 author = "Steve Beyer"
-description = "My name is Steve Beyer and on this blog you find all kinds of tech related articles mostly around php, software design and personal growth."
+description = "My name is Steve Beyer. This blog is about tech related articles mostly php, software design and personal growth."
 
 [Params.social]
 

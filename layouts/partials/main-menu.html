@@ -1,4 +1,4 @@
-<div class="flex justify-between items-center h-12">
+<div class="flex justify-between items-center h-12 uppercase">
     <div class="flex-1 flex sm:items-stretch sm:justify-between">
         <div class="flex-shrink-0 flex items-center">
             <a
@@ -7,11 +7,11 @@
                 class="flex items-center"
             >
                 <img
-                    class="h-8 w-auto ml-2"
-                    src="/favicon-96x96.png"
+                    class="w-8 mt-1"
+                    src="/favicon.png"
                     alt="Steve Beyer"
                 >
-                <span class='text-xl text-indigo-900 dark:text-indigo-300 ml-4'>stvbyr.tech</span>
+                <span class='text-gray-200 ml-6'>Steve Beyer</span>
             </a>
             
         </div>
@@ -20,7 +20,7 @@
             {{- $currentPage := . -}}
             {{ range sort .Site.Menus.main "Weight" }}
             <a
-                class='text-indigo-900 dark:text-indigo-300  px-3 py-2 rounded-md text-md font-medium'
+                class='text-yellow-400 px-3 py-2 rounded-md text-sm'
                 href="{{ .URL | absLangURL }}"
             >{{ .Name }}</a>
             {{ end }}
@@ -30,7 +30,7 @@
     <!-- Mobile menu button-->
     <div class="flex items-center sm:hidden">
         <button
-            class="fixed bottom-4 right-4 z-30 p-5 rounded-full bg-white dark:bg-gray-700 border-solid border-2 border-indigo-900 dark:border-white focus:outline-none ring-0"
+            class="fixed bottom-4 right-4 z-30 p-5 rounded-full bg-white dark:bg-gray-700 border-solid border-2 border-gray-900 dark:border-white focus:outline-none ring-0"
             aria-expanded="false"
             id="toggle-main-menu"
         >
@@ -38,7 +38,7 @@
 
             <!-- Menu open: "hidden", Menu closed: "block" -->
             <svg
-                class="block h-6 w-6 stroke-current text-indigo-900 dark:text-white"
+                class="block h-6 w-6 stroke-current text-gray-900 dark:text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -54,7 +54,7 @@
 
             <!-- Menu open: "block", Menu closed: "hidden" -->
             <svg
-                class="hidden h-6 w-6 stroke-current text-indigo-900 dark:text-white"
+                class="hidden h-6 w-6 stroke-current text-gray-900 dark:text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -74,14 +74,14 @@
 <!-- Mobile menu, Menu open: "block", Menu closed: "hidden" -->
 <div
     id="main-menu"
-    class="hidden sm:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-700 border-t border-indigo-900 dark:border-transparent z-20"
+    class="hidden sm:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-700 border-t border-gray-900 dark:border-transparent z-20"
 >
     <div class="px-2 pt-2 pb-3 space-y-1 mr-24">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         {{- $currentPage := . -}}
         {{ range sort .Site.Menus.main "Weight" }}
         <a
-            class="text-indigo-700 dark:text-indigo-300 hover:bg-indigo-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            class="text-gray-700 dark:text-yellow-400 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-sm uppercase"
             href="{{ .URL | absLangURL }}"
         >{{ .Name }}</a>
         {{ end }}

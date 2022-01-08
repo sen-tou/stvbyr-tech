@@ -16,8 +16,8 @@ p {
 }
 
 a {
-    @apply text-indigo-700;
-    @apply dark:text-indigo-300;
+    @apply text-gray-700;
+    @apply dark:text-yellow-400;
 }
 
 h1,
@@ -26,8 +26,8 @@ h3,
 h4,
 h5,
 h6 {
-    @apply text-indigo-900;
-    @apply dark:text-indigo-300;
+    @apply text-gray-900;
+    @apply dark:text-yellow-400;
     @apply font-bold;
     @apply mt-2;
     @apply mb-4;
@@ -50,8 +50,8 @@ h3 {
 
 blockquote {
     @apply border-l-2;
-    @apply border-indigo-900;
-    @apply dark:text-indigo-300;
+    @apply border-gray-900;
+    @apply dark:text-yellow-400;
     @apply p-2;
     @apply mb-4;
 }
