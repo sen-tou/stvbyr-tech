@@ -28,7 +28,7 @@ Make sure your device is able to access your Github repository and has a [person
 
 This is the `.gitignore` file that we will be using. It excludes the trash folder from Obsidian and the `.obsidian` config folder.
 
-We exclude the last one because Obsidian autogenerates it for any vault. But since we will be using a specific config folder we don't need the default folder. 
+We exclude the last one because Obsidian auto generates it for any vault. But since we will be using a specific config folder we don't need the default folder. 
 
 Create that file and check it in.
 
@@ -76,7 +76,7 @@ Under settings `⚙️ > About > Override config folder` you can now define whic
 
 Relaunch the app now. You now should be using the new config folder. To check if you're using the new config folder go back to the settings and see if the input field contains your new config folder. 
 
-The cool thing is: The config folder that you now specified is cheked into the git repository. This ensures that all configurations get backed up for this device. This also happens with any `.obsidian.*` folder for other devices. Just the default `.obsidian` folder will be ignored.
+The cool thing is: The config folder that you now specified is checked into the git repository. This ensures that all configurations get backed up for this device. This also happens with any `.obsidian.*` folder for other devices. Just the default `.obsidian` folder will be ignored.
 
 ## Adding A New Device
 
@@ -88,5 +88,5 @@ If you already have a configured Obsidian instance you can just copy the `.obsid
 
 ## Conclusion
 
-There you have it. An easy way to manage you Obsidian.md vault on multiple devices using just one Github repository.
+There you have it. An easy way to manage your Obsidian.md vault on multiple devices using just one Github repository.
 
