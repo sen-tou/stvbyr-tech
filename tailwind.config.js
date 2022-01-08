@@ -8,7 +8,7 @@ module.exports = {
         },
         fontFamily: {
             sans: [
-                'Poppins',
+                'Raleway',
                 'system-ui',
                 '-apple-system',
                 'BlinkMacSystemFont',
