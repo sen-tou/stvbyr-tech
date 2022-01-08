@@ -29,9 +29,10 @@ weight = 1.0
 unsafe = true
 
 [markup.highlight]
-style = "paraiso-dark"
+style = "rrt"
 tabWidth = 2
 lineNos = true
+noclasses = false
 
 [Params]
 

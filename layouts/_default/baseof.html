@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ .Lang }}" class="dark:bg-gray-800 dark:text-gray-200">
+<html lang="{{ .Lang }}" class="dark:bg-gray-800 bg-gray-100 dark:text-gray-200">
 
 <head>
-    {{ partial "seo.html" . }}
-
-    <link rel="preload" href="/fonts/Poppins.woff2" as="font">
-    
+    {{ partial "seo.html" . }} 
  
     {{ if .Site.IsServer }}
     {{ $style := resources.Get "css/styles.css" | resources.PostCSS }}
@@ -15,6 +12,13 @@
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
     {{ end }}
 
+    {{ $style := resources.Get "css/chroma-dark.css" | resources.PostCSS }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
+    {{ $style := resources.Get "css/chroma-light.css" | resources.PostCSS }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+     
+    
     {{ block "styles" . }}{{ end }}
 </head>
 

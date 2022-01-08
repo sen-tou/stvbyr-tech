@@ -8,7 +8,7 @@
 <!-- Sharingbutton Facebook -->
 <!--
 <a
-    class="inline-block no-underline text-indigo-900 dark:text-white fill-current mr-2"
+    class="inline-block no-underline text-gray-900 dark:text-white fill-current mr-2"
     href="https://facebook.com/sharer/sharer.php?u={{- $pageurl -}}"
     target="_blank"
     rel="noopener"
@@ -31,7 +31,7 @@
 -->
 <!-- Sharingbutton Twitter -->
 <a
-    class="inline-block no-underline text-indigo-900 dark:text-white fill-current mr-2"
+    class="inline-block no-underline text-gray-900 dark:text-white fill-current mr-2"
     href='https://twitter.com/share?{{- (querify "text" $subject) | safeHTML -}}%0a%0a&amp;{{- (querify "url" $pageurl) | safeHTML -}}'
     target="_blank"
     rel="noopener"
@@ -55,7 +55,7 @@
 <!-- Sharingbutton E-Mail -->
 <!--
 <a
-    class="inline-block no-underline text-indigo-900 dark:text-white fill-current mr-2"
+    class="inline-block no-underline text-gray-900 dark:text-white fill-current mr-2"
     href='mailto:?{{- (querify "subject" $subject) | safeHTML -}}%0a%0a&amp;{{- (querify "body" $pageurl) | safeHTML -}}'
     target="_self"
     rel="noopener"
@@ -79,7 +79,7 @@
 
 <!-- Sharingbutton LinkedIn -->
 <a
-    class="inline-block no-underline text-indigo-900 dark:text-white fill-current mr-2"
+    class="inline-block no-underline text-gray-900 dark:text-white fill-current mr-2"
     href='https://www.linkedin.com/sharing/share-offsite?{{- (querify "url" $pageurl) | safeHTML -}}'
     target="_blank"
     rel="noopener"
@@ -104,7 +104,7 @@
 <!-- Sharingbutton XING -->
 <!--
 <a
-    class="inline-block no-underline text-indigo-900 dark:text-white fill-current mr-2"
+    class="inline-block no-underline text-gray-900 dark:text-white fill-current mr-2"
     href='https://www.xing.com/app/user?op=share;{{- (querify "url" $pageurl) | safeHTML -}};{{- (querify "title" $subject) | safeHTML -}}%0a%0a'
     target="_blank"
     rel="noopener"
