@@ -11,8 +11,8 @@ menu:
 The following information (Impressum) is required under German law.
 
 Steve Beyer<br>
-Peniger Straße 7<br>
-09212 Limbach-Oberfrohna<br>
+Güterbahnhofstraße 14<br>
+01067 Dresden<br>
 Germany
 
 ## Legal disclaimer

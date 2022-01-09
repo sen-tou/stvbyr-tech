@@ -27,8 +27,8 @@ menu:
 The party responsible for this website (the "controller") for purposes of data protection law is:
 
 Steve Beyer<br>
-Peniger Straße 7<br>
-09212 Limbach-Oberfrohna<br>
+Güterbahnhofstraße 14<br>
+01067 Dresden<br>
 Germany
 
 ## II. The rights of users and data subjects
