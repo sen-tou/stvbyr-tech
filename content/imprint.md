@@ -1,6 +1,6 @@
 ---
 title: "Legal Notice"
-date: 2021-05-27T00:33:04+01:00
+date: 2021-12-27T00:33:04+01:00
 draft: false
 translationKey: "legal-Notice"
 menu: 
@@ -11,8 +11,8 @@ menu:
 The following information (Impressum) is required under German law.
 
 Steve Beyer<br>
-Peniger Straße 7<br>
-09212 Limbach-Oberfrohna<br>
+Güterbahnhofstraße 14<br>
+01067 Dresden<br>
 Germany
 
 ## Legal disclaimer
