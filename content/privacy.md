@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-date: 2021-05-10T00:33:04+01:00
+date: 2021-12-27T00:33:04+01:00
 draft: false
 translationKey: "privacy"
 menu: 
