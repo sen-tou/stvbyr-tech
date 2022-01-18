@@ -4,8 +4,8 @@
 
 {{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
 
-{{ $quality := "x jpg q90" }}
-{{ $tinySize := "640" }}
+{{ $quality := "x jpg q85" }}
+{{ $tinySize := "412" }}
 {{ $smallSize := "768" }}
 {{ $mediumSize := "1024" }}
 
@@ -28,10 +28,10 @@
 {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
 
-<picture>
+<picture class="flex justify-center mb-4">
     {{ with $tiny.RelPermalink }} <source srcset="{{.}}" media="(max-width: {{ $tinySize }})" />{{ end }}
     {{ with $small.RelPermalink }} <source srcset="{{.}}" media="(max-width: {{ $smallSize }}px)" />{{ end }}
     {{ with $medium.RelPermalink }} <source srcset="{{.}}" media="(max-width: {{ $mediumSize }}px)" />{{ end }}
 
-    <img src="{{ $medium.RelPermalink }}" data-size="{{ $medium.Width }}x{{ $medium.Height }}" width="{{ $medium.Width }}" height="{{ $medium.Height }}"alt="{{ with $cap }} {{.}} {{ else }} Cover image for {{ .Params.title }} {{ end }}"/>
+    <img src="{{ $src.RelPermalink }}" data-size="{{ $src.Width }}x{{ $src.Height }}" width="{{ $src.Width }}" height="{{ $src.Height }}" alt="{{ with $cap }} {{.}} {{ else }} Cover image for {{ .Params.title }} {{ end }}"/>
 </picture>

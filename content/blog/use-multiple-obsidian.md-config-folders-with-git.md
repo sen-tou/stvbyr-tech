@@ -4,7 +4,7 @@ date: 2022-01-07T13:29:04+01:00
 draft: false
 summary: "If you are using Obsidian on more than one devices, using multiple config folders can be quiet beneficial."
 translationKey: "use-multiple-obsidian-md-config-folders-and-sync-with-github"
-# image: "home-header.png"
+image: "images/use-multiple-obsidian-config-folders.png"
 categories: 
     - Obsidian.md
     - Productivity
@@ -44,16 +44,15 @@ To sync the repository we will be using a Obsidian.md plugin called [Obsidian Gi
 
 Make sure to clone the new repository. Open the folder with Obsidian.md via `Open folder as vault`. Now you should see a default Obsidian installation. Browse to `⚙️ > Community Plugin > Browse` and install Obsidian Git.
 
-![Search for Obsidian Git plugin](/blog/d84c14ff7b64e494538c81ca734e41b27cdf8fbb2042dff4668c31ac1e6e2562.png)  
+{{<img src="images/d84c14ff7b64e494538c81ca734e41b27cdf8fbb2042dff4668c31ac1e6e2562.png" caption="Search for Obsidian Git plugin">}}
 
 Under settings `⚙️ > Obsidian Git` you can fine tune the plugin. Set a positive value to `Vault backup interval` and `Auto pull interval` to automate git. Scroll through and make adjustments if needed. Though the default settings are great for most uses.
 
-![Configure Obsidian Git](/blog/b81bdc677e128184b4d7501dfe3d1c8c17efe48eca318bba8a0e0931061d2753.png)  
+{{<img src="images/b81bdc677e128184b4d7501dfe3d1c8c17efe48eca318bba8a0e0931061d2753.png" caption="Configure Obsidian Git">}}
 
 Make sure that the plugin works. Create some notes and either wait for the automation to happen or use the git UI within obsidian.
 
-![Obsidian Git UI Integration](/blog/3ea4e8c2173e09ba2e3576c6869725c74c143846307e2d4c11d4c5d73b3b2b55.png)  
-
+{{<img src="images/3ea4e8c2173e09ba2e3576c6869725c74c143846307e2d4c11d4c5d73b3b2b55.png" caption="Obsidian Git UI Integration">}}
 ## The Config Folders
 
 Right know I have multiple laptops, a PC and an IPhone where Obsidian is installed. It would be a hassle to sync them by hand. 
@@ -72,7 +71,7 @@ The naming is of course is up to you. You could also make folders for different 
 
 Under settings `⚙️ > About > Override config folder` you can now define which folder to use. If you're on a laptop or PC right now, use `.obsidian.desktop`. Type that into the text box.
 
-![Switching  the config folder](/blog/1a28afc702ef4442c69aedba219e1c0332b4fd4a7c836fbfa2673a86817b7b2a.png)  
+{{<img src="images/1a28afc702ef4442c69aedba219e1c0332b4fd4a7c836fbfa2673a86817b7b2a.png" caption="Switching  the config folder">}}
 
 Relaunch the app now. You now should be using the new config folder. To check if you're using the new config folder go back to the settings and see if the input field contains your new config folder. 
 
@@ -86,6 +85,10 @@ If you want to add a device to use obsidian you just need to clone your reposito
 
 If you already have a configured Obsidian instance you can just copy the `.obsidian` folder and rename it to your liking. After that you just change the config folder in the settings.
 
+## Troubleshooting
+
+Sometimes you will have random merge conflicts. These happen because sometimes obsidian changes the workspace files. For example when you zoom in the graph view. If you just started the app you can safley `git reset --hard origin/head`. This resets the vault to the current github state. After that your changes get backed up again.
+ 
 ## Conclusion
 
 There you have it. An easy way to manage your Obsidian.md vault on multiple devices using just one Github repository.
