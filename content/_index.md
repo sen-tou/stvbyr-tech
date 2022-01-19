@@ -1,6 +1,6 @@
 ---
-title: "Personal Blog About PHP, JavaScript, Software Design | stvbyr.tech"
-subtitle: "Hi, I'm Steve. I make things with software."
+title: "Steve Beyer Web Developer"
+subtitle: ""
 draft: false
 translationKey: "home"
 image: "images/home-header.jpg"

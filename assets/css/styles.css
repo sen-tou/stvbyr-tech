@@ -48,6 +48,12 @@ h3 {
     @apply text-xl;
 }
 
+main > h2,
+main > h3,
+main > h4 {
+    @apply text-center;
+}
+
 blockquote {
     @apply border-l-2;
     @apply border-gray-900;
