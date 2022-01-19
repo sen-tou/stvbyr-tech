@@ -5,6 +5,7 @@ draft: false
 summary: "If you are using Obsidian on more than one devices, using multiple config folders can be quiet beneficial."
 translationKey: "use-multiple-obsidian-md-config-folders-and-sync-with-github"
 image: "images/use-multiple-obsidian-config-folders.png"
+social_image: "images/twitter-share-obsidian-config-folders.png"
 categories: 
     - Obsidian.md
     - Productivity

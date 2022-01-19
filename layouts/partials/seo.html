@@ -12,6 +12,9 @@
         {{ $socialImg = ($socialImg.Resize "180x jpg q85") }}
     {{ end }}
 {{ end }} <!-- reso 200px x 200px to 1200px x 1200px -->
+{{ if .Params.social_image }}
+    {{ $socialImg = resources.GetMatch .Params.social_image }}
+{{ end }} <!-- reso 300px x 157px and scaled up-->
 
 <meta name="robots" content="index, follow" />
 <meta charset="utf-8" />
@@ -54,7 +57,7 @@
 
 {{ if ne site.Params.seo.twitter.card "disable" }}
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content="
         {{- with .Description }}
         {{- . | safeHTML }}
