@@ -22,12 +22,12 @@
     {{ block "styles" . }}{{ end }}
 </head>
 
-<body>
+<body class="flex flex-col h-screen">
     {{ block "page-header" . }}
         {{ partial "page-header.html" . }}
     {{ end }}
 
-    <main>
+    <main class="flex-1">
         {{ block "header" . }}{{ end }}
         {{ block "container" . }}
             <div class="max-w-2xl p-4 mx-auto overflow-hidden sm:overflow-visible">
