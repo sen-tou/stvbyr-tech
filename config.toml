@@ -5,6 +5,7 @@ defaultContentLanguage = "en"
 enableGitInfo = true
 showReadingTime = true
 title = "stvbyr.tech"
+enableRobotsTXT = true
 
 disableKinds = ["section"]
 
