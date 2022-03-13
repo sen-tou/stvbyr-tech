@@ -58,3 +58,7 @@ github = "https://github.com/stvbyr"
 # a simple and fast averaging filter appropriate for downscaling.
 # See https://github.com/disintegration/imaging
 resampleFilter = "Linear"
+
+[security]
+[security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
