@@ -11,7 +11,10 @@ categories:
     - git
 ---
 
-In my previous post I showed you how you can sync your obsidian vault with github and use it on multiple devices.
+In my previous post I showed you how you can [use multiple obsidian config
+folders and sync them with github]({{< ref
+"/blog/use-multiple-obsidian.md-config-folders-with-git.md" >}} "use multiple
+obsidian config folders and sync them with github").
 
 While this is an easy way to manage your vault you may want to store and manage your data by yourself. And there are valid reasons for this.
 
@@ -22,12 +25,12 @@ This is a good solution if you wanna manage personal information that you don't 
 At the End of this tutorial we will have the following setup:
 - Sync our obsidian vault automatically with the [Obsidian Git plugin](https://github.com/denolehov/obsidian-git)
 - Use a shared folder on the synology that holds git repositories
-- Use a non-admin user for security reasons (keyless auth is a security risk if not configured properly)
 - Login keyless so that the Obsidian plugin can be automated (also you can login with that user without inputting passwords)
+- Use a non-admin user for security reasons (keyless auth is a security risk if not configured properly)
 
 ## Requisites 
 
-- Backup of your synology (full backup)
+- make a backup of your synology (full backup)
 - Synology with DSM 7 installed (could work for DSM 6 but not tested)
   - Git-Server needs to be installed
   - Admin SSH access to the synology
