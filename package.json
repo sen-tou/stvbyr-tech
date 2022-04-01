@@ -17,7 +17,7 @@
     "autoprefixer": "^10.4.2",
     "cross-env": "^7.0.3",
     "in-viewport": "^3.6.0",
-    "postcss": "^8.4.7",
+    "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
     "tailwindcss": "^2.0.0"
