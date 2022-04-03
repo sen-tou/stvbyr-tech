@@ -1,7 +1,7 @@
 ---
 title: "Sync Obsidian Vault to a Synology Home Server With Git"
 summary: "In this post I show you how you can make your Synology a git repository than can sync your Obsidian Vaults."
-date: 2022-04-03T19:30:17+01:00
+date: 2022-04-03T19:30:17+02:00
 translationKey: "sync-obsidian-vault-to-a-synology-home-server-with-git"
 image: "images/sync-obsidian-vault-to-a-synology-home-server-with-git/cover.png"
 social_image: "images/sync-obsidian-vault-to-a-synology-home-server-with-git/twitter.png"
