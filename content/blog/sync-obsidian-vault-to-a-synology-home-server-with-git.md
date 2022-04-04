@@ -47,7 +47,7 @@ To reach our goals we need to configure the Synology and our client. We will sta
 
 ### Synology
 
-Login to the webinterface of your Synology.
+Login to the web interface of your Synology.
 
 #### 1. Create a shared folder for git repositories
 
@@ -66,17 +66,17 @@ Skip "Configure user permissions" for now. We come to that in the next step.
 Navigate to `Control Panel > User & Group > User > Create`.
 
 Under "User Groups" choose the default "users" group. We don't want this user
-to be in any group so that we can specify the right manually.
+to be in any group so that we can specify the rights manually.
 
 Under "Permissions" check Read/Write for the created `git-repos` folder. All
-other folders should not be accesible.
+other folders should not be accessible.
 
 #### 3. Enable SSH Service
 
 Navigate to `Control Panel > Terminal & SNMP`.
 
 Check "Enable SSH service" and change the port to a non reserved port 
-(for example 51289). This is optional but advised.
+(for example 51289, this is optional but advised). 
 
 This port is then always used to ssh into your Synology.
 
@@ -88,7 +88,7 @@ to `/etc/passwd` will be reset.
 
 I used [this blog post by Andi Dittrich](https://andidittrich.de/2016/03/howto-re-enable-scpssh-login-on-Synology-dsm-6-0-for-non-admin-users.html) to solve the problem. It's a little dated but still works for DSM 7.0.
 
-In short: we need to use a sheduled task to periodically set the login shell
+In short: we need to use a scheduled task to periodically set the login shell
 for our gituser.
 
 Login to your Synology with the admin user.
@@ -133,7 +133,7 @@ Login to your Synology with ssh. Use the admin user.
 
 Open the sshd_config. 
 
-**Be careful though as this file configures ssh and you can totally ruin your Synology if you change the wrong things. If you didn't make a backup do it definitly now!**
+**Be careful though as this file configures ssh and you can totally ruin your Synology if you change the wrong things. If you didn't make a backup do it definitely now!**
 
 ```shell
 sudo vi /etc/ssh/sshd_config
@@ -177,14 +177,14 @@ cat ~/.ssh/ed25519_keyless.pub
 On windows (powershell)
 
 ```powershell 
-type ~\.ssh\config
+type ~\.ssh\ed25519_keyless.pub
 ```
 
 The string should start with "ssh-ed25519". Copy the whole content. 
 
 Login to your Synology with ssh. Use the admin user again.
 
-Then open the `authotized_keys` file.
+Then open the `authorized_keys` file.
 
 ```shell
 ssh {adminuser}@{Synology} -p {port}
