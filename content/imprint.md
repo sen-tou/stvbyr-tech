@@ -10,10 +10,7 @@ menu:
 
 The following information (Impressum) is required under German law.
 
-Steve Beyer<br>
-Güterbahnhofstraße 14<br>
-01067 Dresden<br>
-Germany
+{{<img src="images/imprint.png" caption="contact-data">}}
 
 ## Legal disclaimer
 

@@ -26,10 +26,7 @@ menu:
 
 The party responsible for this website (the "controller") for purposes of data protection law is:
 
-Steve Beyer<br>
-Güterbahnhofstraße 14<br>
-01067 Dresden<br>
-Germany
+{{<img src="images/imprint.png" caption="contact-data">}}
 
 ## II. The rights of users and data subjects
 
