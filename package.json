@@ -29,7 +29,7 @@
     "not dead"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.16.8",
+    "@babel/cli": "^7.17.10",
     "@babel/preset-env": "^7.16.11",
     "@babel/core": "^7.17.8"
   }
