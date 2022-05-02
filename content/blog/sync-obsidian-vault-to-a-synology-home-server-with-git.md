@@ -34,6 +34,8 @@ At the End of this post we will have the following setup:
 ## Prerequisites 
 
 - Make a backup of your Synology (full backup)
+- Basic knowledge in git
+  - You don't need to know the ins and outs of git but I expect you to know what a .gitignore does, how to clone and how to use basic git commands
 - Synology with DSM 7 installed (could work for DSM 6 but not tested)
   - Git-Server needs to be installed
   - Admin SSH access to the Synology
@@ -223,7 +225,7 @@ This allows you to just `ssh {Synology}` and you're logged in!
 
 You can still use other users, ports, etc. to log in if you specify them. The ssh binary will figure out what mechanism to use for login.
 
-#### 5. Creating the repository 
+#### 5. Creating the repository
 
 Now that you can ssh as gitworker and create your Obsidian vault on the server. 
 
@@ -231,15 +233,29 @@ I am a bit lazy and don't want to copy paste everything, so use this tutorial fo
 
 The repository has to be created within the new `git-repos` folder.
 
-#### 6. Setting up sync
+The clone command should look something like this:
+
+```shell
+git clone ssh://gitworker@{Synology}:{port}/volume{X}/git-repos/second-brain
+```
+
+The clone should work without a password. As well as all other git commands such as push or pull. This important because otherwise the obsidian plugin cannot be automated.
+
+#### 6. Setting up sync with Obsidian Git
 
 Follow my tutorial on how to [use multiple Obsidian config
 folders and sync them with github]({{< ref
 "/blog/use-multiple-Obsidian.md-config-folders-with-git.md" >}} "use multiple
-Obsidian config folders and sync them with github"). You can skip the things that are Github specific.
+Obsidian config folders and sync them with github").
+
+The main difference between using github and your own repos is the setup of the git repository. Everything else is the same for both approaches.
+
+You can skip the personal access token generation because we are already able to access our synology via ssh at this point.
+
+In that tutorial we also setup multiple config folders so that you can use your vault on multiple devices with different configurations. If you don't want such a setup you can remove the `.obsidian` folder from the `.gitignore`.
 
 ## Conclusion
 
-It's a little bit of work but now you can host your own Obsidian vault on your Synology. 
+It's a little bit of work but now you can host your own Obsidian vault on your Synology.
 
-Bonus: you're also able to host some git projects on your Synology now. The gitworker has access to the git-repos folder and can add more repositories if required. 
+Bonus: you're also able to host some git projects on your Synology now. The gitworker has access to the git-repos folder and can add more repositories if required.
