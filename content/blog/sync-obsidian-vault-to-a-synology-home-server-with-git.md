@@ -65,7 +65,7 @@ Skip "Configure user permissions" for now. We come to that in the next step.
 
 #### 2. Create a user that will be able to sync via ssh
 
-Navigate to `Control Panel > User & Group > User > Create`.
+Navigate to `Control Panel > User & Group > User > Create`. I named mine `gitworker`.
 
 Under "User Groups" choose the default "users" group. We don't want this user
 to be in any group so that we can specify the rights manually.
