@@ -35,7 +35,6 @@ Create that file and check it in.
 
 ```markdown
 .trash/
-.DS_Store
 .obsidian
 ```
 
