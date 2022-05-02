@@ -227,7 +227,7 @@ You can still use other users, ports, etc. to log in if you specify them. The ss
 
 #### 5. Creating the repository
 
-Now that you can ssh as gitworker and create your Obsidian vault on the server. 
+Now you can ssh as gitworker and create your Obsidian vault on the server. 
 
 I am a bit lazy and don't want to copy paste everything, so use this tutorial for the [Synology Git Server](https://kb.Synology.com/en-global/DSM/help/Git/git?version=7) to create your repository and clone it to your client.
 
