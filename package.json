@@ -14,10 +14,10 @@
   "author": "Steve Beyer",
   "license": "Propritary",
   "dependencies": {
-    "autoprefixer": "^10.4.6",
+    "autoprefixer": "^10.4.7",
     "cross-env": "^7.0.3",
     "in-viewport": "^3.6.0",
-    "postcss": "^8.4.13",
+    "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.1.0",
     "tailwindcss": "^2.0.0"
@@ -30,7 +30,7 @@
   ],
   "devDependencies": {
     "@babel/cli": "^7.17.10",
-    "@babel/preset-env": "^7.17.10",
-    "@babel/core": "^7.17.10"
+    "@babel/preset-env": "^7.18.2",
+    "@babel/core": "^7.18.2"
   }
 }
