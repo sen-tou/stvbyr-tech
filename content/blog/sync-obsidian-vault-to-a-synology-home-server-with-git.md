@@ -163,7 +163,16 @@ Start a terminal session on your client.
 ssh-keygen -t ed25519 -f ed25519_keyless
 ```
 
-Make sure to leave password blank to enable keyless auth
+Make sure to leave password blank to enable keyless auth.
+
+**Edit:** After learning a little more about ssh there is a way to use an ssh key
+with password auth that you only have to type once.
+
+You can create an ssh key like the one above but now set a password. Now you
+can add this key to your ssh-agent with `ssh-add /path/to/ssh-key`. It most
+likely is located in your home directory.
+
+If the command complains about not having an ssh agent you can start it with `eval "$(ssh-agent -s)"`
 
 #### 2. Add local public key to authorized_keys on your Synology
 
