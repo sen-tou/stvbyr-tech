@@ -1,20 +1,21 @@
 ---
 title: "Mount Volumes with sshfs in Manjaro from Synology"
-summary: ""
+summary: "Sshfs is a great option if you want to connect to a remote file system securely"
 date: 2022-07-31T19:36:02+02:00
-draft: true
+draft: false
 translationKey: "mount-volumes-with-sshfs-in-manjaro-from-synology"
-image: "home-header.png"
+image: "images/mount-volumes-with-sshfs-in-manjaro-from-synology/cover.png"
+social_image: "images/mount-volumes-with-sshfs-in-manjaro-from-synology/twitter.png"
 categories: 
     - Synology
     - Linux
 ---
 
 Recently I decided to try manjaro on an old laptop that I may take with me while
-traveling. So far I used a synology that I only set up in my local LAN to access
+traveling. So far I used a synology that I only set up in my LAN to access
 the file system.
 
-I used DDns for quite some time to access it on the go. But that only worked
+I used DDNS for quite some time to access it on the go. But that only worked
 through DSM web UI so far. Now I want to be able to access it securely from
 anywhere.  
 
@@ -25,11 +26,7 @@ config. No further overhead required.
 Not gonna lie I had some struggles with it but got it working and want to share
 this journey with you.
 
-Disclaimer: I am not a pro when it comes to these technologies and I want you to
-take these steps with caution. If you have
-suggestions please let me know.
-
-## What do I need to configure?
+## What do I have at the end
 
 My requirements for this were:
 
@@ -47,9 +44,8 @@ access on the go. In the "Applications" tab it is important to allow "ftp" as we
 as "sftp". I don't know why ftp is necessary but otherwise you will get an
 error.
 
-Under `Control Panel > Terminal & SNMP > Terminal` enable SSH and set a port if
-you want (I highly recommend to do that as it adds more security for
-little effort)
+Under `Control Panel > Terminal & SNMP > Terminal` enable SSH and set a port (I highly recommend to do that as it adds more security for
+little effort).
 
 Under `Control Panel > File Services > FTP` enable SFTP and make sure to use the
 same port as for ssh.
@@ -59,18 +55,17 @@ terminal service so that ssh and sftp are going through. FTP is not needed this 
 
 ### Setting up the Client
 
-First we need to install sshfs.
+Next I needed to install sshfs. Which is pretty simple.
 
 ```bash
 pacman -Sy sshfs
 ```
 
-Lets create an ssh key for the client.
+Now, lets create an ssh key for the client.
 
-You can refer to how to do this on my [other tutorial]({{< ref
-"/blog/sync-obsidian-vault-to-a-synology-home-server-with-git.md#1-generate-a-keyless-ssl-key-pair-for-the-client" >}} "Sync
-Obsidian Vault to a Synology Home Server With Git") on how to sync obsidian with
-git. It used ssh to communicate. Important parts are 1. Generate a keyless SSL
+You can refer to how to do this on my 
+{{< link target="_blank" alt="Sync Obsidian Vault to a Synology Home Server With Git" text="other tutorial" ref="/blog/sync-obsidian-vault-to-a-synology-home-server-with-git.md#1-generate-a-keyless-ssl-key-pair-for-the-client" >}} on how to sync obsidian with
+git. Important parts are 1. Generate a keyless SSL
 key-pair for the client to 4. Making your life easier (optional).
 
 In the mentioned article I wrote that you can use a key with password auth. But for `sshfs`
@@ -87,13 +82,15 @@ My ssh folder looks like the following:
   |_ id_ed25519_keyless.pub
 ```
 
-Now lets use `sshfs` to mount our volume.
+Lets use `sshfs` to mount the volume.
 
-I used the `sshfs` command to test some scenarios for myself but I jump that part
-because this is not topic of that post. I encourage you to do the same.
+I used the `sshfs` command to test some scenarios for myself but I skipped that
+part here
+because this is not topic of that post. I encourage you to tinker a little.
 
-In order to mount a folder from my synology on boot we have to add it to
-`/etc/fstab`. This was by far the "funniest" part as debugging this was a pain. After a lot of attempts I came up with this config (There is no
+In order to mount a folder from my synology on boot I had to add it to
+`/etc/fstab`. This was by far the "funniest" part as debugging this was a little
+cumbersome. After a lot of attempts I came up with this config (There is no
 linebreak by the way).
 
 ```txt

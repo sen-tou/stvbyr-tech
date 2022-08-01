@@ -106,7 +106,7 @@ figcaption {
 }
 
 .highlight pre {
-    @apply p-4;
+    @apply p-2;
     white-space: pre-wrap;
     @apply text-xs;
 }
