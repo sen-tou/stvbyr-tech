@@ -64,7 +64,7 @@ pacman -Sy sshfs
 Now, lets create an ssh key for the client.
 
 You can refer to how to do this on my 
-{{< link target="_blank" alt="Sync Obsidian Vault to a Synology Home Server With Git" text="other tutorial" iref="/blog/sync-obsidian-vault-to-a-synology-home-server-with-git.md#1-generate-a-keyless-ssl-key-pair-for-the-client" >}} on how to sync obsidian with
+{{< link target="_blank" alt="Sync Obsidian Vault to a Synology Home Server With Git" text="other tutorial" ref="/blog/sync-obsidian-vault-to-a-synology-home-server-with-git.md#1-generate-a-keyless-ssl-key-pair-for-the-client" >}} on how to sync obsidian with
 git. Important parts are 1. Generate a keyless SSL
 key-pair for the client to 4. Making your life easier (optional).
 
