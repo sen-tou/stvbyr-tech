@@ -1,9 +1,19 @@
 {{ $ref := .Get "ref" }}
-{{ $alt := .Get "alt" }}
+{{ $href := .Get "href" }}
+{{ $rel := .Get "rel" }}
 {{ $target := .Get "target" | default "" }}
+{{ if ne $ref nil }}
+    {{ $ref = ref . $ref }}
+{{ end }}
 
 <a
-    href="{{ ref . $ref }}"
-    alt="{{ $alt }}"
+    {{ with $href }}
+        href="{{ . }}"
+    {{ end }}
+    {{ with $ref }}
+        href="{{ . }}"
+    {{ end }}
+    
     target="{{ $target }}"
+    {{ if $rel }} rel="{{ $rel }}" {{ end }}
 >{{ .Get "text" }}</a>
