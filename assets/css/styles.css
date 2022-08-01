@@ -66,6 +66,10 @@ blockquote p {
     @apply m-0;
 }
 
+ol {
+    @apply list-decimal;
+}
+
 ul {
     @apply list-disc;
 }
@@ -75,6 +79,8 @@ li {
     @apply mb-4;
 }
 
+li > code,
+li > tt,
 dd > code,
 dd > tt,
 p > code,
@@ -100,7 +106,7 @@ figcaption {
 }
 
 .highlight pre {
-    @apply p-4;
+    @apply p-2;
     white-space: pre-wrap;
     @apply text-xs;
 }

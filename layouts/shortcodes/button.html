@@ -1,10 +1,10 @@
-{{ $href := .Get "href" }}
+{{ $ref := .Get "ref" }}
 {{ $alt := .Get "alt" }}
 {{ $target := .Get "target" | default "" }}
-
+ 
 <a
     class="bg-gray-700 text-white px-3 py-2 rounded-md text-md font-medium"
-    href="{{ $href }}"
+    href="{{ relref . $ref }}"
     alt="{{ $alt }}"
     target="{{ $target }}"
 >{{ .Get "text" }}</a>
