@@ -99,15 +99,15 @@ user@synology:/folder /mnt/folder sshfs identityfile=/home/localuser/.ssh/id_ed2
 
 Okay, lets break it down.
 
-1. The first option is the connection string. Important mount root is
+1. `user@synology:/folder` is the connection string. Important mount root is
    appareantly `/volume{x}` so you can just use `/folder` to specify the shared
    folder on the synology
-2. The second part is the folder where we wanna mount it locally
-3. The third one is the type of mount. This has had me quiet a bit. I first tried to
+2. `/mnt/folder` is the folder where we wanna mount it locally
+3. `sshfs` is the type of mount. This has had me quiet a bit. I first tried to
    use `fuse.sshfs` as this is what you find the most on the internet. But I had
    to use `sshfs`. As far as I understood, this type only works with systems
-   that use `systemd`.
-4. The forth one are the options. This is the most important part
+   that use `systemd`
+4. `identityfile...` are the options. This is the most important part
    - `_netdev`: This lets the system know that we want to mount a volume that needs
    network access in order to be mounted. The system wait until it is
    established
@@ -119,17 +119,15 @@ Okay, lets break it down.
    - `identityfile`: Here we specify the keyless ssh key that will be used to
      communicate with the synology (the pub key needs to added to
      `authorized_keys` as done in the tutorial)
-5. The last two options are integers that control backup (first digit) that
+5. `0 0` are integers that control backup (first digit) that
    should apparently not used anymore and file system check (second digit) which
-   controls the fsck behavior which is turned off.
+   controls the fsck behavior which is turned off
 
 With all that done we can now `sudo mount -a` to load the mount immediately.
 If that worked you can try to restart your system now to see if it connects
 properly. If not you have to tinker a little more, good luck 🙈.
 
-Note: There is an option `delay_connect` that will delay mounting the volume as long as
-don't request it. This will make it so that if you don't access your mount that the
-connection will not be established.
+Note: There is an option `delay_connect` that will delay mounting the volume as long as don't request it. This will make it so that if you don't access your mount that the connection will not be established. You can add this to the options if you need this functionality.
 
 ## Closing
 
