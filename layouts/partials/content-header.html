@@ -7,6 +7,16 @@
     </div>
     {{ end }}
 
+    {{ if .Params.categories }}
+        <div class="flex items-center justify-center py-4" role="list">
+            {{ range .Params.categories }}
+                <a class="rounded-md px-2 py-1 mx-2 text-xs bg-purple-100 dark:bg-gray-900" href="{{ "/categories/" | absURL }}{{ . | urlize }}" role="listitem">
+                    {{ . }}
+                </a>
+            {{ end }}
+        </div>
+    {{ end }}
+
     {{ if .Params.date }}
     <div class="flex items-center justify-center py-4">
         <small class="text-xs text-center mr-2">

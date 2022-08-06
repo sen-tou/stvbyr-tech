@@ -32,7 +32,6 @@ unsafe = true
 [markup.highlight]
 style = "rrt"
 tabWidth = 2
-lineNos = true
 noclasses = false
 
 [Params]

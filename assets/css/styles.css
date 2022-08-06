@@ -88,7 +88,7 @@ p > tt,
 td > code,
 td > tt {
     @apply break-words;
-    @apply p-0.5;
+    @apply p-0.5 px-2;
     @apply rounded-sm;
     @apply bg-purple-100;
     @apply dark:bg-gray-900;
@@ -106,7 +106,7 @@ figcaption {
 }
 
 .highlight pre {
-    @apply p-2;
+    @apply py-4 px-6;
     white-space: pre-wrap;
     @apply text-xs;
 }
