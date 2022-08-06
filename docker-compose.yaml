@@ -1,0 +1,17 @@
+services:
+    server:
+        container_name: hugo_server
+        build:
+            dockerfile: ./build/Dockerfile
+            context: .
+            args:
+                NODE_VERSION: 16.14.0
+        # entrypoint:
+        #     - npm
+        #     - run
+        #     - docker-dev
+        volumes:
+            - '.:/src'
+        ports:
+            - '1313:1313'
+
