@@ -21,4 +21,4 @@ WORKDIR /src/stvbyr-tech
 
 RUN npm install
 
-ENTRYPOINT [ "npm", "run", "dev"]
+ENTRYPOINT [ "npm", "run", "dev-docker"]

@@ -10,7 +10,7 @@
     "build:branch": "cross-env NODE_ENV=production hugo --gc --minify -b $DEPLOY_PRIME_URL",
     "build:example": "cross-env NODE_ENV=production hugo --gc --minify --baseURL http://steve-beyer.local",
     "start": "hugo --gc",
-    "docker-dev": "NODE_ENV=development hugo server -D --disableFastRender"
+    "dev-docker": "NODE_ENV=development hugo server -D --bind=\"0.0.0.0\" --disableFastRender"
   },
   "author": "Steve Beyer",
   "license": "Propritary",
