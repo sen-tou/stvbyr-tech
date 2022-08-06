@@ -1,22 +1,24 @@
 ARG NODE_VERSION
+ARG GO_VERSION
+
+FROM golang:${GO_VERSION}-alpine as builder
+
+ARG HUGO_VERSION
+RUN go install -v github.com/gohugoio/hugo@${HUGO_VERSION}
 
 FROM node:${NODE_VERSION}-alpine
 
-RUN apk add git curl tar gzip
+COPY --from=builder /go /go
 
-USER node:node
+ENV GOPATH /go
+ENV PATH $GOPATH/bin:$PATH
 
-RUN curl --insecure -OL https://go.dev/dl/go1.19.linux-amd64.tar.gz \
-    && tar -xvf /home/node ./go1.19.linux-amd64.tar.gz
+RUN apk add git curl tar gzip bash
 
-ENV PATH=${PATH}:/home/node/go/bin
+COPY . /src/stvbyr-tech
 
-RUN echo $PATH && go install -v github.com/gohugoio/hugo@v0.101.0
-
-COPY . .
+WORKDIR /src/stvbyr-tech
 
 RUN npm install
 
 ENTRYPOINT [ "npm", "run", "dev"]
-
-# ENTRYPOINT [ "tail" , "-f", "/etc/fstab"]

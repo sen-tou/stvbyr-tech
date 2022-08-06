@@ -6,12 +6,10 @@ services:
             context: .
             args:
                 NODE_VERSION: 16.14.0
-        # entrypoint:
-        #     - npm
-        #     - run
-        #     - docker-dev
+                GO_VERSION: 1.19
+                HUGO_VERSION: 'v0.101.0'
         volumes:
-            - '.:/src'
+            - .:/src/stvbyr-tech
         ports:
-            - '1313:1313'
+            - 1313:1313
 
