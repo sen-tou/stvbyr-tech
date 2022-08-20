@@ -17,10 +17,13 @@ ENV PATH $GOPATH/bin:$PATH
 
 RUN apk add git curl tar gzip bash
 
+USER node
+
 WORKDIR /src/stvbyr-tech
 
-COPY . .
+COPY --chown=node . .
 
 RUN npm install
+RUN git config --global --add safe.directory /src/stvbyr-tech
 
 ENTRYPOINT [ "npm", "run", "dev-docker"]
