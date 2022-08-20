@@ -1,37 +1,36 @@
 {
-  "name": "steve-beyer-website",
-  "version": "0.0.1",
-  "description": "Steve Beyer Website",
-  "main": "index.js",
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development hugo server -D --disableFastRender",
-    "build": "cross-env NODE_ENV=production hugo --gc --minify",
-    "build:preview": "cross-env NODE_ENV=production hugo --buildFuture --gc --minify -b $DEPLOY_PRIME_URL",
-    "build:branch": "cross-env NODE_ENV=production hugo --gc --minify -b $DEPLOY_PRIME_URL",
-    "build:example": "cross-env NODE_ENV=production hugo --gc --minify --baseURL http://steve-beyer.local",
-    "start": "hugo --gc",
-    "dev-docker": "NODE_ENV=development hugo server -D --bind=\"0.0.0.0\" --disableFastRender"
-  },
-  "author": "Steve Beyer",
-  "license": "Propritary",
-  "dependencies": {
-    "autoprefixer": "^10.4.8",
-    "cross-env": "^7.0.3",
-    "in-viewport": "^3.6.0",
-    "postcss": "^8.4.14",
-    "postcss-cli": "^10.0.0",
-    "postcss-import": "^14.1.0",
-    "tailwindcss": "^2.0.0"
-  },
-  "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "maintained node versions",
-    "not dead"
-  ],
-  "devDependencies": {
-    "@babel/cli": "^7.18.9",
-    "@babel/preset-env": "^7.18.9",
-    "@babel/core": "^7.18.9"
-  }
+    "name": "steve-beyer-website",
+    "version": "0.0.1",
+    "description": "Steve Beyer Website",
+    "main": "index.js",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development hugo server -D --disableFastRender --bind=\"0.0.0.0\" ",
+        "build": "cross-env NODE_ENV=production hugo --gc --minify",
+        "build:preview": "cross-env NODE_ENV=production hugo --buildFuture --gc --minify -b $DEPLOY_PRIME_URL",
+        "build:branch": "cross-env NODE_ENV=production hugo --gc --minify -b $DEPLOY_PRIME_URL",
+        "build:example": "cross-env NODE_ENV=production hugo --gc --minify --baseURL http://steve-beyer.local",
+        "start": "hugo --gc"
+    },
+    "author": "Steve Beyer",
+    "license": "Propritary",
+    "dependencies": {
+        "autoprefixer": "^10.4.8",
+        "cross-env": "^7.0.3",
+        "in-viewport": "^3.6.0",
+        "postcss": "^8.4.14",
+        "postcss-cli": "^10.0.0",
+        "postcss-import": "^14.1.0",
+        "tailwindcss": "^2.0.0"
+    },
+    "browserslist": [
+        "last 1 version",
+        "> 1%",
+        "maintained node versions",
+        "not dead"
+    ],
+    "devDependencies": {
+        "@babel/cli": "^7.18.9",
+        "@babel/preset-env": "^7.18.9",
+        "@babel/core": "^7.18.9"
+    }
 }

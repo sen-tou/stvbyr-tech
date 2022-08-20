@@ -26,4 +26,4 @@ COPY --chown=node . .
 RUN npm install
 RUN git config --global --add safe.directory /src/stvbyr-tech
 
-ENTRYPOINT [ "npm", "run", "dev-docker"]
+ENTRYPOINT [ "npm", "run", "dev"]
