@@ -15,9 +15,9 @@ ENV PATH $GOPATH/bin:$PATH
 
 RUN apk add git curl tar gzip bash
 
-COPY . /src/stvbyr-tech
-
 WORKDIR /src/stvbyr-tech
+
+COPY . .
 
 RUN npm install
 
