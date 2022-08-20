@@ -3,8 +3,10 @@ ARG GO_VERSION
 
 FROM golang:${GO_VERSION}-alpine as builder
 
+RUN apk add git 
+
 ARG HUGO_VERSION
-RUN go install -v github.com/gohugoio/hugo@$v{HUGO_VERSION}
+RUN go install -v github.com/gohugoio/hugo@v${HUGO_VERSION}
 
 FROM node:${NODE_VERSION}-alpine
 
