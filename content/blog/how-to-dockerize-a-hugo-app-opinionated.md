@@ -10,7 +10,7 @@ categories:
     - Docker
 ---
 
-stvbyr.tech uses hugo under the hood. You can find the source {{< link target="_blank" text="on github" href="https://github.com/stvbyr/stvbyr-tech" rel="external">}}.
+stvbyr.tech uses {{< link target="_blank" text="hugo" href="https://gohugo.io/" rel="external">}} under the hood. You can find the source {{< link target="_blank" text="on github" href="https://github.com/stvbyr/stvbyr-tech" rel="external">}}.
 
 The goal of making a dockerized hugo app is the fact that updating the dependencies (go, hugo, node) is cumbersome and you have to install all the tools on your system.
 
@@ -18,7 +18,7 @@ With docker we can produce reproducible builds which have the benefit of being p
 
 It is easy to switch the hugo version and see if it works or not. Switching back is just a matter of rebuilding the container.
 
-The first question that you might have is: why not just use <https://github.com/klakegg/docker-hugo>?
+The first question that you might have is: why not just use {{< link target="_blank" text="klakegg/docker-hugo" href="https://github.com/klakegg/docker-hugo" rel="external">}}?
 
 The answer to that is: If you want a quick setup with batteries included (this is what the projects describes it self) then use that. There is nothing my setup does better than this project.
 
@@ -35,9 +35,9 @@ Both build steps use the alpine versions which makes it quick and more storage e
 
 Because hugo is statically linked we can copy the tool over to the node container and throw the go layer away.
 
-Note: although we copy the folder go it does not actually contain the go binary. This folder contains just the compiled hugo binary.
+Note: although we copy the folder "go" it does not actually contain the go binary. This folder contains just the compiled hugo binary.
 
-In addition to the dependencies I also added some command line tools to the container because we will have to manage the app from inside the container.
+In addition to the dependencies I also added some command line tools because we will have to manage the app from inside the container.
 
 ```dockerfile
 ARG NODE_VERSION
@@ -73,7 +73,7 @@ ENTRYPOINT [ "npm", "run", "dev"]
 
 ## Docker Compose
 
-Although t is not necessarily needed, I decided to use a docker compose file as I find docker commands can get pretty ugly and managing them with a proper configuration file is cleaner.
+Although it is not necessarily needed, I decided to use a docker compose file as I find docker commands can get pretty ugly and managing them with a proper configuration file is cleaner.
 
 Needless to say if we wanna add a service in the future docker compose makes this much easier.
 
@@ -101,7 +101,7 @@ services:
             - 1313:1313
 ```
 
-## Managing the project
+## Working with the container
 
 Now that we got the files set up we can build the project with `docker compose build` and then run it with `docker compose up`.
 
@@ -111,9 +111,9 @@ After `docker compose up` we can access the container with `docker exec -it hugo
 
 In here we can use all hugo functionality that we are used to. E.g. creating a new blog post with `hugo new blog/some-blog-post.md`.
 
-## Additional information on the structure
+## Structure
 
-This part explains some extra information about how I use this setup.
+Let's talk a bit about the structure of my hugo app so that you can understand how I use the docker container.
 
 I use a default hugo project. I don't use a theme as the components are all written and styled by myself. Except, I took inspiration from some layouts and shortcodes that others have created and adjusted them to my needs.
 
@@ -127,11 +127,13 @@ The command contains an important piece of configuration to make this possible: 
 
 If we want to access the site without binding it, the server assumes that we want to connect from 127.0.0.1. This will not work because the server runs now on the default docker network and has its own ip.
 
-If try to connect now via the browser we use our own ip that is not 127.0.0.1 anymore. By binding 0.0.0.0 we say that all connections from anywhere are allowed. Which is fine for a local setup.
+If we try to connect now via the browser we use our own ip that is not 127.0.0.1 anymore. By binding 0.0.0.0 we say that all connections from anywhere are allowed. Which is fine for a local setup.
 
-I host this site on netlify which means that I need to configure the build steps via netlify.toml. I also have a .nvmrc to look the node version.
+I host this site on netlify which means that I need to configure the build steps via netlify.toml. Those build steps use the scripts from the package.json.
 
-This will have the side effect of maintaining the version numbers in multiple files. However most of the time a simple search and replace will do the trick.
+For this reason I also have a .nvmrc to look the node version. With this I make sure that netlify can build the site in a deterministic way.
+
+This will have the side effect of maintaining the version numbers in multiple files (docker-compose.yaml, .nvmrc, netlify.toml). However most of the time a simple search and replace will do the trick.
 
 ## Conclusion
 
@@ -139,6 +141,6 @@ I think this is a very easy and clean setup.
 
 It does not take a lot to dockerize a hugo application. The benefit of having confidence that the system always works as configured is great.
 
-Also keeping your development host clean from x amount of version of the same dependency feels pretty clean.
+Also keeping your development host clean from x amount of versions of the same dependency feels pretty clean.
 
 I hope you find this useful. If you have suggestions to this setup feel free to reach out to me on twitter.
