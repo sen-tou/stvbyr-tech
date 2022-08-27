@@ -2,14 +2,15 @@ services:
     server:
         container_name: hugo_server
         build:
-            dockerfile: ./build/Dockerfile
+            dockerfile: ./Dockerfile
             context: .
             args:
                 NODE_VERSION: 16.14.0
                 GO_VERSION: 1.19
-                HUGO_VERSION: 'v0.101.0'
+                HUGO_VERSION: 0.101.0
         volumes:
             - .:/src/stvbyr-tech
+            - /src/stvbyr-tech/node_modules
         ports:
             - 1313:1313
 

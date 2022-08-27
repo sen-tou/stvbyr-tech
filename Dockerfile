@@ -3,8 +3,10 @@ ARG GO_VERSION
 
 FROM golang:${GO_VERSION}-alpine as builder
 
+RUN apk add git 
+
 ARG HUGO_VERSION
-RUN go install -v github.com/gohugoio/hugo@${HUGO_VERSION}
+RUN go install -v github.com/gohugoio/hugo@v${HUGO_VERSION}
 
 FROM node:${NODE_VERSION}-alpine
 
@@ -15,10 +17,13 @@ ENV PATH $GOPATH/bin:$PATH
 
 RUN apk add git curl tar gzip bash
 
-COPY . /src/stvbyr-tech
+USER node
 
 WORKDIR /src/stvbyr-tech
 
-RUN npm install
+COPY --chown=node . .
 
-ENTRYPOINT [ "npm", "run", "dev-docker"]
+RUN npm install
+RUN git config --global --add safe.directory /src/stvbyr-tech
+
+ENTRYPOINT [ "npm", "run", "dev"]
