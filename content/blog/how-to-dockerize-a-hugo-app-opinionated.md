@@ -1,10 +1,11 @@
 ---
 title: "How to Dockerize a Hugo App (opinionated)"
 summary: "I show you how a simple hugo setup with docker can look like based on my own website."
-date: 2022-08-20T14:33:51Z
+date: 2022-08-27T14:33:51Z
 draft: true
 translationKey: "how-to-dockerize-a-hugo-app-opinionated"
-image: "home-header.png"
+image: "images/how-to-dockerize-a-hugo-app-opinionated/cover.jpg"
+social_image: "images/how-to-dockerize-a-hugo-app-opinionated/cover.jpg"
 categories: 
     - Hugo
     - Docker
@@ -45,7 +46,7 @@ ARG GO_VERSION
 
 FROM golang:${GO_VERSION}-alpine as builder
 
-RUN apk add git
+RUN apk add git 
 
 ARG HUGO_VERSION
 RUN go install -v github.com/gohugoio/hugo@v${HUGO_VERSION}
@@ -81,14 +82,14 @@ As mentioned above the versions of the tools can be set in this file. This inclu
 
 I mounted the whole project into the container. Also I added an anonymous volume to not overwrite the contents of node_modules.
 
-This has a caveat that I cannot see the files and cannot use IDE features. I don't need this though as these are just build dependencies. I don't develop anything with node in this project.
+This has a caveat that I cannot see the files in node_modules and cannot use IDE features. I don't need this though as these are just build dependencies. I don't develop anything with node in this project.
 
 ```yaml
 services:
     server:
         container_name: hugo_server
         build:
-            dockerfile: ./build/Dockerfile
+            dockerfile: ./Dockerfile
             context: .
             args:
                 NODE_VERSION: 16.14.0
