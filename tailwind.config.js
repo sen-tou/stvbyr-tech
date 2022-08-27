@@ -1,6 +1,5 @@
 module.exports = {
-    // mode: 'jit', // enable when hugo supports this feature
-    darkMode: 'media',
+    mode: 'jit',
     content: ['./layouts/**/*.html'],
     theme: {
         screens: {
