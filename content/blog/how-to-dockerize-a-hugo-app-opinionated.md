@@ -2,7 +2,7 @@
 title: "How to Dockerize a Hugo App (opinionated)"
 summary: "I show you how a simple hugo setup with docker can look like based on my own website."
 date: 2022-08-27T14:33:51Z
-draft: true
+draft: false
 translationKey: "how-to-dockerize-a-hugo-app-opinionated"
 image: "images/how-to-dockerize-a-hugo-app-opinionated/cover.jpg"
 social_image: "images/how-to-dockerize-a-hugo-app-opinionated/cover.jpg"
