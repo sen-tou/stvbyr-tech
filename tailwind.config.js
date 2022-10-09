@@ -1,5 +1,5 @@
 module.exports = {
-    mode: 'jit',
+    darkMode: 'media',
     content: ['./layouts/**/*.html'],
     theme: {
         screens: {
