@@ -57,13 +57,12 @@ main > h4 {
 blockquote {
     @apply border-l-2;
     @apply border-gray-900;
-    @apply dark:text-yellow-400;
     @apply p-2;
     @apply mb-4;
 }
 
-blockquote p {
-    @apply m-0;
+blockquote p:last-child {
+    @apply mb-0;
 }
 
 ol {
@@ -106,7 +105,7 @@ figcaption {
 }
 
 .highlight pre {
-    @apply py-4 px-6;
+    @apply py-4 px-2;
     white-space: pre-wrap;
     @apply text-xs;
 }
