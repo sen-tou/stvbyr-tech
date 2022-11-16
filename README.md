@@ -1,8 +1,11 @@
 # stvbyr.tech
 
-## Monolith workflow
+My website based on hugo and a custom theme implemented with TailwindCss.
 
-- hugo installed
-- nvm installed + managing node
+## Running locally
 
-## Docker workflow
+```bash
+docker compose up
+```
+
+Local site: <http://localhost:1313>
