@@ -1,23 +1,27 @@
 ---
 title: "What I Learned Using Obsidian"
-summary: ""
-date: 2022-10-15T19:14:18Z
-draft: true
+summary: "My thoughts on what I learned using Obsidian for a while."
+date: 2022-11-16T13:14:18Z
+draft: false
 translationKey: "what-i-learned-using-obsidian"
-image: "home-header.png"
 categories: 
     - Obsidian.md
 ---
 
-I use obsidian for a while now and I have learned some things along the way that
-you will probably also experience. Most of these things made sense over time as
-I got more inspiration from others as well as my own experience with obsidian.
+I use obsidian for a while now and I have learned some things along the way.
+Most of these things made sense over time as I got more inspiration from others
+as well as my own experience with obsidian.
+
+My vault is not the biggest. Right now I manage around 300 notes. Some people
+have thousands of notes. Things like search do not play a big role for my vault.
+I say this because it could be that my experiences don't apply to vault with
+lots more notes than I have.
 
 ## To much concrete Information
 
-I put to much concrete information into my vault. What I meant by that is hard
-knowledge. Knowledge that you will find during research. I put it in without
-much thought. I was just collecting ideas/concepts I deemed useful for a topic.
+I put to much concrete information into my vault. What I meant by that is
+knowledge that you will find during research. Basically raw information. I put
+it in without much thought. I was just collecting ideas/concepts I deemed useful for a topic.
 
 I think it's important to know why you research
 something, what you expect from that data and why you take notes about it.
@@ -27,7 +31,7 @@ something that I researched in the past. I want to know what I figured out and
 where to find material that has further information about it should I be interested
 in reading it again.
 
-This is a huge help for me as I am a neurodivergend person. It is easier to keep
+This is a huge help for me as I am a neurodivergent person. It is easier to keep
 track of knowledge outside of my brain.
 
 However I am not a researcher and I am not collecting knowledge to process it
@@ -92,7 +96,7 @@ want to use the vault. This document contains things like:
 These points don't have to be complicated. Let's give two examples on how these
 can look like.
 
-### Philosophy
+### Example 1: Philosophy
 
 This is what I wrote under "Philosophy":
 
@@ -123,7 +127,7 @@ automation part is in my opinion the most important one. I am distracted pretty
 easily. Having less distraction and focusing on the note taking boost the the
 quality of the content I put in.
 
-### Note processing workflow
+### Example 2: Note processing workflow
 
 Let's look at another bit: The workflow I am using.
 
@@ -133,10 +137,10 @@ Let's look at another bit: The workflow I am using.
 >}}
 
 This is a flow chart of the process I am using to process notes that I put into
-the system. It's simple and work perfectly for the manner hwo I use my vault.
+the system. It's simple and work perfectly for my applications.
 
 One more thing to say about this document is that it is always work in progress.
-Its not a bill that I enforce but rather a guide I follow. It good to question
+Its not a bill that I enforce but rather a guide I follow. It's good to question
 your system from time to time and make changes when necessary.
 
 You don't have to write a document like I did but you should think a little
@@ -158,7 +162,7 @@ can pick the best cherries and create your own note taking system.
 The best way to figure this out is to just try it out for yourself. There is
 unfortunately no shortcut.
 
-I for example figured out that the zettelkasten method is not really the way I
+I for example figured out that the Zettelkasten method is not really the way I
 want to go. After researching and trying I took big inspiration from this
 {{< link
     target="_blank"
@@ -167,4 +171,53 @@ want to go. After researching and trying I took big inspiration from this
     rel="external"
 >}}.
 
-It is a pretty long video but has sections so you can jump around if you want.
+It is a pretty long video but has sections so you can jump around if you want. I
+couldn't describe what is mentioned in this video as there is a lot of
+information in there.
+
+## Have fun and make it your own
+
+When I first started with obsidian I wanted it to be perfect. I wanted a system
+that would solve all my problems with keeping up with knowledge. I searched the
+internet for a template that I could you just use. That didn't work.
+
+The strength of obsidian is that you can make it your own. This can be done with
+structure but also themes and plugins. This takes time but it's also fun to see
+your system evolve over time.
+
+No mather what feature you need there is probably a plugin for it in the
+repository. One of my favorites is data view. With data view you can create your
+own queries and aggregate data as you need.
+
+For example I have "recent inbox" page that is a list of notes that got added
+to the inbox recently. That the simple query:
+
+```sql
+table date(date) as created
+
+from "Inbox"
+
+sort date desc
+
+limit 20
+```
+
+This generates a table from top down with note titles and creation date. This
+way I have a great overview about the things I am interested right now.
+
+Another thing is to take it easy. You don't have to use obsidian every day or
+for everything if you don't want to. There can be a pressure to put everything
+in there. Maybe because you feel you should document something or because you think that
+obsidian can replace every other form of note taking that you use.
+
+I definitely had this urge. It ended in me going through a lot of notes to delete
+them because they didn't provide value to me.
+
+At the end of the day I want to have fun with the system and let it be a tool
+that is helpful to me.
+
+## Conclusion
+
+To summarize all of this: try to create a system that is tailored to you. If you
+don't need a feature don't add it. If you are tired of a note taking method try
+another one or create your own. When you have fun you are more productive.
