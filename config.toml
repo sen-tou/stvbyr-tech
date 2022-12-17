@@ -36,9 +36,6 @@ noclasses = false
 
 [Params]
 
-[Params.seo.twitter]
-handle = "stvbyr"
-
 [Params.brand]
 logo_500px = "apple-icon-180x180.png"
 
@@ -49,7 +46,6 @@ description = "My name is Steve Beyer. This blog is about tech related articles 
 [Params.social]
 
 [Params.social.profiles]
-twitter = "https://twitter.com/stvbyr"
 github = "https://github.com/stvbyr"
 
 [imaging]
@@ -60,4 +56,4 @@ resampleFilter = "Linear"
 
 [security]
 [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
+allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
