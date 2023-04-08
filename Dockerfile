@@ -19,9 +19,9 @@ RUN apk add git curl tar gzip bash
 
 USER node
 
-WORKDIR /src/stvbyr-tech
+WORKDIR /homes/node/stvbyr-tech
 
-COPY --chown=node . .
+COPY --chown=node:node . .
 
 RUN npm install
 RUN git config --global --add safe.directory /src/stvbyr-tech
