@@ -24,6 +24,6 @@ WORKDIR /homes/node/stvbyr-tech
 COPY --chown=node:node . .
 
 RUN npm install
-RUN git config --global --add safe.directory /src/stvbyr-tech
+RUN git config --global --add safe.directory /homes/node/stvbyr-tech
 
 ENTRYPOINT [ "npm", "run", "dev"]
