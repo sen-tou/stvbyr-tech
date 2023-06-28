@@ -5,9 +5,9 @@ services:
             dockerfile: ./Dockerfile
             context: .
             args:
-                NODE_VERSION: 16.14.0
-                GO_VERSION: 1.19
-                HUGO_VERSION: 0.101.0
+                NODE_VERSION: "18.16.1"
+                GO_VERSION: "1.20"
+                HUGO_VERSION: "0.114.1"
         volumes:
             - .:/homes/node/stvbyr-tech
             - /homes/node/stvbyr-tech/node_modules

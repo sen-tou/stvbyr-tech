@@ -11,7 +11,7 @@ categories:
     - Docker
 ---
 
-stvbyr.tech uses {{< link target="_blank" text="hugo" href="https://gohugo.io/" rel="external">}} under the hood. You can find the source {{< link target="_blank" text="on github" href="https://github.com/stvbyr/stvbyr-tech" rel="external">}}.
+stvbyr.tech uses {{< link target="_blank" text="hugo" href="<https://gohugo.io/>" rel="external">}} under the hood. You can find the source {{< link target="_blank" text="on github" href="<https://github.com/stvbyr/stvbyr-tech>" rel="external">}}.
 
 The goal of making a dockerized hugo app is the fact that updating the dependencies (go, hugo, node) is cumbersome and you have to install all the tools on your system.
 
@@ -19,7 +19,7 @@ With docker we can produce reproducible builds which have the benefit of being p
 
 It is easy to switch the hugo version and see if it works or not. Switching back is just a matter of rebuilding the container.
 
-The first question that you might have is: why not just use {{< link target="_blank" text="klakegg/docker-hugo" href="https://github.com/klakegg/docker-hugo" rel="external">}}?
+The first question that you might have is: why not just use {{< link target="_blank" text="klakegg/docker-hugo" href="<https://github.com/klakegg/docker-hugo>" rel="external">}}?
 
 The answer to that is: If you want a quick setup with batteries included (this is what the projects describes it self) then use that. There is nothing my setup does better than this project.
 
@@ -94,7 +94,7 @@ services:
             args:
                 NODE_VERSION: 16.14.0
                 GO_VERSION: 1.19
-                HUGO_VERSION: 0.101.0
+                HUGO_VERSION: 0.114.1
         volumes:
             - .:/src/stvbyr-tech
             - /src/stvbyr-tech/node_modules
